@@ -1,0 +1,18 @@
+footer { 
+    grid-area: footer;
+    background-color: cornflowerblue;
+    color: white;
+    height: 200px;
+    text-align: end;
+
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: #333333;
+}
+

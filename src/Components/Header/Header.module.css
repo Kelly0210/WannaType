@@ -1,0 +1,53 @@
+h1 {
+    text-align: center;
+        font-family: Arial;
+        color: #FFFFFF;
+        text-shadow: 
+            -0   -4px 0   #000000,
+             0   -4px 0   #000000,
+            -0    4px 0   #000000,
+             0    4px 0   #000000,
+            -4px -0   0   #000000,
+             4px -0   0   #000000,
+            -4px  0   0   #000000,
+             4px  0   0   #000000,
+            -1px -4px 0   #000000,
+             1px -4px 0   #000000,
+            -1px  4px 0   #000000,
+             1px  4px 0   #000000,
+            -4px -1px 0   #000000,
+             4px -1px 0   #000000,
+            -4px  1px 0   #000000,
+             4px  1px 0   #000000,
+            -2px -4px 0   #000000,
+             2px -4px 0   #000000,
+            -2px  4px 0   #000000,
+             2px  4px 0   #000000,
+            -4px -2px 0   #000000,
+             4px -2px 0   #000000,
+            -4px  2px 0   #000000,
+             4px  2px 0   #000000,
+            -3px -4px 0   #000000,
+             3px -4px 0   #000000,
+            -3px  4px 0   #000000,
+             3px  4px 0   #000000,
+            -4px -3px 0   #000000,
+             4px -3px 0   #000000,
+            -4px  3px 0   #000000,
+             4px  3px 0   #000000,
+            -4px -4px 0   #000000,
+             4px -4px 0   #000000,
+            -4px  4px 0   #000000,
+             4px  4px 0   #000000,
+            -4px -4px 0   #000000,
+             4px -4px 0   #000000,
+            -4px  4px 0   #000000,
+             4px  4px 0   #000000;
+}
+
+header { 
+    grid-area: header; 
+    
+    height: 100px;
+    background-color: cornflowerblue;
+}
