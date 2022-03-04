@@ -1,12 +1,13 @@
 import React from 'react';
 import Chapters from '../Chapters/Chapters';
-import style from './Main.module.css'
+import style from './Main.module.css';
+import Keyboard from '../Keyboard/Keyboard';
 
 const Main = () => {
     return (
         <main className={style.main}>
-        <h1>Sobaka</h1>
-
+        <textarea></textarea>
+        <Keyboard />
       </main>
     );
 

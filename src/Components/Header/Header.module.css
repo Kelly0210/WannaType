@@ -45,9 +45,8 @@ h1 {
              4px  4px 0   #000000;
 }
 
-header { 
+.header { 
     grid-area: header; 
-    
     height: 100px;
     background-color: cornflowerblue;
 }

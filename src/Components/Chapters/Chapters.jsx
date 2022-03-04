@@ -3,7 +3,7 @@ import style from './Chapters.module.css';
 
 const Chapters = () => {
     return (
-        <div className={style.sidebar}>
+        <div className={style.chapters}>
             <ul>
                 <li>Chapter 1</li>
                 <li>Chapter 2</li>

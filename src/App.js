@@ -9,10 +9,10 @@ import Chapters from './Components/Chapters/Chapters';
 
 function App() {
   return (
-      <div className={style.container}>
+      <div className='container'>
     <Header />
-    <Main />
     <Chapters />
+    <Main />
     <Footer />
       </div>
   );
