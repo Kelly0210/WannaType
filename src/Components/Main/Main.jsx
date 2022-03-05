@@ -6,7 +6,10 @@ import Keyboard from '../Keyboard/Keyboard';
 const Main = () => {
     return (
         <main className={style.main}>
-        <textarea></textarea>
+          <div className={style.container}>
+          <textarea></textarea>
+          </div>
+        
         <Keyboard />
       </main>
     );
