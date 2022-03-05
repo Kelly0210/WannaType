@@ -1,5 +1,5 @@
 .row {
-    width: 756px;
+    width: 820px;
     height: 50px;
     margin: 0 auto;
 }
@@ -10,7 +10,26 @@
     border-radius: 5px;
     margin: 5px;
     background-color: aqua;
+    text-align: center;
 }
-.space {
-    width: 400px
+.keyGreen {
+    background-color: #8cff66;
+}
+.keyBackSpace {
+    width: 72px;
+}
+.keyTab {
+    width: 72px;
+}
+.keyCaps {
+    width: 87px;
+}
+.keyEnter {
+    width: 85px;
+}
+.keyShift {
+    width: 114px;
+}
+.keySpace {
+    width: 400px;
 }

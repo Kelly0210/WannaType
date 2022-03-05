@@ -7,7 +7,7 @@ const Keyboard = () => {
         <div className={style.container}>
         <div className={style.row}>
             <div className={style.key}>`</div>
-            <div className={style.key}>1</div>
+            <div className={`${style.key} ${style.keyGreen}`}>1</div>
             <div className={style.key}>2</div>
             <div className={style.key}>3</div>
             <div className={style.key}>4</div>
@@ -19,11 +19,11 @@ const Keyboard = () => {
             <div className={style.key}>0</div>
             <div className={style.key}>-</div>
             <div className={style.key}>=</div>
-            <div className={style.key}>&lt;-</div>
+            <div className={`${style.key} ${style.keyBackSpace}`}>←</div>
         </div>
         <div className={style.row}>
-            <div className={style.key}>TAB</div>
-            <div className={style.key}>Q</div>
+            <div className={`${style.key} ${style.keyTab}`}>TAB</div>
+            <div className={`${style.key} ${style.keyGreen}`}>Q</div>
             <div className={style.key}>W</div>
             <div className={style.key}>E</div>
             <div className={style.key}>R</div>
@@ -31,14 +31,15 @@ const Keyboard = () => {
             <div className={style.key}>Y</div>
             <div className={style.key}>U</div>
             <div className={style.key}>I</div>
+            <div className={style.key}>O</div>
             <div className={style.key}>P</div>
             <div className={style.key}>[</div>
             <div className={style.key}>]</div>
             <div className={style.key}>\</div>
         </div>
         <div className={style.row}>
-            <div className={style.key}>CAPS</div>
-            <div className={style.key}>A</div>
+            <div className={`${style.key} ${style.keyCaps}`}>CAPS</div>
+            <div className={`${style.key} ${style.keyGreen}`}>A</div>
             <div className={style.key}>S</div>
             <div className={style.key}>D</div>
             <div className={style.key}>F</div>
@@ -49,11 +50,11 @@ const Keyboard = () => {
             <div className={style.key}>L</div>
             <div className={style.key}>;</div>
             <div className={style.key}>'</div>
-            <div className={style.key}>ENTER</div>
+            <div className={`${style.key} ${style.keyEnter}`}>ENTER</div>
         </div>
         <div className={style.row}>
-            <div className={style.key}>SHIFT</div>
-            <div className={style.key}>Z</div>
+            <div className={`${style.key} ${style.keyShift}`}>SHIFT</div>
+            <div className={`${style.key} ${style.keyGreen}`}>Z</div>
             <div className={style.key}>X</div>
             <div className={style.key}>C</div>
             <div className={style.key}>V</div>
@@ -63,10 +64,10 @@ const Keyboard = () => {
             <div className={style.key}>,</div>
             <div className={style.key}>.</div>
             <div className={style.key}>/</div>
-            <div className={style.key}>SHIFT</div>
+            <div className={`${style.key} ${style.keyShift}`}>SHIFT</div>
         </div>
         <div className={style.row}>
-            <div className={`${style.key} ${style.space}`}></div>    
+            <div className={`${style.key} ${style.keySpace}`}></div>    
         </div>
         </div>
         
