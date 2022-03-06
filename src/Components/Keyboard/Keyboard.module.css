@@ -12,36 +12,41 @@
     background-color: aqua;
     text-align: center;
 }
+
 .keyGreen {
-    background-color: #8cff66;
+    background-color: #78e2aa;
+}
+.keyPink {
+    background-color: #f69ec4;;
 }
 .keyOrange {
-    background-color: orange;
+    background-color: #ffc07e;;
 }
 .keyYellow {
-    background-color: yellow;
+    background-color: #ffef7e;
+}
+.keyBlue {
+    background-color: #63e3ff;
+}
+.keyWaveBlue {
+    background-color: #9ad3fa;
 }
 .keyBackSpace {
     width: 72px;
 }
 .keyTab {
     width: 72px;
-    background-color: #8cff66;
-    opacity: 0.6;
 }
 .keyCaps {
     width: 87px;
-    background-color: #8cff66;
-    opacity: 0.6;
 }
 .keyEnter {
     width: 85px;
 }
 .keyShift {
     width: 114px;
-    background-color: #8cff66;
-    opacity: 0.6;
 }
 .keySpace {
     width: 400px;
+    margin-left: 210px;
 }
