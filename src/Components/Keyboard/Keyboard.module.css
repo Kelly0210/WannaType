@@ -15,20 +15,32 @@
 .keyGreen {
     background-color: #8cff66;
 }
+.keyOrange {
+    background-color: orange;
+}
+.keyYellow {
+    background-color: yellow;
+}
 .keyBackSpace {
     width: 72px;
 }
 .keyTab {
     width: 72px;
+    background-color: #8cff66;
+    opacity: 0.6;
 }
 .keyCaps {
     width: 87px;
+    background-color: #8cff66;
+    opacity: 0.6;
 }
 .keyEnter {
     width: 85px;
 }
 .keyShift {
     width: 114px;
+    background-color: #8cff66;
+    opacity: 0.6;
 }
 .keySpace {
     width: 400px;
