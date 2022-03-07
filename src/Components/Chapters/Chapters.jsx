@@ -10,6 +10,8 @@ const Chapters = () => {
                 <li>Chapter 3</li>
                 <li>Chapter 4</li>
                 <li>Chapter 5</li>
+                <li>Random Exercise</li>
+                <li>Random Text</li>
             </ul>
         </div>
     )

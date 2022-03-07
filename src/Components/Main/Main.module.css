@@ -2,18 +2,3 @@
     grid-area: main;
     background-color: burlywood;
  }
-
-.container {
-    margin: 0 auto;
-}
-textarea {
-    padding: 0 auto;
-    resize: none;
-    border-radius: 4px;
-    width: 800px;
-    height: 300px;
-}
-
-textarea::selection {
-    border: 3px solid black;
-}
