@@ -1,18 +1,18 @@
 .footer { 
     grid-area: footer;
-    background-color: cornflowerblue;
-    color: white;
-    height: 200px;
+    color: #2c3258;
+    background-color: #f1c40f;
+    height: 100px;
     text-align: end;
-
+    padding: 10px;
 }
 
 a {
     text-decoration: none;
-    color: white;
+    color: #2c3258;
 }
 
 a:hover {
-    color: #333333;
+    color: white;
 }
 
