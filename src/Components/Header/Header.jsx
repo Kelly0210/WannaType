@@ -1,10 +1,12 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import style from './Header.module.css'
+
 
 const Header = () => {
     return(
         <header className={style.header}>
-        <h1>Wanna Type</h1>
+        <h1><Link to='/' className={style.companyName}>Wanna Type</Link></h1>
       </header>
     );
 }
