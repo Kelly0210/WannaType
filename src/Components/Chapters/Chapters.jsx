@@ -7,7 +7,7 @@ const Chapters = () => {
         <div className={style.chapters}>
             <ul>
                 <li>
-                    <Link to='/chapter1'>Chapter 1</Link>
+                    <Link to='/training'>Chapter 1</Link>
                 </li>
                 <li>
                     <a href='/chapter2'>Chapter 2</a>

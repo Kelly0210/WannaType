@@ -1,0 +1,24 @@
+.container404 {
+    font-size: 40px;
+    color: white;
+    margin: 0 auto;
+}
+
+.text404 {
+    margin: 0 auto;
+}
+
+.number404 {
+    font-size: 200px;
+    text-align: center;
+    margin: 0;
+}
+
+.linkHome {
+    color: white;
+    text-decoration: underline;
+}
+
+.linkHome:hover {
+    color: yellow;
+}
