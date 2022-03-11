@@ -1,0 +1,16 @@
+.homeContainer {
+    color: white;
+    font-size: 40px;
+    margin: 0 auto;
+}
+
+.linkHome {
+    color: white;
+    border-bottom: 3px solid white;
+    padding-bottom : 1px;
+}
+
+.linkHome:hover {
+    color: yellow;
+    border-bottom: 3px solid yellow;
+}
