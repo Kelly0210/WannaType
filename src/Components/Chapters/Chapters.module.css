@@ -1,7 +1,6 @@
 .chapters { 
     grid-area: chapters;
     background-color: crimson;
-    
 }
 
 ul {
@@ -9,6 +8,16 @@ ul {
     padding-left: 17px;
 }
 
-li:hover {
+li {
+    padding-bottom: 2px;
+}
+
+.linkForTraning {
+    color: black;
+    text-decoration: none;
+}
+
+.linkForTraning:hover {
     color: white;
+    text-decoration: underline;
 }

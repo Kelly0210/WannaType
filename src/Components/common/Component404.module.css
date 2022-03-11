@@ -1,5 +1,5 @@
 .container404 {
-    font-size: 40px;
+    font-size: 35px;
     color: white;
     margin: 0 auto;
 }
@@ -9,7 +9,7 @@
 }
 
 .number404 {
-    font-size: 200px;
+    font-size: 220px;
     text-align: center;
     margin: 0;
 }
@@ -17,6 +17,7 @@
 .linkHome {
     color: white;
     text-decoration: underline;
+    margin: 0px;
 }
 
 .linkHome:hover {

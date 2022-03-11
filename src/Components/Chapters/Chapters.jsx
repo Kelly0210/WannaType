@@ -6,17 +6,20 @@ const Chapters = () => {
     return (
         <div className={style.chapters}>
             <ul>
-                <li>
-                    <Link to='/training'>Chapter 1</Link>
-                </li>
-                <li>
-                    <a href='/chapter2'>Chapter 2</a>
-                </li>
-                <li>Chapter 3</li>
-                <li>Chapter 4</li>
-                <li>Chapter 5</li>
-                <li>Random Test</li>
-                <li>Random Text</li>
+                <li><Link to='training/chapter1' className={style.linkForTraning}>Chapter 1</Link></li>
+                <li><Link to='/training' className={style.linkForTraning}>Chapter 2</Link></li>
+                <li><Link to='/training' className={style.linkForTraning}>Chapter 3</Link></li>
+                <li><Link to='/training' className={style.linkForTraning}>Chapter 4</Link></li>
+                <li><Link to='/training' className={style.linkForTraning}>Chapter 5</Link></li>
+                <li><Link to='/training' className={style.linkForTraning}>Chapter 6</Link></li>
+                <li><Link to='/training' className={style.linkForTraning}>Chapter 7</Link></li>
+                <li><Link to='/training' className={style.linkForTraning}>Chapter 8</Link></li>
+                <li><Link to='/training' className={style.linkForTraning}>Chapter 9</Link></li>
+                <li><Link to='/training' className={style.linkForTraning}>Chapter 10</Link></li>
+                <li><Link to='/training' className={style.linkForTraning}>Random Test</Link></li>
+                <li><Link to='/training' className={style.linkForTraning}>Ransom Text</Link></li>
+
+                <li><Link to='/training' className={style.linkForTraning}>Games</Link></li>
             </ul>
         </div>
     )

@@ -6,6 +6,7 @@
 
 .linkHome {
     color: white;
+    text-decoration: none;
     border-bottom: 3px solid white;
     padding-bottom : 1px;
 }
