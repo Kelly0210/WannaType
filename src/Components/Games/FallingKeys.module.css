@@ -1,3 +1,11 @@
+.display {
+    width: 900px;
+    height: 400px;
+    margin: 50px auto;
+    border-radius: 5px;
+    background-color: white;
+}
+
 .key {
     display: inline-block;
     width: 46px;
@@ -8,18 +16,41 @@
     text-align: center;
 }
 
-
 @keyframes falling {
     0% {
-        margin-top: 0px
+        margin-top: 0px;
+        visibility: visible;
+    }
+    75% {
+        margin-top: 350px;
+        visibility: hidden;
     }
     100% {
-        margin-top: 200px
+        visibility: hidden;
     }
 }
 
 
-.testBlock {
+.key {
     animation-name: falling;
     animation-duration: 10000ms;
+}
+
+.keyGreen {
+    background-color: #78e2aa;
+}
+.keyPink {
+    background-color: #f69ec4;;
+}
+.keyOrange {
+    background-color: #ffc07e;;
+}
+.keyYellow {
+    background-color: #ffef7e;
+}
+.keyBlue {
+    background-color: #63e3ff;
+}
+.keyWaveBlue {
+    background-color: #9ad3fa;
 }
