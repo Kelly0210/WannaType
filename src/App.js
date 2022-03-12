@@ -7,6 +7,7 @@ import Header from './Components/Header/Header';
 import Main from './Components/Main/Main';
 import Home from './Components/Home/Home';
 import Chapters from './Components/Chapters/Chapters';
+import FallingKeys from './Components/Games/FallingKeys';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
           <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/training' element={<Main />}/>
+          <Route path='/games' element={<FallingKeys />}/>
 
           <Route path='*' element={<Component404 />}/>
           </Routes>

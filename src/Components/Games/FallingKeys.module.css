@@ -1,0 +1,25 @@
+.key {
+    display: inline-block;
+    width: 46px;
+    height: 46px;
+    border-radius: 5px;
+    margin: 0px 3px;
+    background-color: aqua;
+    text-align: center;
+}
+
+
+@keyframes falling {
+    0% {
+        margin-top: 0px
+    }
+    100% {
+        margin-top: 200px
+    }
+}
+
+
+.testBlock {
+    animation-name: falling;
+    animation-duration: 10000ms;
+}

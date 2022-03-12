@@ -17,9 +17,9 @@ const Chapters = () => {
                 <li><Link to='/training' className={style.linkForTraning}>Chapter 9</Link></li>
                 <li><Link to='/training' className={style.linkForTraning}>Chapter 10</Link></li>
                 <li><Link to='/training' className={style.linkForTraning}>Random Test</Link></li>
-                <li><Link to='/training' className={style.linkForTraning}>Ransom Text</Link></li>
+                <li><Link to='/training' className={style.linkForTraning}>Random Text</Link></li>
 
-                <li><Link to='/training' className={style.linkForTraning}>Games</Link></li>
+                <li><Link to='/games' className={style.linkForTraning}>Games</Link></li>
             </ul>
         </div>
     )

@@ -4,7 +4,7 @@
 .row {
     width: 820px;
     height: 50px;
-    margin: 2px auto;
+    margin: 3px auto;
 }
 .key {
     display: inline-block;
@@ -52,4 +52,12 @@
 .keySpace {
     width: 400px;
     margin-left: 175px;
+}
+
+.nextKey {
+    border: 3px solid rgb(0, 102, 255);
+}
+
+.wrongKey {
+    border: 3px solid crimson;
 }
