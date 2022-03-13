@@ -1,4 +1,5 @@
-textarea {
+.inputField {
+    font-size: 21px;
     width: 900px;
     height: 300px;
     resize: none;

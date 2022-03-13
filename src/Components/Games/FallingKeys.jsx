@@ -60,7 +60,7 @@ const GenerateKey = () => {
             break;
     }
     return <div className={combinedClass}>
-        <span>{generateLetter}</span>
+        <span className={style.containerKey}>{generateLetter}</span>
         </div>;
 } 
 
@@ -70,7 +70,8 @@ const FallingKeys = () => {
         <div className={style.display}>
          {/* {setInterval(() => GenerateKey(), 50)} */}
          {/* {setInterval(GenerateKey, 1000)} */}
-         <button onClick={() => GenerateKey()}>Start</button>
+         {/* <button onClick={() => GenerateKey()}>Start</button> */}
+         {GenerateKey()}
         </div>
     )
 }
