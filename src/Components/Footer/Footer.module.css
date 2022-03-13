@@ -4,9 +4,15 @@
     background-color: #f1c40f;
     height: 100px;
     text-align: end;
-    padding: 10px;
+    padding: 10px 15px;
 }
 
+.mailContainer {
+    padding-bottom: 7px;
+}
+.logoContainer {
+    padding-bottom: 4px;
+}
 .gmail {
     text-decoration: none;
     color: #2c3258;

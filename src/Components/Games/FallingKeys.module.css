@@ -34,6 +34,7 @@
 .key {
     animation-name: falling;
     animation-duration: 10000ms;
+    animation-iteration-count: infinite;
 }
 
 .keyGreen {

@@ -8,12 +8,20 @@
 }
 .key {
     display: inline-block;
+    position: relative;
     width: 46px;
     height: 46px;
     border-radius: 5px;
     margin: 0px 3px;
-    background-color: aqua;
-    text-align: center;
+}
+
+.containerKey {
+    font-size: 17px;
+    position: absolute;
+
+    top: 50%;
+    right: 38%;
+    transform: translate(0, -50%);
 }
 
 .keyGreen {
@@ -48,6 +56,7 @@
 }
 .keyShift {
     width: 114px;
+    text-align: left;
 }
 .keySpace {
     width: 400px;

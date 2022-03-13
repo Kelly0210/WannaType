@@ -54,21 +54,24 @@ const GenerateKey = () => {
         case 'm':
             combinedClass = `${style.key} ${style.keyYellow}`;
             break;             
-            
+
         default:
             combinedClass = `${style.key}`;
             break;
     }
-    return <div className={combinedClass}>{generateLetter}</div>;
+    return <div className={combinedClass}>
+        <span>{generateLetter}</span>
+        </div>;
 } 
+
 
 const FallingKeys = () => {
     return(
-        <>
         <div className={style.display}>
-         {GenerateKey()}
+         {/* {setInterval(() => GenerateKey(), 50)} */}
+         {/* {setInterval(GenerateKey, 1000)} */}
+         <button onClick={() => GenerateKey()}>Start</button>
         </div>
-        </>
     )
 }
 export default FallingKeys;
