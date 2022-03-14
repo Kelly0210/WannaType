@@ -7,6 +7,10 @@
     margin-left: 130px;
 }
 
-textarea::selection {
+.inputField::selection {
     border: 3px solid #2c3258;
+}
+
+.inputField:placeholder-shown {
+    color: green;
 }

@@ -1,27 +1,21 @@
 import React from 'react';
 import style from './CustomTextArea.module.css';
+import { generateLesson } from '../common/generateLesson';
 
 const initialLetters = ['j', 'f', ' '];
-let generateLesson = '';
-
-for (let i = 0; i < 40; i++) {
-    let generateLetters = initialLetters[Math.floor(Math.random() * 3)];
-    generateLesson += generateLetters;
-}
 
 class CustomTextArea extends React.Component {
 
     constructor() {
         super();
         this.state = {value: ''};
-        this.state = {placeholder: generateLesson}
+        this.state = {placeholder: generateLesson(initialLetters)}
 
         this.handleChange = this.handleChange.bind(this);
     }
 
     handleChange(event) {
         this.setState({value: event.target.value});
-        console.log(this.state.placeholder);
     }
 
     render() {
@@ -38,4 +32,4 @@ class CustomTextArea extends React.Component {
     }
 }
 
-export default CustomTextArea
+export default CustomTextArea;
