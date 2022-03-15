@@ -7,10 +7,18 @@
     margin-left: 130px;
 }
 
-.inputField::selection {
-    border: 3px solid #2c3258;
+/* .placeholderr
+{
+    position: relative;
 }
 
-.inputField:placeholder-shown {
-    color: green;
-}
+.placeholderr::after
+{
+    font-size: inherit;
+    position: absolute;
+    left: 133px;
+    top: 3.7px;
+    content: attr(dataPlaceholder);
+    pointer-events: none;
+    opacity: 0.6;
+} */
