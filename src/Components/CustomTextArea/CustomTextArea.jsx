@@ -10,33 +10,31 @@ class CustomTextArea extends React.Component {
         super();
         this.state = {value: '',
         placeholder: generateLesson(Lesson1, 20),
-        mistake: 0,
+        mistakes: 0,
         disabled: false,
     }
-
         this.handleChange = this.handleChange.bind(this);
     }
 
     handleChange(event) {
         this.setState({value: event.target.value});
 
-        if (event.target.value.slice(-1) !== 'q') {
+        if (event.target.value.slice(-1) !== this.state.placeholder[this.state.value.length]) {
+            this.state.mistakes++;
             console.log('mistake');
-            this.state.mistake++;
         } else {
             console.log('Great');
         }
 
-        if (this.state.mistake === 3) {
-            console.log('You lose');
+        if (this.state.mistakes === 3) {
             this.handleDisable();
-            
         }
     }
 
     handleDisable() {
         this.state.disabled = true;
     }
+
     render() {
         return (
             // <div dataPlaceholder={this.state.placeholder} className={style.placeholderr} >
