@@ -1,7 +1,7 @@
 .displayBox {
     display: flex;
     justify-content: center;
-    width: 800px;
+    width: 820px;
     min-height: 70px;
     background-color: white;
     
@@ -15,4 +15,5 @@
     opacity: 0.6;
     letter-spacing: 3px;
     margin: auto 0;
+    /* user-select: none; */
 }

@@ -1,31 +1,37 @@
 import React from 'react';
 import style from './CustomTextArea.module.css';
-import { generateLesson } from '../common/generateLesson';
-import { Lesson1 } from '../common/Lessons';
 
 
 class CustomTextArea extends React.Component {
 
-    constructor() {
-        super();
-        this.state = {value: '',
-        placeholder: generateLesson(Lesson1, 20),
-        mistakes: 0,
-        disabled: false,
-    }
+    constructor(props) {
+        super(props);
+        this.state = {
+            value: '',
+            lesson: this.props.lesson,
+            mistakes: 0,
+            disabled: false,
+        }
         this.handleChange = this.handleChange.bind(this);
         this.handleDisable = this.handleDisable.bind(this);
     }
 
     handleChange(event) {
-        this.setState({value: event.target.value});
+        let lesson = this.state.lesson;
+        let stateValue = this.state.value;
+        let inputValue = event.target.value;
+        this.setState({ value: event.target.value });
 
-        if (event.target.value.slice(-1) !== this.state.placeholder[this.state.value.length]) {
-            this.setState({mistakes: this.state.mistakes + 1});
+        if (inputValue.slice(-1) !== lesson[stateValue.length]) {
+            this.setState({ mistakes: this.state.mistakes + 1 });
             // this.state.mistakes++;
             console.log('mistake');
         } else {
             console.log('Great');
+        }
+
+        if (stateValue.length === lesson.length) {
+            console.log('You win!');
         }
 
         if (this.state.mistakes === 2) {
@@ -34,18 +40,19 @@ class CustomTextArea extends React.Component {
     }
 
     handleDisable() {
-        this.setState({disabled: true});
+        this.setState({ disabled: true });
     }
 
     render() {
         return (
             <div className={style.textareaContainer}>
                 <textarea autoFocus
-                          disabled={this.state.disabled}
-                          className={style.inputField}
-                          onChange={this.handleChange}
-                          value={this.state.value}
-                          />
+                    className={style.inputField}
+
+                    disabled={this.state.disabled}
+                    onChange={this.handleChange}
+                    value={this.state.value}
+                />
             </div>
         )
     }
