@@ -3,8 +3,13 @@ import style from './Keyboard.module.css'
 
 
 const Keyboard = () => {
+
+for (let i = 0; i < document.querySelectorAll('div.key').length; i++) {
+    console.log(document.querySelectorAll('div.key'))
+};
+
     return (
-        <div className={style.container}>
+        <div className={style.keyboardContainer}>
         <div className={style.row}>
             <div className={`${style.key} ${style.keyWaveBlue}`}><span className={style.containerKey}>`</span></div>
             <div className={`${style.key} ${style.keyGreen}`}><span className={style.containerKey}>1</span></div>

@@ -4,7 +4,10 @@
     height: 300px;
     resize: none;
     border-radius: 4px;
-    margin-left: 130px;
+}
+
+.textareaContainer {
+    text-align: center;
 }
 
 /* .placeholderr

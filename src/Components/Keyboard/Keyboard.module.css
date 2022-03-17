@@ -1,5 +1,6 @@
-.container {
+.keyboardContainer {
     padding-top: 7px;
+    text-align: center;
 }
 .row {
     width: 820px;
@@ -59,7 +60,7 @@
 }
 .keySpace {
     width: 400px;
-    margin-left: 175px;
+    text-align: center;
 }
 
 .nextKey {

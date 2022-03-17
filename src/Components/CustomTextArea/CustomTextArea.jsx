@@ -14,37 +14,37 @@ class CustomTextArea extends React.Component {
         disabled: false,
     }
         this.handleChange = this.handleChange.bind(this);
+        this.handleDisable = this.handleDisable.bind(this);
     }
 
     handleChange(event) {
         this.setState({value: event.target.value});
 
         if (event.target.value.slice(-1) !== this.state.placeholder[this.state.value.length]) {
-            this.state.mistakes++;
+            this.setState({mistakes: this.state.mistakes + 1});
+            // this.state.mistakes++;
             console.log('mistake');
         } else {
             console.log('Great');
         }
 
-        if (this.state.mistakes === 3) {
+        if (this.state.mistakes === 2) {
             this.handleDisable();
         }
     }
 
     handleDisable() {
-        this.state.disabled = true;
+        this.setState({disabled: true});
     }
 
     render() {
         return (
-            // <div dataPlaceholder={this.state.placeholder} className={style.placeholderr} >
-            <div>
+            <div className={style.textareaContainer}>
                 <textarea autoFocus
                           disabled={this.state.disabled}
                           className={style.inputField}
                           onChange={this.handleChange}
                           value={this.state.value}
-                          placeholder={this.state.placeholder}
                           />
             </div>
         )
