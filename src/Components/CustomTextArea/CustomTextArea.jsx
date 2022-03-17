@@ -14,6 +14,7 @@ class CustomTextArea extends React.Component {
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleDisable = this.handleDisable.bind(this);
+        this.mistakeAddClass = this.mistakeAddClass.bind(this);
     }
 
     handleChange(event) {
@@ -24,10 +25,10 @@ class CustomTextArea extends React.Component {
 
         if (inputValue.slice(-1) !== lesson[stateValue.length]) {
             this.setState({ mistakes: this.state.mistakes + 1 });
+            this.mistakeAddClass(true);
             // this.state.mistakes++;
-            console.log('mistake');
         } else {
-            console.log('Great');
+            this.mistakeAddClass(false);
         }
 
         if (stateValue.length === lesson.length) {
@@ -41,6 +42,10 @@ class CustomTextArea extends React.Component {
 
     handleDisable() {
         this.setState({ disabled: true });
+    }
+
+    mistakeAddClass(boolean) {
+        this.props.mistakeAddClass(boolean);
     }
 
     render() {
