@@ -21,15 +21,17 @@ class Main extends React.Component {
   }
 
   mistakeAddClass(boolean) {
-    this.setState({mistake: boolean});
+    this.setState({ mistake: boolean });
   }
 
   render() {
     return (
       <main className={style.main}>
-        <Display lesson={this.state.lesson} mistake={this.state.mistake}/>
-        <CustomTextArea lesson={this.state.lesson} mistakeAddClass={this.mistakeAddClass}/>
-        <Keyboard />
+        <Display lesson={this.state.lesson}
+                 mistake={this.state.mistake} />
+        <CustomTextArea lesson={this.state.lesson}
+                        mistakeAddClass={this.mistakeAddClass} />
+        <Keyboard mistake={this.state.mistake}/>
       </main>
     )
   }

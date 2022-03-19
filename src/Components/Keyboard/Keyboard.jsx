@@ -2,12 +2,11 @@ import React from 'react';
 import style from './Keyboard.module.css'
 
 
-const Keyboard = () => {
+const Keyboard = (props) => {
 
-for (let i = 0; i < document.querySelectorAll('div.key').length; i++) {
-    console.log(document.querySelectorAll('div.key'))
-};
-
+if (props.mistake) {
+    
+}
     return (
         <div className={style.keyboardContainer}>
         <div className={style.row}>
