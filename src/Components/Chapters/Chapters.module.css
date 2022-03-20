@@ -1,4 +1,4 @@
-.chapters { 
+.chaptersContainer { 
     grid-area: chapters;
     background-color: crimson;
 }
@@ -21,4 +21,12 @@ li {
     color: white;
     text-decoration: underline;
     font-weight: bold;
+}
+
+.chapters {
+    color: yellow;
+}
+
+.hide {
+    display: none;
 }

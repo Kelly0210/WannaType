@@ -5,7 +5,7 @@ import style from './Keyboard.module.css'
 const Keyboard = (props) => {
 
 if (props.mistake) {
-    
+    console.log(document.getElementById(`${props.lastLetter}`))
 }
     return (
         <div className={style.keyboardContainer}>
@@ -27,7 +27,7 @@ if (props.mistake) {
         </div>
         <div className={style.row}>
             <div className={`${style.key} ${style.keyTab} ${style.keyWaveBlue}`}><span className={style.containerKey}>TAB</span></div>
-            <div className={`${style.key} ${style.keyGreen}`}><span className={style.containerKey}>Q</span></div>
+            <div id='q' className={`${style.key} ${style.keyGreen}`}><span className={style.containerKey}>Q</span></div>
             <div className={`${style.key} ${style.keyBlue}`}><span className={style.containerKey}>W</span></div>
             <div className={`${style.key} ${style.keyPink}`}><span className={style.containerKey}>E</span></div>
             <div className={`${style.key} ${style.keyOrange}`}><span className={style.containerKey}>R</span></div>

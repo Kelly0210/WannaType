@@ -21,7 +21,9 @@ class CustomTextArea extends React.Component {
         let lesson = this.state.lesson;
         let stateValue = this.state.value;
         let inputValue = event.target.value;
+        
         this.setState({ value: event.target.value });
+        this.props.passLastLetter(inputValue.slice(-1));
 
         if (inputValue.slice(-1) !== lesson[stateValue.length]) {
             this.setState({ mistakes: this.state.mistakes + 1 });
