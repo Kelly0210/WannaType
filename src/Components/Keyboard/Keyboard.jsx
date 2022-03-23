@@ -4,74 +4,80 @@ import style from './Keyboard.module.css'
 
 const Keyboard = (props) => {
 
+
+
 if (props.mistake) {
-    console.log(document.getElementById(`${props.lastLetter}`))
+    let docum = document.getElementById(props.lastLetter);
+    docum.classList.add(`${style.wrongKey}`);
+} else {
+    // let docum = document.getElementById(props.lastLetter);
+    // docum.classList.add(`${style.nextKey}`);
 }
     return (
         <div className={style.keyboardContainer}>
         <div className={style.row}>
-            <div className={`${style.key} ${style.keyWaveBlue}`}><span className={style.containerKey}>`</span></div>
-            <div className={`${style.key} ${style.keyGreen}`}><span className={style.containerKey}>1</span></div>
-            <div className={`${style.key} ${style.keyGreen}`}><span className={style.containerKey}>2</span></div>
-            <div className={`${style.key} ${style.keyBlue}`}><span className={style.containerKey}>3</span></div>
-            <div className={`${style.key} ${style.keyPink}`}><span className={style.containerKey}>4</span></div>
-            <div className={`${style.key} ${style.keyOrange}`}><span className={style.containerKey}>5</span></div>
-            <div className={`${style.key} ${style.keyOrange}`}><span className={style.containerKey}>6</span></div>
-            <div className={`${style.key} ${style.keyYellow}`}><span className={style.containerKey}>7</span></div>
-            <div className={`${style.key} ${style.keyPink}`}><span className={style.containerKey}>8</span></div>
-            <div className={`${style.key} ${style.keyBlue}`}><span className={style.containerKey}>9</span></div>
-            <div className={`${style.key} ${style.keyGreen}`}><span className={style.containerKey}>0</span></div>
-            <div className={`${style.key} ${style.keyGreen}`}><span className={style.containerKey}>-</span></div>
-            <div className={`${style.key} ${style.keyGreen}`}><span className={style.containerKey}>=</span></div>
-            <div className={`${style.key} ${style.keyBackSpace} ${style.keyWaveBlue}`}><span className={style.containerKey}>←</span></div>
+            <div id='`' className={`${style.key} ${style.keyWaveBlue}`}>`</div>
+            <div id='1' className={`${style.key} ${style.keyGreen}`}>1</div>
+            <div id='2' className={`${style.key} ${style.keyGreen}`}>2</div>
+            <div id='3' className={`${style.key} ${style.keyBlue}`}>3</div>
+            <div id='4' className={`${style.key} ${style.keyPink}`}>4</div>
+            <div id='5' className={`${style.key} ${style.keyOrange}`}>5</div>
+            <div id='6' className={`${style.key} ${style.keyOrange}`}>6</div>
+            <div id='7' className={`${style.key} ${style.keyYellow}`}>7</div>
+            <div id='8' className={`${style.key} ${style.keyPink}`}>8</div>
+            <div id='9' className={`${style.key} ${style.keyBlue}`}>9</div>
+            <div id='0' className={`${style.key} ${style.keyGreen}`}>0</div>
+            <div id='-' className={`${style.key} ${style.keyGreen}`}>-</div>
+            <div id='=' className={`${style.key} ${style.keyGreen}`}>=</div>
+            <div className={`${style.key} ${style.keyBackSpace} ${style.keyWaveBlue}`}>←</div>
         </div>
         <div className={style.row}>
-            <div className={`${style.key} ${style.keyTab} ${style.keyWaveBlue}`}><span className={style.containerKey}>TAB</span></div>
-            <div id='q' className={`${style.key} ${style.keyGreen}`}><span className={style.containerKey}>Q</span></div>
-            <div className={`${style.key} ${style.keyBlue}`}><span className={style.containerKey}>W</span></div>
-            <div className={`${style.key} ${style.keyPink}`}><span className={style.containerKey}>E</span></div>
-            <div className={`${style.key} ${style.keyOrange}`}><span className={style.containerKey}>R</span></div>
-            <div className={`${style.key} ${style.keyOrange}`}><span className={style.containerKey}>T</span></div>
-            <div className={`${style.key} ${style.keyYellow}`}><span className={style.containerKey}>Y</span></div>
-            <div className={`${style.key} ${style.keyYellow}`}><span className={style.containerKey}>U</span></div>
-            <div className={`${style.key} ${style.keyPink}`}><span className={style.containerKey}>I</span></div>
-            <div className={`${style.key} ${style.keyBlue}`}><span className={style.containerKey}>O</span></div>
-            <div className={`${style.key} ${style.keyGreen}`}><span className={style.containerKey}>P</span></div>
-            <div className={`${style.key} ${style.keyGreen}`}><span className={style.containerKey}>[</span></div>
-            <div className={`${style.key} ${style.keyGreen}`}><span className={style.containerKey}>]</span></div>
-            <div className={`${style.key} ${style.keyWaveBlue}`}><span className={style.containerKey}>\</span></div>
+            <div className={`${style.key} ${style.keyTab} ${style.keyWaveBlue}`}>TAB</div>
+            <div id='q' className={`${style.key} ${style.keyGreen}`}>Q</div>
+            <div id='w' className={`${style.key} ${style.keyBlue}`}>W</div>
+            <div id='e' className={`${style.key} ${style.keyPink}`}>E</div>
+            <div id='r' className={`${style.key} ${style.keyOrange}`}>R</div>
+            <div id='t' className={`${style.key} ${style.keyOrange}`}>T</div>
+            <div id='y' className={`${style.key} ${style.keyYellow}`}>Y</div>
+            <div id='u' className={`${style.key} ${style.keyYellow}`}>U</div>
+            <div id='i' className={`${style.key} ${style.keyPink}`}>I</div>
+            <div id='o' className={`${style.key} ${style.keyBlue}`}>O</div>
+            <div id='p' className={`${style.key} ${style.keyGreen}`}>P</div>
+            <div id='[' className={`${style.key} ${style.keyGreen}`}>[</div>
+            <div id=']' className={`${style.key} ${style.keyGreen}`}>]</div>
+            <div id='\' className={`${style.key} ${style.keyWaveBlue}`}>\</div>
         </div>
         <div className={style.row}>
-            <div className={`${style.key} ${style.keyCaps} ${style.keyWaveBlue}`}><span className={style.containerKey}>CAPS</span></div>
-            <div className={`${style.key} ${style.keyGreen}`}><span className={style.containerKey}>A</span></div>
-            <div className={`${style.key} ${style.keyBlue}`}><span className={style.containerKey}>S</span></div>
-            <div className={`${style.key} ${style.keyPink}`}><span className={style.containerKey}>D</span></div>
-            <div className={`${style.key} ${style.keyOrange}`}><span className={style.containerKey}>F</span></div>
-            <div className={`${style.key} ${style.keyOrange}`}><span className={style.containerKey}>G</span></div>
-            <div className={`${style.key} ${style.keyYellow}`}><span className={style.containerKey}>H</span></div>
-            <div className={`${style.key} ${style.keyYellow}`}><span className={style.containerKey}>J</span></div>
-            <div className={`${style.key} ${style.keyPink}`}><span className={style.containerKey}>K</span></div>
-            <div className={`${style.key} ${style.keyBlue}`}><span className={style.containerKey}>L</span></div>
-            <div className={`${style.key} ${style.keyGreen}`}><span className={style.containerKey}>;</span></div>
-            <div className={`${style.key} ${style.keyGreen}`}><span className={style.containerKey}>'</span></div>
-            <div className={`${style.key} ${style.keyEnter} ${style.keyWaveBlue}`}><span className={style.containerKey}>ENTER</span></div>
+            <div className={`${style.key} ${style.keyCaps} ${style.keyWaveBlue}`}>CAPS</div>
+            <div id='a' className={`${style.key} ${style.keyGreen}`}>A</div>
+            <div id='s' className={`${style.key} ${style.keyBlue}`}>S</div>
+            <div id='d' className={`${style.key} ${style.keyPink}`}>D</div>
+            <div id='f' className={`${style.key} ${style.keyOrange}`}>F</div>
+            <div id='g' className={`${style.key} ${style.keyOrange}`}>G</div>
+            <div id='h' className={`${style.key} ${style.keyYellow}`}>H</div>
+            <div id='j' className={`${style.key} ${style.keyYellow}`}>J</div>
+            <div id='k' className={`${style.key} ${style.keyPink}`}>K</div>
+            <div id='l' className={`${style.key} ${style.keyBlue}`}>L</div>
+            <div id=';' className={`${style.key} ${style.keyGreen}`}>;</div>
+            <div id="'" className={`${style.key} ${style.keyGreen}`}>'</div>
+            <div className={`${style.key} ${style.keyEnter} ${style.keyWaveBlue}`}>ENTER</div>
         </div>
         <div className={style.row}>
-            <div className={`${style.key} ${style.keyShift} ${style.keyWaveBlue}`}><span className={style.containerKey}>SHIFT</span></div>
-            <div className={`${style.key} ${style.keyGreen}`}><span className={style.containerKey}>Z</span></div>
-            <div className={`${style.key} ${style.keyBlue}`}><span className={style.containerKey}>X</span></div>
-            <div className={`${style.key} ${style.keyPink}`}><span className={style.containerKey}>C</span></div>
-            <div className={`${style.key} ${style.keyOrange}`}><span className={style.containerKey}>V</span></div>
-            <div className={`${style.key} ${style.keyOrange}`}><span className={style.containerKey}>B</span></div>
-            <div className={`${style.key} ${style.keyYellow}`}><span className={style.containerKey}>N</span></div>
-            <div className={`${style.key} ${style.keyYellow}`}><span className={style.containerKey}>M</span></div>
-            <div className={`${style.key} ${style.keyPink}`}><span className={style.containerKey}>,</span></div>
-            <div className={`${style.key} ${style.keyBlue}`}><span className={style.containerKey}>.</span></div>
-            <div className={`${style.key} ${style.keyGreen}`}><span className={style.containerKey}>/</span></div>
-            <div className={`${style.key} ${style.keyShift} ${style.keyWaveBlue}`}><span className={style.containerKey}>SHIFT</span></div>
+            <div className={`${style.key} ${style.keyShift} ${style.keyWaveBlue}`}>SHIFT</div>
+            <div id='z' className={`${style.key} ${style.keyGreen}`}>Z</div>
+            <div id='x' className={`${style.key} ${style.keyBlue}`}>X</div>
+            <div id='c' className={`${style.key} ${style.keyPink}`}>C</div>
+            <div id='v' className={`${style.key} ${style.keyOrange}`}>V</div>
+            <div id='b' className={`${style.key} ${style.keyOrange}`}>B</div>
+            <div id='n' className={`${style.key} ${style.keyYellow}`}>N</div>
+            <div id='m' className={`${style.key} ${style.keyYellow}`}>M</div>
+            <div id=',' className={`${style.key} ${style.keyPink}`}>,</div>
+            <div id='.' className={`${style.key} ${style.keyBlue}`}>.</div>
+            <div id='/' className={`${style.key} ${style.keyGreen}`}>/</div>
+            <div className={`${style.key} ${style.keyShift} ${style.keyWaveBlue}`}>SHIFT</div>
         </div>
         <div className={style.row}>
-            <div className={`${style.key} ${style.keySpace} ${style.keyWaveBlue}`}></div>    
+            <div id=' ' className={`${style.key} ${style.keySpace} ${style.keyWaveBlue}`}> </div>    
         </div>
         </div>
         

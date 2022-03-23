@@ -8,21 +8,16 @@
     margin: 3px auto;
 }
 .key {
-    display: inline-block;
+    display: block;
+    position: relative;
+    float: left;
+    line-height: 45px;
+    border: 2px solid #2c3e50;
     position: relative;
     width: 46px;
     height: 46px;
     border-radius: 5px;
-    margin: 0px 3px;
-}
-
-.containerKey {
-    font-size: 17px;
-    position: absolute;
-
-    top: 50%;
-    right: 38%;
-    transform: translate(0, -50%);
+    margin: 0px 1px;
 }
 
 .keyGreen {
@@ -60,7 +55,7 @@
 }
 .keySpace {
     width: 400px;
-    text-align: center;
+    margin-left: 170px;
 }
 
 .nextKey {
@@ -73,4 +68,8 @@
 
 #kek {
     color: red;
+}
+
+#q, #a, #z {
+    background-color: #78e2aa;
 }
