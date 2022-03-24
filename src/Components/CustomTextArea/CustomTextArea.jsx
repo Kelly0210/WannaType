@@ -1,4 +1,5 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 import style from './CustomTextArea.module.css';
 
 
@@ -35,6 +36,7 @@ class CustomTextArea extends React.Component {
 
         if (stateValue.length === lesson.length) {
             console.log('You win!');
+            // <Redirect to='/training/lesson-1/chapter-2' />
         }
 
         if (this.state.mistakes === 2) {

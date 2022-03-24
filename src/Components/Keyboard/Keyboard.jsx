@@ -2,18 +2,28 @@ import React from 'react';
 import style from './Keyboard.module.css'
 
 
-const Keyboard = (props) => {
+class Keyboard extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            lastLetter: props.lastLetter,
+            mistake: props.mistake
+        }
+        this.handleChange = this.handleChange.bind(this);
+    }
 
+    handleChange() {
+        if(this.state.mistake) {
+            let docum = document.getElementById(this.state.lastLetter);
+            docum.classList.add(`${style.wrongKey}`);
+        } else {
+            //
+        }
+    }
 
-if (props.mistake) {
-    let docum = document.getElementById(props.lastLetter);
-    docum.classList.add(`${style.wrongKey}`);
-} else {
-    // let docum = document.getElementById(props.lastLetter);
-    // docum.classList.add(`${style.nextKey}`);
-}
-    return (
+    render() {
+        return (
         <div className={style.keyboardContainer}>
         <div className={style.row}>
             <div id='`' className={`${style.key} ${style.keyWaveBlue}`}>`</div>
@@ -82,6 +92,7 @@ if (props.mistake) {
         </div>
         
     )
+        }
 }
 
 export default Keyboard;

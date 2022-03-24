@@ -16,6 +16,7 @@
     opacity: 0.6;
     letter-spacing: 3px;
     margin: auto 0;
+    overflow: hidden;
     /* user-select: none; */
 }
 

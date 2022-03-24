@@ -27,7 +27,7 @@ class Main extends React.Component {
   }
 
   passLastLetter(lastLetter) {
-    this.setState({lastLetter: lastLetter});
+    this.setState({ lastLetter: lastLetter });
   }
 
   render() {
