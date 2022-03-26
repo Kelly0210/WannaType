@@ -1,5 +1,6 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
+import FinishBoard from '../FinishBoard/FinishBoard';
 import style from './CustomTextArea.module.css';
 
 
@@ -62,6 +63,7 @@ class CustomTextArea extends React.Component {
                     onChange={this.handleChange}
                     value={this.state.value}
                 />
+                {this.state.disabled && <FinishBoard />}
             </div>
         )
     }

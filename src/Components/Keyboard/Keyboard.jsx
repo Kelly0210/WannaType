@@ -6,16 +6,16 @@ const Keyboard = (props) => {
 
     
 if (props.lastLetter != false) {
-    let docum = document.getElementById(props.lastLetter);
+    let pressedButton = document.getElementById(props.lastLetter);
+
     if (props.mistake) {
-        docum.classList.add(`${style.wrongKey}`);
-        // docum.classList.remove(`${style.wrongKey}`);
-        console.log('wrong')
+        pressedButton.classList.add(`${style.wrongKey}`);
+        setTimeout(() => {pressedButton.classList.remove(`${style.wrongKey}`)}, 1500);
+        console.log('wrong');
     } else {
-        docum.classList.add(`${style.correctKey}`);
-        // let docum1 = document.getElementById(props.lastLetter);
-        console.log('correct')
-        // docum1.classList.remove(`${style.nextKey}`);
+        pressedButton.classList.add(`${style.correctKey}`);
+        setTimeout(() => {pressedButton.classList.remove(`${style.correctKey}`)}, 1500);
+        console.log('correct');
 
     }
 }
