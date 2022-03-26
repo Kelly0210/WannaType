@@ -15,7 +15,7 @@ class Main extends React.Component {
     super()
     this.state = {
       lesson: generateLesson(Lesson1, 30),
-      mistake: false,
+      mistake: '',
       lastLetter: ''
     }
     this.mistakeAddClass = this.mistakeAddClass.bind(this);
@@ -35,9 +35,11 @@ class Main extends React.Component {
       <main className={style.main}>
         <Display lesson={this.state.lesson}
                  mistake={this.state.mistake} />
+
         <CustomTextArea lesson={this.state.lesson}
                         mistakeAddClass={this.mistakeAddClass}
                         passLastLetter={this.passLastLetter} />
+
         <Keyboard mistake={this.state.mistake}
                   lastLetter={this.state.lastLetter}/>
       </main>

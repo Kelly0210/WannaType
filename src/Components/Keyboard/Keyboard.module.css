@@ -2,11 +2,13 @@
     padding-top: 7px;
     text-align: center;
 }
+
 .row {
     width: 770px;
     height: 50px;
     margin: 3px auto;
 }
+
 .key {
     display: block;
     position: relative;
@@ -23,49 +25,91 @@
 .keyGreen {
     background-color: #78e2aa;
 }
+
 .keyPink {
-    background-color: #f69ec4;;
+    background-color: #f69ec4;
+    ;
 }
+
 .keyOrange {
-    background-color: #ffc07e;;
+    background-color: #ffc07e;
+    ;
 }
+
 .keyYellow {
     background-color: #ffef7e;
 }
+
 .keyBlue {
     background-color: #63e3ff;
 }
+
 .keyWaveBlue {
     background-color: #9ad3fa;
 }
+
 .keyBackSpace {
     width: 72px;
 }
+
 .keyTab {
     width: 72px;
 }
+
 .keyCaps {
     width: 87px;
 }
+
 .keyEnter {
     width: 85px;
 }
+
 .keyShift {
     width: 114px;
 }
+
 .keySpace {
     width: 400px;
     margin-left: 170px;
 }
 
-.nextKey {
-    border: 3px solid rgb(0, 102, 255);
+@keyframes pulse-red {
+    0% {
+        background: rgba(255, 82, 82, 1);
+        box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 82, 82, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
+    }
 }
+
 
 .wrongKey {
-    border: 3px solid crimson;
+    box-shadow: 0 0 0 0 rgba(255, 82, 82, 1);
+    animation: pulse-red 2s;
 }
 
-#q, #a, #z {
-    background-color: #78e2aa;
+@keyframes pulse-green {
+    0% {
+        background: rgba(51, 217, 178, 1);
+        box-shadow: 0 0 0 0 rgba(51, 217, 178, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(51, 217, 178, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(51, 217, 178, 0);
+    }
+}
+
+.correctKey { 
+    box-shadow: 0 0 0 0 rgba(51, 217, 178, 1);
+    animation: pulse-green 2s;
 }
