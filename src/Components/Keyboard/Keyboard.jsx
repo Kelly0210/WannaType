@@ -11,12 +11,9 @@ if (props.lastLetter != false) {
     if (props.mistake) {
         pressedButton.classList.add(`${style.wrongKey}`);
         setTimeout(() => {pressedButton.classList.remove(`${style.wrongKey}`)}, 1500);
-        console.log('wrong');
     } else {
         pressedButton.classList.add(`${style.correctKey}`);
         setTimeout(() => {pressedButton.classList.remove(`${style.correctKey}`)}, 1500);
-        console.log('correct');
-
     }
 }
 

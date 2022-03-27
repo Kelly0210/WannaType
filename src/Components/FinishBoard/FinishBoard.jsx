@@ -1,8 +1,12 @@
 import React from 'react';
+import style from './FinishBoard.module.css'
+
 
 const FinishBoard = () => {
     return (
-        <div>booba v2</div>
+        <div className={style.boardBox}>
+        <img src='https://image.pngaaa.com/345/818345-middle.png' className={style.reloadIcon}/>
+        </div>
     )
 }
 

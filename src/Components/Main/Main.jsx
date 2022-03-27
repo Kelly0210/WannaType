@@ -15,7 +15,7 @@ class Main extends React.Component {
     super()
     this.state = {
       lesson: generateLesson(Lesson1, 30),
-      mistake: '',
+      mistake: false,
       lastLetter: ''
     }
     this.mistakeAddClass = this.mistakeAddClass.bind(this);
