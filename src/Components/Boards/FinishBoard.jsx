@@ -1,12 +1,16 @@
 import React from 'react';
 import style from './FinishBoard.module.css'
+import reload from '../../assets/img/reload.png'
 
 
 const FinishBoard = (props) => {
-    console.log(props.result)
+    const reloadLesson = () => {
+        props.reloadLesson();
+    }
+
     return (
         <div className={style.boardBox}>
-        {props.result ? '' : <img src='https://image.pngaaa.com/345/818345-middle.png' className={style.reloadIcon}/>}
+        {props.result ? 'You win' : <img src={reload} onClick={reloadLesson} className={style.reloadIcon}/>}
         </div>
     )
 }

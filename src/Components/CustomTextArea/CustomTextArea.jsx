@@ -21,6 +21,7 @@ class CustomTextArea extends React.Component {
         this.handleDisable = this.handleDisable.bind(this);
         this.handleMistake = this.handleMistake.bind(this);
         this.handleComplete = this.handleComplete.bind(this);
+        this.reloadLesson = this.reloadLesson.bind(this);
     }
 
     handleChange(event) {
@@ -33,20 +34,21 @@ class CustomTextArea extends React.Component {
 
         this.handleMistake(inputValue, stateValue, lesson);
         this.handleComplete(stateValue, lesson);
-        this.handleDisable();
     }
 
     handleDisable() {
-        if (this.state.mistakes === 2) {
-            this.setState({ disabled: true });
-        }
+        this.setState({ disabled: true });
     }
 
     handleMistake(inputValue, stateValue, lesson) {
+
+        if (this.state.mistakes === 2) {
+            this.handleDisable();
+        }
+
         if (inputValue.slice(-1) !== lesson[stateValue.length]) {
             this.setState({ mistakes: this.state.mistakes + 1 });
             this.props.handleMistake(true);
-            // this.state.mistakes++;
         } else {
             this.props.handleMistake(false);
         }
@@ -60,6 +62,10 @@ class CustomTextArea extends React.Component {
         }
     }
 
+    reloadLesson() {
+        this.props.reloadLesson();
+    }
+
     render() {
         return (
             <div className={style.textareaContainer}>
@@ -70,7 +76,8 @@ class CustomTextArea extends React.Component {
                     onChange={this.handleChange}
                     value={this.state.value}
                 />
-                {this.state.disabled && <FinishBoard result={this.state.win} />}
+                {this.state.disabled && <FinishBoard result={this.state.win}
+                    reloadLesson={this.reloadLesson} />}
             </div>
         )
     }

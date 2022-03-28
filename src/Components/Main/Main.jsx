@@ -16,10 +16,11 @@ class Main extends React.Component {
     this.state = {
       lesson: generateLesson(Lesson1, 30),
       mistake: false,
-      lastLetter: ''
+      lastLetter: '',
     }
     this.handleMistake = this.handleMistake.bind(this);
     this.passLastLetter = this.passLastLetter.bind(this);
+    this.reloadLesson = this.reloadLesson.bind(this);
   }
 
   handleMistake(boolean) {
@@ -30,6 +31,10 @@ class Main extends React.Component {
     this.setState({ lastLetter: lastLetter });
   }
 
+  reloadLesson() {
+    window.location.reload();
+  }
+
   render() {
     return (
       <main className={style.main}>
@@ -38,7 +43,8 @@ class Main extends React.Component {
 
         <CustomTextArea lesson={this.state.lesson}
           handleMistake={this.handleMistake}
-          passLastLetter={this.passLastLetter} />
+          passLastLetter={this.passLastLetter}
+          reloadLesson={this.reloadLesson} />
 
         <Keyboard mistake={this.state.mistake}
           lastLetter={this.state.lastLetter} />
