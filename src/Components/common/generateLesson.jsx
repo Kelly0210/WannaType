@@ -6,12 +6,13 @@ export const generateLesson = (initialLetters = 'Please, reload page', levelOfDi
 
     switch (levelOfDifficulty) {
         case 'easy': levelOfDifficulty = 120;
+        spacesBetweenWords = 4;
         break;
         case 'average': levelOfDifficulty = 240;
         spacesBetweenWords = 6;
         break;
         case 'hard': levelOfDifficulty = 480;
-        let spacesBetweenWords = 8;
+        spacesBetweenWords = 8;
         break;
     }
 

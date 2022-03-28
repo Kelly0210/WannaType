@@ -41,7 +41,7 @@
 .cursor::after {
     content: '|';
     font-size: 40px;
-    /* animation: cursor-blink 2s infinite; */
+    animation: cursor-blink 2s infinite;
 }
 
 @keyframes pulse-red {

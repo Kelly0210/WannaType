@@ -18,11 +18,11 @@ class Main extends React.Component {
       mistake: false,
       lastLetter: ''
     }
-    this.mistakeAddClass = this.mistakeAddClass.bind(this);
+    this.handleMistake = this.handleMistake.bind(this);
     this.passLastLetter = this.passLastLetter.bind(this);
   }
 
-  mistakeAddClass(boolean) {
+  handleMistake(boolean) {
     this.setState({ mistake: boolean });
   }
 
@@ -34,14 +34,14 @@ class Main extends React.Component {
     return (
       <main className={style.main}>
         <Display lesson={this.state.lesson}
-                 mistake={this.state.mistake} />
+          mistake={this.state.mistake} />
 
         <CustomTextArea lesson={this.state.lesson}
-                        mistakeAddClass={this.mistakeAddClass}
-                        passLastLetter={this.passLastLetter} />
+          handleMistake={this.handleMistake}
+          passLastLetter={this.passLastLetter} />
 
         <Keyboard mistake={this.state.mistake}
-                  lastLetter={this.state.lastLetter}/>
+          lastLetter={this.state.lastLetter} />
       </main>
     )
   }

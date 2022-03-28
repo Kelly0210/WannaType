@@ -1,28 +1,47 @@
 import React from 'react';
 import style from './Display.module.css';
+import * as PropTypes from 'prop-types';
 
-const Display = ({lesson, mistake}) => {
+class Display extends React.Component {
 
-    const displayBox = document.getElementById('displayBox');
-    const leftText = document.getElementById('leftText');
-    const finishText = document.getElementById('finishText');
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        let {lesson, mistake} = this.props;
 
-    if (mistake) {
-        displayBox.classList.add(`${style.displayMistake}`);
-        leftText.textContent = leftText.textContent.slice(1);
-        
-        finishText.textContent += leftText.textContent[0];
-        setTimeout(() => {displayBox.classList.remove(`${style.displayMistake}`)}, 1500);
+        const displayBox = document.getElementById('displayBox');
+        const leftText = document.getElementById('leftText');
+        const finishText = document.getElementById('finishText');
+
+        if (mistake) {
+            displayBox.classList.add(`${style.displayMistake}`);
+            leftText.textContent = leftText.textContent.slice(1);
+
+            finishText.textContent += leftText.textContent[0];
+            setTimeout(() => {
+                displayBox.classList.remove(`${style.displayMistake}`)
+            }, 1500);
+        } else {
+            // displayBox.classList.add(`${style.displayMistake}`);
+            finishText.textContent += leftText.textContent[0];
+            leftText.textContent = leftText.textContent.slice(1);
+        }
     }
 
-    return (
-        <div id='displayBox' className={style.displayBox} >
+    render() {
+        let {lesson, mistake} = this.props;
+        return (
+            <div id='displayBox' className={style.displayBox}>
             <span className={style.displayText}>
-                <span id='finishText' className={style.cursor}>test</span>
+                <span id='finishText' className={style.cursor}/>
                 <span id='leftText' className={style.unfinishedText}>{lesson}</span>
             </span>
-        </div>
-    )
+            </div>
+        )
+    }
+}
+
+Display.propTypes = {
+    lesson: PropTypes.string,
+    mistake: PropTypes.bool
 }
 
 export default Display;

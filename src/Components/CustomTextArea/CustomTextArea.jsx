@@ -1,6 +1,7 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
-import FinishBoard from '../FinishBoard/FinishBoard';
+import * as PropTypes from 'prop-types';
+import FinishBoard from '../Boards/FinishBoard';
 import style from './CustomTextArea.module.css';
 
 
@@ -13,10 +14,13 @@ class CustomTextArea extends React.Component {
             lesson: this.props.lesson,
             mistakes: 0,
             disabled: false,
+            win: false,
+            wpm: 0,
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleDisable = this.handleDisable.bind(this);
-        this.mistakeAddClass = this.mistakeAddClass.bind(this);
+        this.handleMistake = this.handleMistake.bind(this);
+        this.handleComplete = this.handleComplete.bind(this);
     }
 
     handleChange(event) {
@@ -27,30 +31,33 @@ class CustomTextArea extends React.Component {
         this.setState({ value: event.target.value });
         this.props.passLastLetter(inputValue.slice(-1));
 
-        if (inputValue.slice(-1) !== lesson[stateValue.length]) {
-            this.setState({ mistakes: this.state.mistakes + 1 });
-            this.mistakeAddClass(true);
-            // this.state.mistakes++;
-        } else {
-            this.mistakeAddClass(false);
-        }
-
-        if (stateValue.length === lesson.length) {
-            console.log('You win!');
-            // <Redirect to='/training/lesson-1/chapter-2' />
-        }
-
-        if (this.state.mistakes === 2) {
-            this.handleDisable();
-        }
+        this.handleMistake(inputValue, stateValue, lesson);
+        this.handleComplete(stateValue, lesson);
+        this.handleDisable();
     }
 
     handleDisable() {
-        this.setState({ disabled: true });
+        if (this.state.mistakes === 2) {
+            this.setState({ disabled: true });
+        }
     }
 
-    mistakeAddClass(boolean) {
-        this.props.mistakeAddClass(boolean);
+    handleMistake(inputValue, stateValue, lesson) {
+        if (inputValue.slice(-1) !== lesson[stateValue.length]) {
+            this.setState({ mistakes: this.state.mistakes + 1 });
+            this.props.handleMistake(true);
+            // this.state.mistakes++;
+        } else {
+            this.props.handleMistake(false);
+        }
+    }
+
+    handleComplete(stateValue, lesson) {
+        if (stateValue.length === lesson.length) {
+            this.setState({ win: true });
+            this.handleDisable();
+            // <Redirect to='/training/lesson-1/chapter-2' />
+        }
     }
 
     render() {
@@ -63,10 +70,16 @@ class CustomTextArea extends React.Component {
                     onChange={this.handleChange}
                     value={this.state.value}
                 />
-                {this.state.disabled && <FinishBoard />}
+                {this.state.disabled && <FinishBoard result={this.state.win} />}
             </div>
         )
     }
+}
+
+CustomTextArea.propTypes = {
+    lesson: PropTypes.string,
+    mistake: PropTypes.bool,
+    mistakeAddClass: PropTypes.any
 }
 
 export default CustomTextArea;
