@@ -6,6 +6,7 @@ import CustomTextArea from '../CustomTextArea/CustomTextArea';
 import Keyboard from '../Keyboard/Keyboard';
 import { generateLesson } from '../common/generateLesson';
 import { Lesson1 } from '../common/Lessons';
+import StatusBar from '../StatusBar/StatusBar';
 
 
 
@@ -38,6 +39,9 @@ class Main extends React.Component {
   render() {
     return (
       <main className={style.main}>
+
+        <StatusBar />
+
         <Display lesson={this.state.lesson}
           mistake={this.state.mistake} />
 
