@@ -11,21 +11,21 @@ class CustomTextArea extends React.Component {
         super(props);
         this.state = {
             value: '',
-            lesson: this.props.lesson,
-            mistakes: 0,
             disabled: false,
+            
             win: false,
             wpm: 0,
         }
+
         this.handleChange = this.handleChange.bind(this);
-        this.handleDisable = this.handleDisable.bind(this);
         this.handleMistake = this.handleMistake.bind(this);
         this.handleComplete = this.handleComplete.bind(this);
+        this.handleDisable = this.handleDisable.bind(this);
         this.reloadLesson = this.reloadLesson.bind(this);
     }
 
     handleChange(event) {
-        let lesson = this.state.lesson;
+        let lesson = this.props.lesson;
         let stateValue = this.state.value;
         let inputValue = event.target.value;
 
@@ -36,18 +36,14 @@ class CustomTextArea extends React.Component {
         this.handleComplete(stateValue, lesson);
     }
 
-    handleDisable() {
-        this.setState({ disabled: true });
-    }
-
     handleMistake(inputValue, stateValue, lesson) {
 
-        if (this.state.mistakes === 2) {
+        if (this.props.numberOfMistake === 2) {
             this.handleDisable();
         }
 
         if (inputValue.slice(-1) !== lesson[stateValue.length]) {
-            this.setState({ mistakes: this.state.mistakes + 1 });
+            this.props.mistakeCounter();
             this.props.handleMistake(true);
         } else {
             this.props.handleMistake(false);
@@ -60,6 +56,10 @@ class CustomTextArea extends React.Component {
             this.handleDisable();
             // <Redirect to='/training/lesson-1/chapter-2' />
         }
+    }
+
+    handleDisable() {
+        this.setState({ disabled: true });
     }
 
     reloadLesson() {
@@ -85,8 +85,9 @@ class CustomTextArea extends React.Component {
 
 CustomTextArea.propTypes = {
     lesson: PropTypes.string,
-    mistake: PropTypes.bool,
-    mistakeAddClass: PropTypes.any
+    numberOfMistake: PropTypes.number,
+    handleMistake: PropTypes.func,
+    mistakeCounter: PropTypes.func
 }
 
 export default CustomTextArea;

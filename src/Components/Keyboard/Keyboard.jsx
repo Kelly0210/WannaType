@@ -6,10 +6,10 @@ import * as PropTypes from 'prop-types';
 class Keyboard extends React.Component {
 
     componentDidUpdate() {
-        let { lastLetter, mistake } = this.props;
+        let { lastLetter, mistakeHappend } = this.props;
         let pressedButton = document.getElementById(lastLetter);
 
-        if (mistake) {
+        if (mistakeHappend) {
             pressedButton.classList.add(`${style.wrongKey}`);
             setTimeout(() => { pressedButton.classList.remove(`${style.wrongKey}`) }, 1500);
         }
@@ -93,7 +93,7 @@ class Keyboard extends React.Component {
 
 Keyboard.propTypes = {
     lastLetter: PropTypes.string,
-    mistake: PropTypes.bool
+    mistakeHappend: PropTypes.bool
 }
 
 export default Keyboard;

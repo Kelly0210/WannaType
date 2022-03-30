@@ -1,3 +1,7 @@
 .statusBox {
     background-color: white;
+    border-radius: 5px;
+    width: 780px;
+    height: 40px;
+    margin: 0 auto;
 }

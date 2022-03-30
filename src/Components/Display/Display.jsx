@@ -5,13 +5,13 @@ import * as PropTypes from 'prop-types';
 class Display extends React.Component {
 
     componentDidUpdate(prevProps, prevState, snapshot) {
-        let {lesson, mistake} = this.props;
+        let {lesson, mistakeHappend} = this.props;
 
         const displayBox = document.getElementById('displayBox');
         const leftText = document.getElementById('leftText');
         const finishText = document.getElementById('finishText');
 
-        if (mistake) {
+        if (mistakeHappend) {
             displayBox.classList.add(`${style.displayMistake}`);
             leftText.textContent = leftText.textContent.slice(1);
 
@@ -27,7 +27,7 @@ class Display extends React.Component {
     }
 
     render() {
-        let {lesson, mistake} = this.props;
+        let {lesson, mistakeHappend} = this.props;
         return (
             <div id='displayBox' className={style.displayBox}>
             <span className={style.displayText}>
@@ -41,7 +41,7 @@ class Display extends React.Component {
 
 Display.propTypes = {
     lesson: PropTypes.string,
-    mistake: PropTypes.bool
+    mistakeHappend: PropTypes.bool
 }
 
 export default Display;

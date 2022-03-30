@@ -16,16 +16,23 @@ class Main extends React.Component {
     super()
     this.state = {
       lesson: generateLesson(Lesson1, 30),
-      mistake: false,
+      mistakeHappend: false,
+      numberOfMistake: 0,
       lastLetter: '',
     }
+    
     this.handleMistake = this.handleMistake.bind(this);
     this.passLastLetter = this.passLastLetter.bind(this);
     this.reloadLesson = this.reloadLesson.bind(this);
+    this.mistakeCounter = this.mistakeCounter.bind(this);
   }
 
   handleMistake(boolean) {
-    this.setState({ mistake: boolean });
+    this.setState({ mistakeHappend: boolean });
+  }
+
+  mistakeCounter() {
+    this.setState({ numberOfMistake: this.state.numberOfMistake + 1 });
   }
 
   passLastLetter(lastLetter) {
@@ -40,17 +47,23 @@ class Main extends React.Component {
     return (
       <main className={style.main}>
 
-        <StatusBar />
+        <StatusBar numberOfMistake={this.state.numberOfMistake} />
 
         <Display lesson={this.state.lesson}
-          mistake={this.state.mistake} />
+          mistakeHappend={this.state.mistakeHappend} />
 
-        <CustomTextArea lesson={this.state.lesson}
+        <CustomTextArea
           handleMistake={this.handleMistake}
-          passLastLetter={this.passLastLetter}
-          reloadLesson={this.reloadLesson} />
+          mistakeCounter={this.mistakeCounter}
+          numberOfMistake={this.state.numberOfMistake}
 
-        <Keyboard mistake={this.state.mistake}
+          lesson={this.state.lesson}
+          reloadLesson={this.reloadLesson}
+
+          passLastLetter={this.passLastLetter}
+        />
+
+        <Keyboard mistakeHappend={this.state.mistakeHappend}
           lastLetter={this.state.lastLetter} />
       </main>
     )
