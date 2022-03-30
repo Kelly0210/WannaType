@@ -22,6 +22,7 @@ class CustomTextArea extends React.Component {
         this.handleComplete = this.handleComplete.bind(this);
         this.handleDisable = this.handleDisable.bind(this);
         this.reloadLesson = this.reloadLesson.bind(this);
+        this.completionPercentage = this.completionPercentage.bind(this);
     }
 
     handleChange(event) {
@@ -34,6 +35,7 @@ class CustomTextArea extends React.Component {
 
         this.handleMistake(inputValue, stateValue, lesson);
         this.handleComplete(stateValue, lesson);
+        this.completionPercentage(stateValue, lesson);
     }
 
     handleMistake(inputValue, stateValue, lesson) {
@@ -56,6 +58,11 @@ class CustomTextArea extends React.Component {
             this.handleDisable();
             // <Redirect to='/training/lesson-1/chapter-2' />
         }
+    }
+
+    completionPercentage(stateValue, lesson) {
+        let percentage = Math.ceil(stateValue.length / lesson.length * 100);
+        this.props.completionPercentage(percentage);
     }
 
     handleDisable() {
@@ -87,7 +94,8 @@ CustomTextArea.propTypes = {
     lesson: PropTypes.string,
     numberOfMistake: PropTypes.number,
     handleMistake: PropTypes.func,
-    mistakeCounter: PropTypes.func
+    mistakeCounter: PropTypes.func,
+    completionPercentage: PropTypes.func,
 }
 
 export default CustomTextArea;

@@ -19,12 +19,14 @@ class Main extends React.Component {
       mistakeHappend: false,
       numberOfMistake: 0,
       lastLetter: '',
+      percentage: 0,
     }
-    
+
     this.handleMistake = this.handleMistake.bind(this);
     this.passLastLetter = this.passLastLetter.bind(this);
     this.reloadLesson = this.reloadLesson.bind(this);
     this.mistakeCounter = this.mistakeCounter.bind(this);
+    this.completionPercentage = this.completionPercentage.bind(this);
   }
 
   handleMistake(boolean) {
@@ -36,7 +38,11 @@ class Main extends React.Component {
   }
 
   passLastLetter(lastLetter) {
-    this.setState({ lastLetter: lastLetter });
+    this.setState({ lastLetter });
+  }
+
+  completionPercentage(percentage) {
+    this.setState({ percentage });
   }
 
   reloadLesson() {
@@ -47,7 +53,8 @@ class Main extends React.Component {
     return (
       <main className={style.main}>
 
-        <StatusBar numberOfMistake={this.state.numberOfMistake} />
+        <StatusBar numberOfMistake={this.state.numberOfMistake}
+          percentage={this.state.percentage} />
 
         <Display lesson={this.state.lesson}
           mistakeHappend={this.state.mistakeHappend} />
@@ -60,6 +67,7 @@ class Main extends React.Component {
           lesson={this.state.lesson}
           reloadLesson={this.reloadLesson}
 
+          completionPercentage={this.completionPercentage}
           passLastLetter={this.passLastLetter}
         />
 
