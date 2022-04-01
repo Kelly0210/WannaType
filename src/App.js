@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Component404 from './Components/common/Component404';
@@ -8,9 +8,11 @@ import Main from './Components/Main/Main';
 import Home from './Components/Home/Home';
 import Chapters from './Components/Chapters/Chapters';
 import FallingKeys from './Components/Games/FallingKeys';
+import Fallback from './Components/common/Fallback';
 
 const App = () => {
   return (
+    <Suspense fallback={<Fallback />}>
     <div className='container'>
       <BrowserRouter>
         <Header />
@@ -26,6 +28,7 @@ const App = () => {
         <Footer />
       </BrowserRouter>
     </div>
+    </Suspense>
   );
 }
 

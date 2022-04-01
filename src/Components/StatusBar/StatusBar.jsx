@@ -11,7 +11,7 @@ class StatusBar extends React.Component {
         return (
             <div className={style.statusBox}>
                 <span>Number of mistakes: {this.props.numberOfMistake}</span>
-                <span> Process: {this.props.percentage}/100%</span>
+                <span> Process: {this.props.percentage}%</span>
             </div>
         )
     }
