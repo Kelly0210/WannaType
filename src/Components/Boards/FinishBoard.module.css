@@ -1,25 +1,45 @@
 .boardBox {
+  display: grid;
+  grid-template-columns: 0.5fr 2.1fr 0.4fr;
+  grid-template-rows: 0.7fr 1.3fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "arrowLeft result arrowRight"
+    "arrowLeft reload arrowRight"
+    "arrowLeft tips arrowRight";
+
   width: 1000px;
   height: 500px;
   background-color: white;
   border-radius: 10px;
   position: absolute;
-  top: 25%;
+  top: 28%;
   left: 28%;
   z-index: 1;
 }
 
 .reloadIcon {
+  grid-area: reload;
+  margin: 0 auto;
   width: 200px;
+  opacity: 0.8;
+}
+
+.reloadIcon:hover {
+  opacity: 1;
 }
 
 .result {
+  grid-area: result;
   text-transform: uppercase;
   font-size: 50px;
 }
 
-.arrowRight {
-  float: right;
+.arrowRightBox {
+  grid-area: arrowRight;
+}
+
+.arrowRightBox img {
   height: 480px;
   border-radius: inherit;
   width: 110px;
@@ -27,19 +47,22 @@
   padding: 10px;
 }
 
-.arrowLeft {
-  float: left;
-  height: 480px;
-  border-radius: inherit;
-  width: 110px;
-  opacity: 0.8;
-  padding: 10px;
-}
-
-.arrowLeft:hover {
+.arrowRightBox img:hover {
   opacity: 1;
 }
 
-.arrowRight:hover {
+.arrowLeftBox {
+  grid-area: arrowLeft;
+}
+
+.arrowLeftBox img {
+  height: 480px;
+  border-radius: inherit;
+  width: 110px;
+  opacity: 0.8;
+  padding: 10px;
+}
+
+.arrowLeftBox img:hover {
   opacity: 1;
 }

@@ -1,8 +1,24 @@
 .statusBox {
+    display: flex;
     background-color: white;
     border-radius: 5px;
     width: 780px;
     height: 40px;
     margin: 0 auto;
-    justify-content: space-between;
+    justify-content: space-around;
+}
+
+.heart {
+    width: 30px;
+    padding: 5px 3px;
+}
+
+.percentageBox {
+    margin: 0 auto;
+    line-height: 40px;
+}
+
+.cpmBox {
+    margin: 0 auto;
+    line-height: 40px;
 }
