@@ -12,9 +12,9 @@ class CustomTextArea extends React.Component {
         this.state = {
             value: '',
             disabled: false,
-            
+            startTime: new Date().getTime(),
             win: false,
-            wpm: 0,
+            cpm: 0,
         }
 
         this.handleChange = this.handleChange.bind(this);
@@ -23,12 +23,15 @@ class CustomTextArea extends React.Component {
         this.handleDisable = this.handleDisable.bind(this);
         this.reloadLesson = this.reloadLesson.bind(this);
         this.completionPercentage = this.completionPercentage.bind(this);
+        this.charactersPerMinute = this.charactersPerMinute.bind(this);
     }
 
     handleChange(event) {
         let lesson = this.props.lesson;
         let stateValue = this.state.value;
+        let startTime = this.state.startTime;
         let inputValue = event.target.value;
+
 
         this.setState({ value: event.target.value });
         this.props.passLastLetter(inputValue.slice(-1));
@@ -36,6 +39,7 @@ class CustomTextArea extends React.Component {
         this.handleMistake(inputValue, stateValue, lesson);
         this.handleComplete(stateValue, lesson);
         this.completionPercentage(stateValue, lesson);
+        this.charactersPerMinute(startTime, inputValue);
     }
 
     handleMistake(inputValue, stateValue, lesson) {
@@ -63,6 +67,14 @@ class CustomTextArea extends React.Component {
     completionPercentage(stateValue, lesson) {
         let percentage = Math.ceil(stateValue.length / lesson.length * 100);
         this.props.completionPercentage(percentage);
+    }
+
+    charactersPerMinute(startTime, inputValue) {
+        let timePassedMs = new Date().getTime();
+        let timePassedMin = (timePassedMs - startTime) / 1000 / 60;
+        this.setState({cpm: Math.ceil(inputValue.length / timePassedMin)});
+
+        this.props.charactersPerMinute(this.state.cpm);
     }
 
     handleDisable() {

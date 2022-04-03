@@ -4,7 +4,7 @@ import * as PropTypes from 'prop-types';
 
 class Display extends React.Component {
 
-    componentDidUpdate(prevProps, prevState, snapshot) {
+    componentDidUpdate() {
         let {lesson, mistakeHappend} = this.props;
 
         const displayBox = document.getElementById('displayBox');

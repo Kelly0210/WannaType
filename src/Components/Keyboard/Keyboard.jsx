@@ -5,19 +5,19 @@ import * as PropTypes from 'prop-types';
 
 class Keyboard extends React.Component {
 
-    componentDidUpdate() {
-        let { lastLetter, mistakeHappend } = this.props;
-        let pressedButton = document.getElementById(lastLetter);
+    // componentDidUpdate() {
+    //     let { lastLetter, mistakeHappend } = this.props;
+    //     let pressedButton = document.getElementById(lastLetter);
 
-        if (mistakeHappend) {
-            pressedButton.classList.add(`${style.wrongKey}`);
-            setTimeout(() => { pressedButton.classList.remove(`${style.wrongKey}`) }, 1500);
-        }
-        else {
-            pressedButton.classList.add(`${style.correctKey}`);
-            setTimeout(() => { pressedButton.classList.remove(`${style.correctKey}`) }, 1500);
-        }
-    }
+    //     if (mistakeHappend) {
+    //         pressedButton.classList.add(`${style.wrongKey}`);
+    //         setTimeout(() => { pressedButton.classList.remove(`${style.wrongKey}`) }, 1500);
+    //     }
+    //     else {
+    //         pressedButton.classList.add(`${style.correctKey}`);
+    //         setTimeout(() => { pressedButton.classList.remove(`${style.correctKey}`) }, 1500);
+    //     }
+    // }
 
     render() {
         return (

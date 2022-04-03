@@ -20,6 +20,7 @@ class Main extends React.Component {
       numberOfMistake: 0,
       lastLetter: '',
       percentage: 0,
+      cpm: 0,
     }
 
     this.handleMistake = this.handleMistake.bind(this);
@@ -27,6 +28,7 @@ class Main extends React.Component {
     this.reloadLesson = this.reloadLesson.bind(this);
     this.mistakeCounter = this.mistakeCounter.bind(this);
     this.completionPercentage = this.completionPercentage.bind(this);
+    this.charactersPerMinute = this.charactersPerMinute.bind(this);
   }
 
   handleMistake(boolean) {
@@ -49,15 +51,20 @@ class Main extends React.Component {
     window.location.reload();
   }
 
+  charactersPerMinute(cpm) {
+    this.setState({ cpm });
+  }
+
   render() {
     return (
       <main className={style.main}>
 
         <StatusBar numberOfMistake={this.state.numberOfMistake}
-          percentage={this.state.percentage} />
+          percentage={this.state.percentage} cpm={this.state.cpm} />
 
         <Display lesson={this.state.lesson}
-          mistakeHappend={this.state.mistakeHappend} />
+          mistakeHappend={this.state.mistakeHappend}
+        />
 
         <CustomTextArea
           handleMistake={this.handleMistake}
@@ -69,6 +76,7 @@ class Main extends React.Component {
 
           completionPercentage={this.completionPercentage}
           passLastLetter={this.passLastLetter}
+          charactersPerMinute={this.charactersPerMinute}
         />
 
         <Keyboard mistakeHappend={this.state.mistakeHappend}
