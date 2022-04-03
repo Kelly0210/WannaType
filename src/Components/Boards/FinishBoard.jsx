@@ -16,10 +16,10 @@ const FinishBoard = (props) => {
         <div className={style.boardBox}>
 
         {props.result ? <h2 className={style.result}>Congratulation!</h2> : <h2 className={style.result}>Try again?</h2>}
-        <img src={reload} onClick={reloadLesson} className={style.reloadIcon}/>
+        <img src={reload} alt='reload icon' onClick={reloadLesson} className={style.reloadIcon}/>
         
-        <Link to='training/lesson-1/chapter-1' className={style.arrowLeftBox}><img src={arrowLeft}/></Link>
-        <Link to={props.result ? 'training/lesson-1/chapter-1' : '#'} className={style.arrowRightBox}><img src={arrowRight}/></Link>
+        <Link to='training/lesson-1/chapter-1' className={style.arrowLeftBox}><img src={arrowLeft} alt='arrow left'/></Link>
+        <Link to={props.result ? 'training/lesson-1/chapter-1' : '#'} className={style.arrowRightBox}><img src={arrowRight} alt='arrow right'/></Link>
 
         </div>
         
