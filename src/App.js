@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Component404 from './Components/common/Component404';
@@ -12,7 +12,7 @@ import Fallback from './Components/common/Fallback';
 
 const App = () => {
   return (
-    <Suspense fallback={<Fallback />}>
+    <React.Suspense fallback={<Fallback />}>
     <div className='container'>
       <BrowserRouter>
         <Header />
@@ -28,7 +28,7 @@ const App = () => {
         <Footer />
       </BrowserRouter>
     </div>
-    </Suspense>
+    </React.Suspense>
   );
 }
 

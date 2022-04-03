@@ -1,18 +1,45 @@
 .boardBox {
-    width: 1000px;
-    height: 500px;
-    background-color: white;
-    border-radius: 10px;
-    position: absolute;
-    top: 25%;
-    left: 28%;
-    z-index: 1;
+  width: 1000px;
+  height: 500px;
+  background-color: white;
+  border-radius: 10px;
+  position: absolute;
+  top: 25%;
+  left: 28%;
+  z-index: 1;
 }
 
 .reloadIcon {
   width: 200px;
 }
 
-.reloadIcon:hover {
-    width: 300px;
+.result {
+  text-transform: uppercase;
+  font-size: 50px;
+}
+
+.arrowRight {
+  float: right;
+  height: 480px;
+  border-radius: inherit;
+  width: 110px;
+  opacity: 0.8;
+  padding: 10px;
+}
+
+.arrowLeft {
+  float: left;
+  height: 480px;
+  border-radius: inherit;
+  width: 110px;
+  opacity: 0.8;
+  padding: 10px;
+}
+
+.arrowLeft:hover {
+  opacity: 1;
+}
+
+.arrowRight:hover {
+  opacity: 1;
 }
