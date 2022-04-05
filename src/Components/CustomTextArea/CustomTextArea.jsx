@@ -9,8 +9,8 @@ class CustomTextArea extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            disabled: false,
             startTimeMs: new Date().getTime(),
+            disabled: false,
             win: false,
         }
 
@@ -95,10 +95,16 @@ class CustomTextArea extends React.Component {
 
 CustomTextArea.propTypes = {
     lesson: PropTypes.string,
+    reloadLesson: PropTypes.func,
+
     numberOfMistake: PropTypes.number,
     handleMistake: PropTypes.func,
     mistakeCounter: PropTypes.func,
+
     completionPercentage: PropTypes.func,
+    charactersPerMinute: PropTypes.func,
+
+    passLastLetter: PropTypes.func
 }
 
 export default CustomTextArea;

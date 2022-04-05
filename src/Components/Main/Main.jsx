@@ -5,7 +5,7 @@ import Display from '../Display/Display';
 import CustomTextArea from '../CustomTextArea/CustomTextArea';
 import Keyboard from '../Keyboard/Keyboard';
 import { generateLesson } from '../common/generateLesson';
-import { Lesson1 } from '../common/Lessons';
+import { Lesson11, Lesson3 } from '../common/Lessons';
 import StatusBar from '../StatusBar/StatusBar';
 
 
@@ -15,7 +15,7 @@ class Main extends React.Component {
   constructor() {
     super()
     this.state = {
-      lesson: generateLesson(Lesson1, 30),
+      lesson: generateLesson(Lesson11.chapter10, 32),
       mistakeHappend: false,
       numberOfMistake: 0,
       lastLetter: '',
@@ -60,27 +60,31 @@ class Main extends React.Component {
       <main className={style.main}>
 
         <StatusBar numberOfMistake={this.state.numberOfMistake}
-          percentage={this.state.percentage} cpm={this.state.cpm} />
+          percentage={this.state.percentage} cpm={this.state.cpm}
+        />
 
         <Display lesson={this.state.lesson}
           mistakeHappend={this.state.mistakeHappend}
         />
 
         <CustomTextArea
+          lesson={this.state.lesson}
+          reloadLesson={this.reloadLesson}
+
           handleMistake={this.handleMistake}
           mistakeCounter={this.mistakeCounter}
           numberOfMistake={this.state.numberOfMistake}
 
-          lesson={this.state.lesson}
-          reloadLesson={this.reloadLesson}
-
           completionPercentage={this.completionPercentage}
-          passLastLetter={this.passLastLetter}
           charactersPerMinute={this.charactersPerMinute}
+
+          passLastLetter={this.passLastLetter}
         />
 
         <Keyboard mistakeHappend={this.state.mistakeHappend}
-          lastLetter={this.state.lastLetter} />
+          lastLetter={this.state.lastLetter}
+        />
+
       </main>
     )
   }
