@@ -8,7 +8,6 @@ const Chapters = () => {
 
     const callMe= () => {
         return combinedStyle = `${style.chapters} ${style.hide}`;
-        console.log('hideCheck')
     }
 
     return (
@@ -16,11 +15,17 @@ const Chapters = () => {
             <ul>
                 <li onClick={callMe}>Lesson 1</li>
                 <ul className={combinedStyle}>
-                    <li><Link to='/training/lesson-1/chapter-1' className={style.linkForTraning}>Chapter 1</Link></li>
-                    <li><Link to='/training/lesson-1/chapter-2' className={style.linkForTraning}>Chapter 2</Link></li>
-                    <li><Link to='/training/lesson-1/chapter-3' className={style.linkForTraning}>Chapter 3</Link></li>
-                    <li><Link to='/training/lesson-1/chapter-4' className={style.linkForTraning}>Chapter 4</Link></li>
-                    <li><Link to='/training/lesson-1/chapter-5' className={style.linkForTraning}>Chapter 5</Link></li>
+                    <li><Link to='/training/lesson-1/chapter-1' className={style.linkForTraning}>New keys - f and j</Link></li>
+                    <li><Link to='/training/lesson-1/chapter-2' className={style.linkForTraning}>Training - f and j</Link></li>
+                    <li><Link to='/training/lesson-1/chapter-3' className={style.linkForTraning}>Training - f and j</Link></li>
+
+                    <li><Link to='/training/lesson-1/chapter-4' className={style.linkForTraning}>New keys - d and k</Link></li>
+                    <li><Link to='/training/lesson-1/chapter-5' className={style.linkForTraning}>Training - d and k</Link></li>
+                    <li><Link to='/training/lesson-1/chapter-6' className={style.linkForTraning}>Training - d and k</Link></li>
+
+                    <li><Link to='/training/lesson-1/chapter-7' className={style.linkForTraning}>All keys</Link></li>
+                    <li><Link to='/training/lesson-1/chapter-8' className={style.linkForTraning}>All keys</Link></li>
+                    <li><Link to='/training/lesson-1/chapter-9' className={style.linkForTraning}>All keys</Link></li>
                 </ul>
                 {/* <li><Link to='/training' className={style.linkForTraning}>Lesson 2</Link></li>
                 <li><Link to='/training' className={style.linkForTraning}>Lesson 3</Link></li>
