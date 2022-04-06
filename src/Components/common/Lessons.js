@@ -1,257 +1,263 @@
-// First - Middle row
-export const Lesson1 = {
-    chapter1: ['f', 'j'],
-    chapter2: ['f', 'j'],
-    chapter3: ['f', 'j'],
+export const tutorial = {
 
-    chapter4: ['d', 'k'],
-    chapter5: ['d', 'k'],
-    chapter6: ['d', 'k'],
+    // First - Middle row
+    
+    lesson1: {
+        chapter1: ['f', 'j'],
+        chapter2: ['f', 'j'],
+        chapter3: ['f', 'j'],
 
-    chapter7: ['d', 'f', 'j', 'k'],
-    chapter8: ['d', 'f', 'j', 'k'],
-    chapter9: ['d', 'f', 'j', 'k'],
-};
+        chapter4: ['d', 'k'],
+        chapter5: ['d', 'k'],
+        chapter6: ['d', 'k'],
 
-export const Lesson2 = {
-    chapter1: ['s', 'l'],
-    chapter2: ['s', 'l'],
-    chapter3: ['s', 'l'],
+        chapter7: ['d', 'f', 'j', 'k'],
+        chapter8: ['d', 'f', 'j', 'k'],
+        chapter9: ['d', 'f', 'j', 'k'],
+    },
 
-    chapter4: ['s', 'd', 'f', 'j', 'k', 'l'],
-    chapter5: ['s', 'd', 'f', 'j', 'k', 'l'],
-    chapter6: ['s', 'd', 'f', 'j', 'k', 'l'],
+    lesson2: {
+        chapter1: ['s', 'l'],
+        chapter2: ['s', 'l'],
+        chapter3: ['s', 'l'],
 
-    chapter7: ['a', ';'],
-    chapter8: ['a', ';'],
-    chapter9: ['a', ';'],
+        chapter4: ['s', 'd', 'f', 'j', 'k', 'l'],
+        chapter5: ['s', 'd', 'f', 'j', 'k', 'l'],
+        chapter6: ['s', 'd', 'f', 'j', 'k', 'l'],
 
-    chapter10: ['a', 's', 'd', 'f', 'j', 'k', 'l', ';'],
-    chapter11: ['a', 's', 'd', 'f', 'j', 'k', 'l', ';'],
-    chapter12: ['a', 's', 'd', 'f', 'j', 'k', 'l', ';'],
-};
+        chapter7: ['a', ';'],
+        chapter8: ['a', ';'],
+        chapter9: ['a', ';'],
 
-export const Lesson3 = {
-    chapter1: ['g', 'h'],
-    chapter2: ['g', 'h'],
-    chapter3: ['g', 'h'],
+        chapter10: ['a', 's', 'd', 'f', 'j', 'k', 'l', ';'],
+        chapter11: ['a', 's', 'd', 'f', 'j', 'k', 'l', ';'],
+        chapter12: ['a', 's', 'd', 'f', 'j', 'k', 'l', ';'],
+    },
 
-    chapter4: ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
-    chapter5: ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
-    chapter6: ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
+    lesson3: {
+        chapter1: ['g', 'h'],
+        chapter2: ['g', 'h'],
+        chapter3: ['g', 'h'],
 
-    chapter7: ['gas', 'lags', 'has',],
-    chapter8: [],
-    chapter9: [],
-};
+        chapter4: ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
+        chapter5: ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
+        chapter6: ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
 
-// Second row
+        chapter7: ['gas', 'lags', 'has',],
+        chapter8: [],
+        chapter9: [],
+    },
 
-export const Lesson4 = {
-    chapter1: ['r', 'u'],
-    chapter2: ['r', 'u'],
-    chapter3: ['r', 'u'],
+    // Second row
 
-    chapter4: ['r', 'f', 'j', 'u'],
-    chapter5: ['r', 'f', 'j', 'u'],
-    chapter6: ['r', 'f', 'j', 'u'],
+    lesson4: {
+        chapter1: ['r', 'u'],
+        chapter2: ['r', 'u'],
+        chapter3: ['r', 'u'],
 
-    chapter7: ['r', 'u',
-        'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
-    chapter8: ['r', 'u',
-        'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
-    chapter9: ['r', 'u',
-        'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
+        chapter4: ['r', 'f', 'j', 'u'],
+        chapter5: ['r', 'f', 'j', 'u'],
+        chapter6: ['r', 'f', 'j', 'u'],
 
-    chapter10: []
-};
+        chapter7: ['r', 'u',
+            'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
+        chapter8: ['r', 'u',
+            'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
+        chapter9: ['r', 'u',
+            'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
 
-export const Lesson5 = {
-    chapter1: ['t', 'y'],
-    chapter2: ['t', 'y'],
-    chapter3: ['t', 'y'],
+        chapter10: []
+    },
 
-    chapter4: ['r', 't', 'f', 'j', 'y', 'u'],
-    chapter5: ['r', 't', 'f', 'j', 'y', 'u'],
-    chapter6: ['r', 't', 'f', 'j', 'y', 'u'],
+    lesson5: {
+        chapter1: ['t', 'y'],
+        chapter2: ['t', 'y'],
+        chapter3: ['t', 'y'],
 
-    chapter7: ['r', 't', 'y', 'u',
-        'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
-    chapter8: ['r', 't', 'y', 'u',
-        'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
-    chapter9: ['r', 't', 'y', 'u',
-        'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
+        chapter4: ['r', 't', 'f', 'j', 'y', 'u'],
+        chapter5: ['r', 't', 'f', 'j', 'y', 'u'],
+        chapter6: ['r', 't', 'f', 'j', 'y', 'u'],
 
-    chapter10: []
-};
+        chapter7: ['r', 't', 'y', 'u',
+            'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
+        chapter8: ['r', 't', 'y', 'u',
+            'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
+        chapter9: ['r', 't', 'y', 'u',
+            'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
 
-export const Lesson6 = {
-    chapter1: ['e', 'i'],
-    chapter2: ['e', 'i'],
-    chapter3: ['e', 'i'],
+        chapter10: []
+    },
 
-    chapter4: ['e', 'd', 'k', 'i'],
-    chapter5: ['e', 'd', 'k', 'i'],
-    chapter6: ['e', 'd', 'k', 'i'],
+    lesson6: {
+        chapter1: ['e', 'i'],
+        chapter2: ['e', 'i'],
+        chapter3: ['e', 'i'],
 
-    chapter7: ['e', 'r', 't', 'y', 'u', 'i',
-        'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
-    chapter8: ['e', 'r', 't', 'y', 'u', 'i',
-        'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
-    chapter9: ['e', 'r', 't', 'y', 'u', 'i',
-        'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
+        chapter4: ['e', 'd', 'k', 'i'],
+        chapter5: ['e', 'd', 'k', 'i'],
+        chapter6: ['e', 'd', 'k', 'i'],
 
-    chapter10: []
-};
+        chapter7: ['e', 'r', 't', 'y', 'u', 'i',
+            'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
+        chapter8: ['e', 'r', 't', 'y', 'u', 'i',
+            'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
+        chapter9: ['e', 'r', 't', 'y', 'u', 'i',
+            'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
 
-export const Lesson7 = {
-    chapter1: ['w', 'o'],
-    chapter2: ['w', 'o'],
-    chapter3: ['w', 'o'],
+        chapter10: []
+    },
 
-    chapter4: ['w', 's', 'o', 'l'],
-    chapter5: ['w', 's', 'o', 'l'],
-    chapter6: ['w', 's', 'o', 'l'],
+    lesson7: {
+        chapter1: ['w', 'o'],
+        chapter2: ['w', 'o'],
+        chapter3: ['w', 'o'],
 
-    chapter7: ['w', 'e', 'r', 't', 'y', 'u', 'i', 'o',
-        'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
-    chapter8: ['w', 'e', 'r', 't', 'y', 'u', 'i', 'o',
-        'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
-    chapter9: ['w', 'e', 'r', 't', 'y', 'u', 'i', 'o',
-        'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
+        chapter4: ['w', 's', 'o', 'l'],
+        chapter5: ['w', 's', 'o', 'l'],
+        chapter6: ['w', 's', 'o', 'l'],
 
-    chapter10: []
-};
+        chapter7: ['w', 'e', 'r', 't', 'y', 'u', 'i', 'o',
+            'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
+        chapter8: ['w', 'e', 'r', 't', 'y', 'u', 'i', 'o',
+            'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
+        chapter9: ['w', 'e', 'r', 't', 'y', 'u', 'i', 'o',
+            'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
 
-export const Lesson8 = {
-    chapter1: ['q', 'p'],
-    chapter2: ['q', 'p'],
-    chapter3: ['q', 'p'],
+        chapter10: []
+    },
 
-    chapter4: ['q', 'a', ';', 'p'],
-    chapter5: ['q', 'a', ';', 'p'],
-    chapter6: ['q', 'a', ';', 'p'],
+    lesson8: {
+        chapter1: ['q', 'p'],
+        chapter2: ['q', 'p'],
+        chapter3: ['q', 'p'],
 
-    chapter7: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
-        'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
-    chapter8: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
-        'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
-    chapter9: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
-        'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
+        chapter4: ['q', 'a', ';', 'p'],
+        chapter5: ['q', 'a', ';', 'p'],
+        chapter6: ['q', 'a', ';', 'p'],
 
-    chapter10: []
-};
+        chapter7: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
+            'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
+        chapter8: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
+            'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
+        chapter9: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
+            'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
 
-//Third row
+        chapter10: []
+    },
 
-export const Lesson9 = {
-    chapter1: ['v', 'm'],
-    chapter2: ['v', 'm'],
-    chapter3: ['v', 'm'],
+    //Third row
 
-    chapter4: ['v', 'f', 'j', 'm'],
-    chapter5: ['v', 'f', 'j', 'm'],
-    chapter6: ['v', 'f', 'j', 'm'],
+    lesson9: {
+        chapter1: ['v', 'm'],
+        chapter2: ['v', 'm'],
+        chapter3: ['v', 'm'],
 
-    chapter7: ['r', 'v', 'f', 'j', 'm', 'u'],
-    chapter8: ['r', 'v', 'f', 'j', 'm', 'u'],
-    chapter9: ['r', 'v', 'f', 'j', 'm', 'u'],
+        chapter4: ['v', 'f', 'j', 'm'],
+        chapter5: ['v', 'f', 'j', 'm'],
+        chapter6: ['v', 'f', 'j', 'm'],
 
-    chapter10: ['r', 't', 'v', 'f', 'j', 'm', 'u', 'y'],
-    chapter11: ['r', 't', 'v', 'f', 'j', 'm', 'u', 'y'],
-    chapter12: ['r', 't', 'v', 'f', 'j', 'm', 'u', 'y'],
+        chapter7: ['r', 'v', 'f', 'j', 'm', 'u'],
+        chapter8: ['r', 'v', 'f', 'j', 'm', 'u'],
+        chapter9: ['r', 'v', 'f', 'j', 'm', 'u'],
 
-    chapter13: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
-        'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
-        'v', 'm'],
-    chapter14: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
-        'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
-        'v', 'm'],
-    chapter15: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
-        'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
-        'v', 'm'],
+        chapter10: ['r', 't', 'v', 'f', 'j', 'm', 'u', 'y'],
+        chapter11: ['r', 't', 'v', 'f', 'j', 'm', 'u', 'y'],
+        chapter12: ['r', 't', 'v', 'f', 'j', 'm', 'u', 'y'],
 
-    chapter16: []
+        chapter13: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
+            'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
+            'v', 'm'],
+        chapter14: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
+            'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
+            'v', 'm'],
+        chapter15: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
+            'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
+            'v', 'm'],
 
-};
+        chapter16: []
 
-export const Lesson10 = {
-    chapter1: ['c', ','],
-    chapter2: ['c', ','],
-    chapter3: ['c', ','],
+    },
 
-    chapter4: ['d', 'c', ',', 'k'],
-    chapter5: ['d', 'c', ',', 'k'],
-    chapter6: ['d', 'c', ',', 'k'],
+    lesson10: {
+        chapter1: ['c', ','],
+        chapter2: ['c', ','],
+        chapter3: ['c', ','],
 
-    chapter7: ['e', 'd', 'c', ',', 'k', 'i'],
-    chapter8: ['e', 'd', 'c', ',', 'k', 'i'],
-    chapter9: ['e', 'd', 'c', ',', 'k', 'i'],
+        chapter4: ['d', 'c', ',', 'k'],
+        chapter5: ['d', 'c', ',', 'k'],
+        chapter6: ['d', 'c', ',', 'k'],
 
-    chapter10: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
-        'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
-        'c', 'v', 'm', ','],
-    chapter11: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
-        'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
-        'c', 'v', 'm', ','],
-    chapter12: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
-        'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
-        'c', 'v', 'm', ','],
+        chapter7: ['e', 'd', 'c', ',', 'k', 'i'],
+        chapter8: ['e', 'd', 'c', ',', 'k', 'i'],
+        chapter9: ['e', 'd', 'c', ',', 'k', 'i'],
 
-    chapter13: []
-};
+        chapter10: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
+            'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
+            'c', 'v', 'm', ','],
+        chapter11: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
+            'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
+            'c', 'v', 'm', ','],
+        chapter12: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
+            'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
+            'c', 'v', 'm', ','],
 
-export const Lesson11 = {
-    chapter1: ['x', '.'],
-    chapter2: ['x', '.'],
-    chapter3: ['x', '.'],
+        chapter13: []
+    },
 
-    chapter4: ['s', 'x', '.', 'l'],
-    chapter5: ['s', 'x', '.', 'l'],
-    chapter6: ['s', 'x', '.', 'l'],
+    lesson11: {
+        chapter1: ['x', '.'],
+        chapter2: ['x', '.'],
+        chapter3: ['x', '.'],
 
-    chapter7: ['w', 's', 'x', '.', 'l', 'o'],
-    chapter8: ['w', 's', 'x', '.', 'l', 'o'],
-    chapter9: ['w', 's', 'x', '.', 'l', 'o'],
+        chapter4: ['s', 'x', '.', 'l'],
+        chapter5: ['s', 'x', '.', 'l'],
+        chapter6: ['s', 'x', '.', 'l'],
 
-    chapter10: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
-    'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
-    'x', 'c', 'v', 'm', ',', '.'],
-    chapter11: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
-    'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
-    'x', 'c', 'v', 'm', ',', '.'],
-    chapter12: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
-    'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
-    'x', 'c', 'v', 'm', ',', '.'],
+        chapter7: ['w', 's', 'x', '.', 'l', 'o'],
+        chapter8: ['w', 's', 'x', '.', 'l', 'o'],
+        chapter9: ['w', 's', 'x', '.', 'l', 'o'],
 
-    chapter13: []
-};
+        chapter10: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
+            'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
+            'x', 'c', 'v', 'm', ',', '.'],
+        chapter11: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
+            'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
+            'x', 'c', 'v', 'm', ',', '.'],
+        chapter12: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
+            'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
+            'x', 'c', 'v', 'm', ',', '.'],
 
-export const Lesson12 = {
-    chapter1: ['z', '/'],
-    chapter2: ['z', '/'],
-    chapter3: ['z', '/'],
+        chapter13: []
+    },
 
-    chapter4: ['a', 'z', '/', ';'],
-    chapter5: ['a', 'z', '/', ';'],
-    chapter6: ['a', 'z', '/', ';'],
+    lesson12: {
+        chapter1: ['z', '/'],
+        chapter2: ['z', '/'],
+        chapter3: ['z', '/'],
 
-    chapter7: ['q', 'a', 'z', '/', ';', 'p'],
-    chapter8: ['q', 'a', 'z', '/', ';', 'p'],
-    chapter9: ['q', 'a', 'z', '/', ';', 'p'],
+        chapter4: ['a', 'z', '/', ';'],
+        chapter5: ['a', 'z', '/', ';'],
+        chapter6: ['a', 'z', '/', ';'],
 
-    chapter10: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
-    'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
-    'z', 'x', 'c', 'v', 'm', ',', '.', '/'],
-    chapter11: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
-    'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
-    'z', 'x', 'c', 'v', 'm', ',', '.', '/'],
-    chapter12: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
-    'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
-    'z', 'x', 'c', 'v', 'm', ',', '.', '/'],
+        chapter7: ['q', 'a', 'z', '/', ';', 'p'],
+        chapter8: ['q', 'a', 'z', '/', ';', 'p'],
+        chapter9: ['q', 'a', 'z', '/', ';', 'p'],
 
-    chapter13: []
-};
+        chapter10: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
+            'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
+            'z', 'x', 'c', 'v', 'm', ',', '.', '/'],
+        chapter11: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
+            'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
+            'z', 'x', 'c', 'v', 'm', ',', '.', '/'],
+        chapter12: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
+            'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
+            'z', 'x', 'c', 'v', 'm', ',', '.', '/'],
+
+        chapter13: []
+    }
+
+}
+
 // export const Lessonn2 = ['d', 'j', 'k', 'l'];
 // export const Lesson3 = ['s', 'd', 'j', 'k', 'l', ';'];
 // export const Lesson4 = ['a','s', 'd', 'j', 'k', 'l', ';',"'"];
