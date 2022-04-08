@@ -1,7 +1,7 @@
 export const tutorial = {
 
     // First - Middle row
-    
+
     lesson1: {
         chapter1: ['f', 'j'],
         chapter2: ['f', 'j'],
