@@ -156,7 +156,7 @@ export const tutorial = {
         chapter5: ['v', 'f', 'j', 'm'],
         chapter6: ['v', 'f', 'j', 'm'],
 
-        chapter7: ['r', 'v', 'f', 'j', 'm', 'u'],
+        chapter7: ['r', 'v', 'f', 'j', 'm', 'u'], // 'g', 'h', ?
         chapter8: ['r', 'v', 'f', 'j', 'm', 'u'],
         chapter9: ['r', 'v', 'f', 'j', 'm', 'u'],
 
