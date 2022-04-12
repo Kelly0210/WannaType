@@ -10,15 +10,18 @@
 .mailContainer {
     padding-bottom: 7px;
 }
-.logoContainer {
-    padding-bottom: 4px;
-}
-.gmail {
+
+.mail {
     text-decoration: none;
     color: #2c3258;
 }
 
-a:hover {
+.mail:hover {
     color: white;
 }
+
+.logoContainer {
+    padding-bottom: 4px;
+}
+
 
