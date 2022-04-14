@@ -11,7 +11,7 @@ class CustomTextArea extends React.Component {
         this.state = {
             startTimeMs: new Date().getTime(),
             disabled: false,
-            win: false,
+            result: false,
         }
 
         this.handleChange = this.handleChange.bind(this);
@@ -22,6 +22,7 @@ class CustomTextArea extends React.Component {
         this.reloadLesson = this.reloadLesson.bind(this);
         this.completionPercentage = this.completionPercentage.bind(this);
         this.charactersPerMinute = this.charactersPerMinute.bind(this);
+        
     }
 
     handleChange(event) {
@@ -53,7 +54,7 @@ class CustomTextArea extends React.Component {
 
     handleComplete(inputValue, lesson) {
         if (inputValue.length === lesson.length) {
-            this.setState({ win: true });
+            this.setState({ result: true });
             this.handleDisable();
         }
     }
@@ -86,7 +87,7 @@ class CustomTextArea extends React.Component {
                     disabled={this.state.disabled}
                     onChange={this.handleChange}
                 />
-                {this.state.disabled && <FinishBoard result={this.state.win}
+                {this.state.disabled && <FinishBoard result={this.state.result}
                     reloadLesson={this.reloadLesson} />}
             </div>
         )

@@ -41,7 +41,7 @@ class Display extends React.Component {
 
 Display.propTypes = {
     lesson: PropTypes.string,
-    mistakeHappend: PropTypes.bool
+    mistakeHappened: PropTypes.bool
 }
 
 export default Display;

@@ -6,8 +6,7 @@
     background-color: white;
 
     border-radius: 6px;
-    margin: 10px auto;
-    margin-top: 3px;
+    margin: 3px auto 10px auto;
     overflow: auto;
 }
 
@@ -16,7 +15,7 @@
     letter-spacing: 3px;
     margin: auto 0;
     overflow: hidden;
-    /* user-select: none; */
+    user-select: none;
 }
 
 /* .finishedText {

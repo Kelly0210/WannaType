@@ -6,28 +6,28 @@ class Chapters extends React.Component {
 
     constructor() {
         super()
-        this.state = {
-            combinedStyle: `${style.chapters}`
+
+        this.toggleList = this.toggleList.bind(this);
+    }
+
+    toggleList(event) {
+        
+        let innerUl = document.getElementById(event.target.textContent);
+
+        if (innerUl.classList.contains(`${style.active}`)) {
+            innerUl.classList.remove(`${style.active}`)
+        } else {
+            innerUl.classList.add(`${style.active}`)
         }
-
-        this.callMe = this.callMe.bind(this);
-    }
-
-    callMe = (event) => {
-        console.log(event.target.href)
-    }
-
-    componentDidMount() {
-        console.log(document.querySelectorAll(`a.${style.linkForTraning}`));
     }
 
     render() {
         return (
             <div className={style.chaptersContainer}>
                 <ul>
-                    <li><Link to='#' onClick={this.callMe}>Lesson 1</Link></li>
-                    <ul className={style.active}>
-                        <li onClick={this.callMe}><Link to='/lesson-1/chapter-1'>New keys - f and j</Link></li>
+                    <li><Link to='#' onClick={this.toggleList}>Lesson 1</Link></li>
+                    <ul id='Lesson 1'>
+                        <li><Link to='/lesson-1/chapter-1'>New keys - f and j</Link></li>
                         <li><Link to='/lesson-1/chapter-2'>Training - f and j</Link></li>
                         <li><Link to='/lesson-1/chapter-3'>Training - f and j</Link></li>
 
@@ -40,8 +40,8 @@ class Chapters extends React.Component {
                         <li><Link to='/lesson-1/chapter-9'>All keys</Link></li>
                     </ul>
 
-                    <li><Link to='#' onClick={this.callMe}>Lesson 2</Link></li>
-                    <ul>
+                    <li><Link to='#' onClick={this.toggleList}>Lesson 2</Link></li>
+                    <ul id='Lesson 2'>
                         <li><Link to='/lesson-2/chapter-1'>Chapter 1</Link></li>
                         <li><Link to='/lesson-2/chapter-2'>Chapter 2</Link></li>
                         <li><Link to='/lesson-2/chapter-3'>Chapter 3</Link></li>
@@ -59,8 +59,8 @@ class Chapters extends React.Component {
                         <li><Link to='/lesson-2/chapter-12'>Chapter 12</Link></li>
                     </ul>
 
-                    <li><Link to='#' onClick={this.callMe}>Lesson 3</Link></li>
-                    <ul>
+                    <li><Link to='#' onClick={this.toggleList}>Lesson 3</Link></li>
+                    <ul id='Lesson 3'>
                         <li><Link to='/lesson-3/chapter-1'>Chapter 1</Link></li>
                         <li><Link to='/lesson-3/chapter-2'>Chapter 2</Link></li>
                         <li><Link to='/lesson-3/chapter-3'>Chapter 3</Link></li>
@@ -74,8 +74,8 @@ class Chapters extends React.Component {
                         <li><Link to='/lesson-3/chapter-9'>Chapter 9</Link></li>
                     </ul>
 
-                    <li><Link to='#' onClick={this.callMe}>Lesson 4</Link></li>
-                    <ul>
+                    <li><Link to='#' onClick={this.toggleList}>Lesson 4</Link></li>
+                    <ul id='Lesson 4'>
                         <li><Link to='/lesson-4/chapter-1'>Chapter 1</Link></li>
                         <li><Link to='/lesson-4/chapter-2'>Chapter 2</Link></li>
                         <li><Link to='/lesson-4/chapter-3'>Chapter 3</Link></li>
@@ -91,8 +91,8 @@ class Chapters extends React.Component {
                         <li><Link to='/lesson-4/chapter-10'>Chapter 10</Link></li>
                     </ul>
 
-                    <li><Link to='#' onClick={this.callMe}>Lesson 5</Link></li>
-                    <ul>
+                    <li><Link to='#' onClick={this.toggleList}>Lesson 5</Link></li>
+                    <ul id='Lesson 5'>
                         <li><Link to='/lesson-5/chapter-1'>Chapter 1</Link></li>
                         <li><Link to='/lesson-5/chapter-2'>Chapter 2</Link></li>
                         <li><Link to='/lesson-5/chapter-3'>Chapter 3</Link></li>
@@ -108,8 +108,8 @@ class Chapters extends React.Component {
                         <li><Link to='/lesson-5/chapter-10'>Chapter 10</Link></li>
                     </ul>
 
-                    <li><Link to='#' onClick={this.callMe}>Lesson 6</Link></li>
-                    <ul>
+                    <li><Link to='#' onClick={this.toggleList}>Lesson 6</Link></li>
+                    <ul id='Lesson 6'>
                         <li><Link to='/lesson-6/chapter-1'>Chapter 1</Link></li>
                         <li><Link to='/lesson-6/chapter-2'>Chapter 2</Link></li>
                         <li><Link to='/lesson-6/chapter-3'>Chapter 3</Link></li>
@@ -125,8 +125,8 @@ class Chapters extends React.Component {
                         <li><Link to='/lesson-6/chapter-10'>Chapter 10</Link></li>
                     </ul>
 
-                    <li><Link to='#' onClick={this.callMe}>Lesson 7</Link></li>
-                    <ul>
+                    <li><Link to='#' onClick={this.toggleList}>Lesson 7</Link></li>
+                    <ul id='Lesson 7'>
                         <li><Link to='/lesson-7/chapter-1'>Chapter 1</Link></li>
                         <li><Link to='/lesson-7/chapter-2'>Chapter 2</Link></li>
                         <li><Link to='/lesson-7/chapter-3'>Chapter 3</Link></li>
@@ -142,8 +142,8 @@ class Chapters extends React.Component {
                         <li><Link to='/lesson-7/chapter-10'>Chapter 10</Link></li>
                     </ul>
 
-                    <li><Link to='#' onClick={this.callMe}>Lesson 8</Link></li>
-                    <ul>
+                    <li><Link to='#' onClick={this.toggleList}>Lesson 8</Link></li>
+                    <ul id='Lesson 8'>
                         <li><Link to='/lesson-8/chapter-1'>Chapter 1</Link></li>
                         <li><Link to='/lesson-8/chapter-2'>Chapter 2</Link></li>
                         <li><Link to='/lesson-8/chapter-3'>Chapter 3</Link></li>
@@ -159,8 +159,8 @@ class Chapters extends React.Component {
                         <li><Link to='/lesson-8/chapter-10'>Chapter 10</Link></li>
                     </ul>
 
-                    <li><Link to='#' onClick={this.callMe}>Lesson 9</Link></li>
-                    <ul>
+                    <li><Link to='#' onClick={this.toggleList}>Lesson 9</Link></li>
+                    <ul id='Lesson 9'>
                         <li><Link to='/lesson-9/chapter-1'>Chapter 1</Link></li>
                         <li><Link to='/lesson-9/chapter-2'>Chapter 2</Link></li>
                         <li><Link to='/lesson-9/chapter-3'>Chapter 3</Link></li>
@@ -184,8 +184,8 @@ class Chapters extends React.Component {
                         <li><Link to='/lesson-9/chapter-16'>Chapter 16</Link></li>
                     </ul>
 
-                    <li><Link to='#' onClick={this.callMe}>Lesson 10</Link></li>
-                    <ul>
+                    <li><Link to='#' onClick={this.toggleList}>Lesson 10</Link></li>
+                    <ul id='Lesson 10'>
                         <li><Link to='/lesson-10/chapter-1'>Chapter 1</Link></li>
                         <li><Link to='/lesson-10/chapter-2'>Chapter 2</Link></li>
                         <li><Link to='/lesson-10/chapter-3'>Chapter 3</Link></li>
@@ -205,8 +205,8 @@ class Chapters extends React.Component {
                         <li><Link to='/lesson-10/chapter-13'>Chapter 13</Link></li>
                     </ul>
 
-                    <li><Link to='#' onClick={this.callMe}>Lesson 11</Link></li>
-                    <ul>
+                    <li><Link to='#' onClick={this.toggleList}>Lesson 11</Link></li>
+                    <ul id='Lesson 11'>
                         <li><Link to='/lesson-11/chapter-1'>Chapter 1</Link></li>
                         <li><Link to='/lesson-11/chapter-2'>Chapter 2</Link></li>
                         <li><Link to='/lesson-11/chapter-3'>Chapter 3</Link></li>
@@ -227,8 +227,8 @@ class Chapters extends React.Component {
                         <li><Link to='/lesson-11/chapter-13'>Chapter 13</Link></li>
                     </ul>
 
-                    <li><Link to='#' onClick={this.callMe}>Lesson 12</Link></li>
-                    <ul>
+                    <li><Link to='#' onClick={this.toggleList}>Lesson 12</Link></li>
+                    <ul id='Lesson 12'>
                         <li><Link to='/lesson-12/chapter-1'>Chapter 1</Link></li>
                         <li><Link to='/lesson-12/chapter-2'>Chapter 2</Link></li>
                         <li><Link to='/lesson-12/chapter-3'>Chapter 3</Link></li>
