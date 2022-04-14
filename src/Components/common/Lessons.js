@@ -156,13 +156,13 @@ export const tutorial = {
         chapter5: ['v', 'f', 'j', 'm'],
         chapter6: ['v', 'f', 'j', 'm'],
 
-        chapter7: ['r', 'v', 'f', 'j', 'm', 'u'], // 'g', 'h', ?
+        chapter7: ['r', 'v', 'f', 'j', 'm', 'u'],
         chapter8: ['r', 'v', 'f', 'j', 'm', 'u'],
         chapter9: ['r', 'v', 'f', 'j', 'm', 'u'],
 
-        chapter10: ['r', 't', 'v', 'f', 'j', 'm', 'u', 'y'],
-        chapter11: ['r', 't', 'v', 'f', 'j', 'm', 'u', 'y'],
-        chapter12: ['r', 't', 'v', 'f', 'j', 'm', 'u', 'y'],
+        chapter10: ['r', 't', 'v', 'f', 'g', 'h', 'j', 'm', 'u', 'y'],
+        chapter11: ['r', 't', 'v', 'f', 'g', 'h', 'j', 'm', 'u', 'y'],
+        chapter12: ['r', 't', 'v', 'f', 'g', 'h', 'j', 'm', 'u', 'y'],
 
         chapter13: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
