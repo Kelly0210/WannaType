@@ -5,7 +5,7 @@ import Display from '../Display/Display';
 import CustomTextArea from '../CustomTextArea/CustomTextArea';
 import Keyboard from '../Keyboard/Keyboard';
 import { generateLesson } from '../common/generateLesson';
-import { Lesson11, Lesson3 } from '../common/Lessons';
+import { tutorial } from '../common/Lessons';
 import StatusBar from '../StatusBar/StatusBar';
 
 
@@ -15,24 +15,43 @@ class Main extends React.Component {
   constructor() {
     super()
     this.state = {
-      lesson: generateLesson(Lesson11.chapter10, 32),
-      mistakeHappend: false,
+      lesson: generateLesson(tutorial.lesson1.chapter1, 30),
+      mistakeHappened: false,
       numberOfMistake: 0,
       lastLetter: '',
       percentage: 0,
       cpm: 0,
+      url: window.location.pathname
     }
 
     this.handleMistake = this.handleMistake.bind(this);
-    this.passLastLetter = this.passLastLetter.bind(this);
-    this.reloadLesson = this.reloadLesson.bind(this);
     this.mistakeCounter = this.mistakeCounter.bind(this);
+
     this.completionPercentage = this.completionPercentage.bind(this);
     this.charactersPerMinute = this.charactersPerMinute.bind(this);
+
+    this.reloadLesson = this.reloadLesson.bind(this);
+    this.passLastLetter = this.passLastLetter.bind(this);
   }
 
+  // shouldComponentUpdate(nextProps, nextState) { 
+  //   this.setState({url: window.location.pathname})
+  //   if (this.state.url !== nextState.url) {
+  //     console.log('test')
+  //     return true;
+  //   } else {
+  //     return false
+  //   }
+
+
+  //   // let test = event.target.pathname.replaceAll('/', '.');
+  //   // let testTwo = test.replaceAll('-', '');
+  //   // let testThree = testTwo.slice(1);
+  //   // let testFour = testThree.split('.').reduce((o,i)=> o[i], tutorial);
+  //  }
+
   handleMistake(boolean) {
-    this.setState({ mistakeHappend: boolean });
+    this.setState({ mistakeHappened: boolean });
   }
 
   mistakeCounter() {
@@ -47,44 +66,39 @@ class Main extends React.Component {
     this.setState({ percentage });
   }
 
-  reloadLesson() {
-    window.location.reload();
-  }
-
   charactersPerMinute(cpm) {
     this.setState({ cpm });
+  }
+
+  reloadLesson() {
+    window.location.reload();
   }
 
   render() {
     return (
       <main className={style.main}>
-
         <StatusBar numberOfMistake={this.state.numberOfMistake}
-          percentage={this.state.percentage} cpm={this.state.cpm}
-        />
+          percentage={this.state.percentage} cpm={this.state.cpm} />
 
         <Display lesson={this.state.lesson}
-          mistakeHappend={this.state.mistakeHappend}
+          mistakeHappened={this.state.mistakeHappened}
         />
 
         <CustomTextArea
-          lesson={this.state.lesson}
-          reloadLesson={this.reloadLesson}
-
           handleMistake={this.handleMistake}
           mistakeCounter={this.mistakeCounter}
           numberOfMistake={this.state.numberOfMistake}
 
+          lesson={this.state.lesson}
+          reloadLesson={this.reloadLesson}
+
           completionPercentage={this.completionPercentage}
-          charactersPerMinute={this.charactersPerMinute}
-
           passLastLetter={this.passLastLetter}
+          charactersPerMinute={this.charactersPerMinute}
         />
 
-        <Keyboard mistakeHappend={this.state.mistakeHappend}
-          lastLetter={this.state.lastLetter}
-        />
-
+        <Keyboard mistakeHappened={this.state.mistakeHappened}
+          lastLetter={this.state.lastLetter} />
       </main>
     )
   }

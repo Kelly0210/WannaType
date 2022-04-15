@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import style from './Chapters.module.css';
+import collapseLeft from '../../assets/img/collapseLeft.png';
 
 class Chapters extends React.Component {
 
@@ -15,9 +16,14 @@ class Chapters extends React.Component {
         innerUl.classList.toggle(`${style.active}`);
     }
 
+    clickMe() {
+        console.log('clicked')
+    }
+
     render() {
         return (
             <div className={style.chaptersContainer}>
+                <img src={collapseLeft} className={style.collapseLeft} onClick={this.clickMe} alt="collapse icon" />
                 <ul>
                     <li><Link to='#' onClick={this.toggleList}>Lesson 1</Link></li>
                     <ul id='Lesson 1'>

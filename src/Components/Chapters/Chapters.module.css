@@ -27,7 +27,11 @@ li > a:hover {
     font-weight: bold;
 }  
 
-
 .active {
     display: list-item;
+}
+
+.collapseLeft {
+    width: 40px;
+    float: right;
 }
