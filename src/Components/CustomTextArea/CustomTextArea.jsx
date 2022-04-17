@@ -22,7 +22,9 @@ class CustomTextArea extends React.Component {
         this.reloadLesson = this.reloadLesson.bind(this);
         this.completionPercentage = this.completionPercentage.bind(this);
         this.charactersPerMinute = this.charactersPerMinute.bind(this);
-        
+
+        this.carriage = this.carriage.bind(this);
+
     }
 
     handleChange(event) {
@@ -30,10 +32,15 @@ class CustomTextArea extends React.Component {
         let startTimeMs = this.state.startTimeMs;
         let inputValue = event.target.value;
 
+        let leftText = document.getElementById('leftText');
+        let finishText = document.getElementById('finishText');
+
         this.handleMistake(inputValue, lesson);
         this.handleComplete(inputValue, lesson);
         this.completionPercentage(inputValue, lesson);
         this.charactersPerMinute(inputValue, startTimeMs);
+
+        this.carriage(leftText, finishText);
 
         this.props.passLastLetter(inputValue.slice(-1));
     }
@@ -79,14 +86,25 @@ class CustomTextArea extends React.Component {
         this.setState({ disabled: true });
     }
 
+    carriage(leftText, finishText) {
+        finishText.textContent += leftText.textContent[0];
+        leftText.textContent = leftText.textContent.slice(1);
+    }
+
     render() {
         return (
-            <div className={style.textareaContainer}>
-                <textarea autoFocus
-                    className={style.inputField}
-                    disabled={this.state.disabled}
-                    onChange={this.handleChange}
-                />
+            <div className={style.InputBox}>
+                <span className={style.displayText}>
+                    <input autoFocus
+                        className={style.inputField}
+                        disabled={this.state.disabled}
+                        onChange={this.handleChange}
+                    />
+
+                <span id='finishText' className={style.cursor}/>
+                <span id='leftText' className={style.unfinishedText}>{this.props.lesson}</span>
+                </span>
+
                 {this.state.disabled && <FinishBoard result={this.state.result}
                     reloadLesson={this.reloadLesson} />}
             </div>

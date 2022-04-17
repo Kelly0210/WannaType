@@ -1,27 +1,25 @@
 import React from 'react';
 import style from './Main.module.css';
 
-import Display from '../Display/Display';
 import CustomTextArea from '../CustomTextArea/CustomTextArea';
 import Keyboard from '../Keyboard/Keyboard';
-import { generateLesson } from '../common/generateLesson';
-import { tutorial } from '../common/Lessons';
 import StatusBar from '../StatusBar/StatusBar';
 
-
+import { generateLesson } from '../common/generateLesson';
+import { tutorial } from '../common/Lessons';
 
 class Main extends React.Component {
 
   constructor() {
     super()
     this.state = {
-      lesson: generateLesson(tutorial.lesson1.chapter1, 30),
+      lesson: generateLesson(tutorial.lesson1.chapter1, 50),
       mistakeHappened: false,
       numberOfMistake: 0,
       lastLetter: '',
       percentage: 0,
       cpm: 0,
-      url: window.location.pathname
+      // url: window.location.pathname
     }
 
     this.handleMistake = this.handleMistake.bind(this);
@@ -33,22 +31,6 @@ class Main extends React.Component {
     this.reloadLesson = this.reloadLesson.bind(this);
     this.passLastLetter = this.passLastLetter.bind(this);
   }
-
-  // shouldComponentUpdate(nextProps, nextState) { 
-  //   this.setState({url: window.location.pathname})
-  //   if (this.state.url !== nextState.url) {
-  //     console.log('test')
-  //     return true;
-  //   } else {
-  //     return false
-  //   }
-
-
-  //   // let test = event.target.pathname.replaceAll('/', '.');
-  //   // let testTwo = test.replaceAll('-', '');
-  //   // let testThree = testTwo.slice(1);
-  //   // let testFour = testThree.split('.').reduce((o,i)=> o[i], tutorial);
-  //  }
 
   handleMistake(boolean) {
     this.setState({ mistakeHappened: boolean });
@@ -80,10 +62,6 @@ class Main extends React.Component {
         <StatusBar numberOfMistake={this.state.numberOfMistake}
           percentage={this.state.percentage} cpm={this.state.cpm} />
 
-        <Display lesson={this.state.lesson}
-          mistakeHappened={this.state.mistakeHappened}
-        />
-
         <CustomTextArea
           handleMistake={this.handleMistake}
           mistakeCounter={this.mistakeCounter}
@@ -106,3 +84,19 @@ class Main extends React.Component {
 }
 
 export default Main;
+
+  // shouldComponentUpdate(nextProps, nextState) { 
+  //   this.setState({url: window.location.pathname})
+  //   if (this.state.url !== nextState.url) {
+  //     console.log('test')
+  //     return true;
+  //   } else {
+  //     return false
+  //   }
+
+
+  //   // let test = event.target.pathname.replaceAll('/', '.');
+  //   // let testTwo = test.replaceAll('-', '');
+  //   // let testThree = testTwo.slice(1);
+  //   // let testFour = testThree.split('.').reduce((o,i)=> o[i], tutorial);
+  //  }
