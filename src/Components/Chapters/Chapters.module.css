@@ -30,7 +30,9 @@ li > a:hover {
 .active {
     display: list-item;
 }
-
+.hide {
+    display: none;
+}
 .collapseLeft {
     width: 40px;
     float: right;

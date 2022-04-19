@@ -5,6 +5,8 @@ import arrowRight from '../../assets/img/arrowRight.png';
 import arrowLeft from '../../assets/img/arrowLeft.png';
 import { Link } from 'react-router-dom';
 
+import { tips } from '../common/Tips';
+
 
 const FinishBoard = (props) => {
 
@@ -12,15 +14,20 @@ const FinishBoard = (props) => {
         props.reloadLesson();
     }
 
+    const randomTip = () => {
+        return tips[Math.floor(Math.random() * tips.length)];
+    }
+
     return (
         <div className={style.boardBox}>
 
-        {props.result ? <h2 className={style.result}>Congratulation!</h2> : <h2 className={style.result}>Try again?</h2>}
-        <img src={reload} alt='reload icon' onClick={reloadLesson} className={style.reloadIcon}/>
+        {props.result ? <h2>Congratulation!</h2> : <h2>Try again?</h2>}
+        <img className={style.reloadIcon} onClick={reloadLesson} src={reload} alt='reload icon'/>
         
         <Link to='training/lesson-1/chapter-1' className={style.arrowLeftBox}><img src={arrowLeft} alt='arrow left'/></Link>
         <Link to={props.result ? 'training/lesson-1/chapter-1' : '#'} className={style.arrowRightBox}><img src={arrowRight} alt='arrow right'/></Link>
 
+        <div className={style.tips}>{randomTip()}</div>
         </div>
         
     )

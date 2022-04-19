@@ -32,17 +32,15 @@ class CustomTextArea extends React.Component {
         let startTimeMs = this.state.startTimeMs;
         let inputValue = event.target.value;
 
-        let leftText = document.getElementById('leftText');
-        let finishText = document.getElementById('finishText');
-
         this.handleMistake(inputValue, lesson);
         this.handleComplete(inputValue, lesson);
         this.completionPercentage(inputValue, lesson);
         this.charactersPerMinute(inputValue, startTimeMs);
 
-        this.carriage(leftText, finishText);
+        this.carriage();
 
         this.props.passLastLetter(inputValue.slice(-1));
+        // this.props.passLastLetter(this.props.lesson[inputValue.length])
     }
 
     handleMistake(inputValue, lesson) {
@@ -86,7 +84,10 @@ class CustomTextArea extends React.Component {
         this.setState({ disabled: true });
     }
 
-    carriage(leftText, finishText) {
+    carriage() {
+        let leftText = document.getElementById('leftText');
+        let finishText = document.getElementById('finishText');
+
         finishText.textContent += leftText.textContent[0];
         leftText.textContent = leftText.textContent.slice(1);
     }
@@ -94,15 +95,15 @@ class CustomTextArea extends React.Component {
     render() {
         return (
             <div className={style.InputBox}>
-                <span className={style.displayText}>
-                    <input autoFocus
-                        className={style.inputField}
-                        disabled={this.state.disabled}
-                        onChange={this.handleChange}
-                    />
+                <input autoFocus
+                    className={style.inputField}
+                    disabled={this.state.disabled}
+                    onChange={this.handleChange}
+                />
 
-                <span id='finishText' className={style.cursor}/>
-                <span id='leftText' className={style.unfinishedText}>{this.props.lesson}</span>
+                <span className={style.displayText}>
+                    <span id='finishText' className={style.cursor} />
+                    <span id='leftText' className={style.unfinishedText}>{this.props.lesson}</span>
                 </span>
 
                 {this.state.disabled && <FinishBoard result={this.state.result}
