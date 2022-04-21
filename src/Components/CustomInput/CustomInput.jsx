@@ -1,13 +1,13 @@
 import React from 'react';
 import * as PropTypes from 'prop-types';
 import FinishBoard from '../Boards/FinishBoard';
-import style from './CustomTextArea.module.css';
+import style from './CustomInput.module.css';
 
 
 class CustomTextArea extends React.Component {
 
-    constructor(props) {
-        super(props);
+    constructor() {
+        super()
         this.state = {
             startTimeMs: new Date().getTime(),
             disabled: false,
@@ -29,13 +29,12 @@ class CustomTextArea extends React.Component {
 
     handleChange(event) {
         let lesson = this.props.lesson;
-        let startTimeMs = this.state.startTimeMs;
         let inputValue = event.target.value;
 
         this.handleMistake(inputValue, lesson);
         this.handleComplete(inputValue, lesson);
         this.completionPercentage(inputValue, lesson);
-        this.charactersPerMinute(inputValue, startTimeMs);
+        this.charactersPerMinute(inputValue);
 
         this.carriage();
 
@@ -69,7 +68,9 @@ class CustomTextArea extends React.Component {
         this.props.completionPercentage(percentage);
     }
 
-    charactersPerMinute(inputValue, startTimeMs) {
+    charactersPerMinute(inputValue) {
+        let startTimeMs = this.state.startTimeMs;
+
         let timePassedMs = new Date().getTime();
         let timePassedMin = (timePassedMs - startTimeMs) / 1000 / 60;
         let cpm = Math.ceil(inputValue.length / timePassedMin);

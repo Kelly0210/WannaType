@@ -1,19 +1,28 @@
-.chaptersContainer { 
+.chaptersContainer {
     grid-area: chapters;
     background-color: crimson;
 }
 
 ul {
-    list-style-type: none;
-    padding-left: 10px;
+    padding: 15px 0 10px 10px;
+    margin: 0;
+    letter-spacing: 0.3px;
+    font-weight: 500;
 }
 
 ul > ul {
+    padding: 0 0 0 10px;
     display: none;
+    list-style-type: none;
 }
 
 li {
-    margin-bottom: 2px;
+    list-style-type: none;
+    margin: 3px 0;
+}
+
+ul > ul > li:nth-child(3n) {
+    padding-bottom: 5px
 }
 
 li > a {
@@ -23,17 +32,34 @@ li > a {
 
 li > a:hover {
     color: white;
-    text-decoration: underline;
-    font-weight: bold;
-}  
+}
 
-.active {
+li > a:focus {
+    color: white;
+}
+
+.expend {
     display: list-item;
 }
+
 .hide {
     display: none;
 }
+
 .collapseLeft {
     width: 40px;
     float: right;
+}
+
+kbd {
+    background-color: #eee;
+    border-radius: 3px;
+    border: 1px solid #b4b4b4;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .2), 0 2px 0 0 rgba(255, 255, 255, .7) inset;
+    color: #333;
+    display: inline-block;
+    font-size: 1.1em;
+    font-weight: 600;
+    line-height: 1;
+    padding: 2px 4px;
 }
