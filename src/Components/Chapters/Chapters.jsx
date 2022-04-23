@@ -2,38 +2,55 @@ import React from "react";
 import { Link } from "react-router-dom";
 import style from './Chapters.module.css';
 import collapseLeft from '../../assets/img/collapseLeft.png';
+import { tutorial } from '../common/Lessons'
+import { generateLesson } from "../common/generateLesson";
 
 class Chapters extends React.Component {
 
     constructor() {
         super()
-
         this.toggleList = this.toggleList.bind(this);
+        this.testClick = this.testClick.bind(this);
     }
 
     toggleList(event) {
         let innerUl = document.getElementById(event.target.textContent);
-        innerUl.classList.toggle(`${style.active}`);
+        innerUl.classList.toggle(`${style.expend}`);
     }
 
-    clickMe() {
-        console.log('clicked')
+    CollapseComponent() {
+        let sub = document.getElementById('test');
+        sub.classList.toggle(`${style.hide}`);
+    }
+
+    testClick(event) {
+
+        let test = event.target.pathname.replaceAll('/', '.');
+        let testTwo = test.replaceAll('-', '');
+        let testThree = testTwo.slice(1);
+        let testFour = testThree.split('.').reduce((o, i) => o[i], tutorial);
+        let testFive = generateLesson(testFour, 50)
+
+        this.props.testFunc(testFive)
+
     }
 
     render() {
         return (
-            <div className={style.chaptersContainer}>
-                <img src={collapseLeft} className={style.collapseLeft} onClick={this.clickMe} alt="collapse icon" />
+            <nav id='test' className={style.chaptersContainer}>
+
+                <img src={collapseLeft} className={style.collapseLeft} onClick={this.CollapseComponent} alt="collapse icon" />
+
                 <ul>
                     <li><Link to='#' onClick={this.toggleList}>Lesson 1</Link></li>
                     <ul id='Lesson 1'>
-                        <li><Link to='/lesson-1/chapter-1'>New keys - f and j</Link></li>
-                        <li><Link to='/lesson-1/chapter-2'>Training - f and j</Link></li>
-                        <li><Link to='/lesson-1/chapter-3'>Training - f and j</Link></li>
+                        <li><Link to='/lesson-1/chapter-1'>New keys - <kbd>f</kbd> and <kbd>j</kbd></Link></li>
+                        <li><Link to='/lesson-1/chapter-2'>New keys - <kbd>f</kbd> and <kbd>j</kbd></Link></li>
+                        <li><Link to='/lesson-1/chapter-3'>New keys - <kbd>f</kbd> and <kbd>j</kbd></Link></li>
 
-                        <li><Link to='/lesson-1/chapter-4'>New keys - d and k</Link></li>
-                        <li><Link to='/lesson-1/chapter-5'>Training - d and k</Link></li>
-                        <li><Link to='/lesson-1/chapter-6'>Training - d and k</Link></li>
+                        <li><Link to='/lesson-1/chapter-4'>New keys - <kbd>d</kbd> and <kbd>k</kbd></Link></li>
+                        <li><Link to='/lesson-1/chapter-5'>New keys - <kbd>d</kbd> and <kbd>k</kbd></Link></li>
+                        <li><Link to='/lesson-1/chapter-6'>New keys - <kbd>d</kbd> and <kbd>k</kbd></Link></li>
 
                         <li><Link to='/lesson-1/chapter-7'>All keys</Link></li>
                         <li><Link to='/lesson-1/chapter-8'>All keys</Link></li>
@@ -42,17 +59,17 @@ class Chapters extends React.Component {
 
                     <li><Link to='#' onClick={this.toggleList}>Lesson 2</Link></li>
                     <ul id='Lesson 2'>
-                        <li><Link to='/lesson-2/chapter-1'>New keys - s and l</Link></li>
-                        <li><Link to='/lesson-2/chapter-2'>Training - s and l</Link></li>
-                        <li><Link to='/lesson-2/chapter-3'>Training - s and l</Link></li>
+                        <li><Link to='/lesson-2/chapter-1'>New keys - <kbd>s</kbd> and <kbd>l</kbd></Link></li>
+                        <li><Link to='/lesson-2/chapter-2'>New keys - <kbd>s</kbd> and <kbd>l</kbd></Link></li>
+                        <li><Link to='/lesson-2/chapter-3'>New keys - <kbd>s</kbd> and <kbd>l</kbd></Link></li>
 
                         <li><Link to='/lesson-2/chapter-4'>All keys</Link></li>
                         <li><Link to='/lesson-2/chapter-5'>All keys</Link></li>
                         <li><Link to='/lesson-2/chapter-6'>All keys</Link></li>
 
-                        <li><Link to='/lesson-2/chapter-7'>New Keys - a and ;</Link></li>
-                        <li><Link to='/lesson-2/chapter-8'>New Keys - a and ;</Link></li>
-                        <li><Link to='/lesson-2/chapter-9'>New Keys - a and ;</Link></li>
+                        <li><Link to='/lesson-2/chapter-7'>New Keys - <kbd>a</kbd> and <kbd>;</kbd></Link></li>
+                        <li><Link to='/lesson-2/chapter-8'>New Keys - <kbd>a</kbd> and <kbd>;</kbd></Link></li>
+                        <li><Link to='/lesson-2/chapter-9'>New Keys - <kbd>a</kbd> and <kbd>;</kbd></Link></li>
 
                         <li><Link to='/lesson-2/chapter-10'>All keys</Link></li>
                         <li><Link to='/lesson-2/chapter-11'>All keys</Link></li>
@@ -61,9 +78,9 @@ class Chapters extends React.Component {
 
                     <li><Link to='#' onClick={this.toggleList}>Lesson 3</Link></li>
                     <ul id='Lesson 3'>
-                        <li><Link to='/lesson-3/chapter-1'>New keys - g and h</Link></li>
-                        <li><Link to='/lesson-3/chapter-2'>New keys - g and h</Link></li>
-                        <li><Link to='/lesson-3/chapter-3'>New keys - g and h</Link></li>
+                        <li><Link to='/lesson-3/chapter-1'>New keys - <kbd>g</kbd> and <kbd>h</kbd></Link></li>
+                        <li><Link to='/lesson-3/chapter-2'>New keys - <kbd>g</kbd> and <kbd>h</kbd></Link></li>
+                        <li><Link to='/lesson-3/chapter-3'>New keys - <kbd>g</kbd> and <kbd>h</kbd></Link></li>
 
                         <li><Link to='/lesson-3/chapter-4'>All keys</Link></li>
                         <li><Link to='/lesson-3/chapter-5'>All keys</Link></li>
@@ -76,9 +93,9 @@ class Chapters extends React.Component {
 
                     <li><Link to='#' onClick={this.toggleList}>Lesson 4</Link></li>
                     <ul id='Lesson 4'>
-                        <li><Link to='/lesson-4/chapter-1'>New keys - r and u</Link></li>
-                        <li><Link to='/lesson-4/chapter-2'>New keys - r and u</Link></li>
-                        <li><Link to='/lesson-4/chapter-3'>New keys - r and u</Link></li>
+                        <li><Link to='/lesson-4/chapter-1'>New keys - <kbd>r</kbd> and <kbd>u</kbd></Link></li>
+                        <li><Link to='/lesson-4/chapter-2'>New keys - <kbd>r</kbd> and <kbd>u</kbd></Link></li>
+                        <li><Link to='/lesson-4/chapter-3'>New keys - <kbd>r</kbd> and <kbd>u</kbd></Link></li>
 
                         <li><Link to='/lesson-4/chapter-4'>Homerow + r and u</Link></li>
                         <li><Link to='/lesson-4/chapter-5'>Homerow + r and u</Link></li>
@@ -93,9 +110,9 @@ class Chapters extends React.Component {
 
                     <li><Link to='#' onClick={this.toggleList}>Lesson 5</Link></li>
                     <ul id='Lesson 5'>
-                        <li><Link to='/lesson-5/chapter-1'>New keys - t and y</Link></li>
-                        <li><Link to='/lesson-5/chapter-2'>New keys - t and y</Link></li>
-                        <li><Link to='/lesson-5/chapter-3'>New keys - t and y</Link></li>
+                        <li><Link to='/lesson-5/chapter-1'>New keys - <kbd>t</kbd> and <kbd>y</kbd></Link></li>
+                        <li><Link to='/lesson-5/chapter-2'>New keys - <kbd>t</kbd> and <kbd>y</kbd></Link></li>
+                        <li><Link to='/lesson-5/chapter-3'>New keys - <kbd>t</kbd> and <kbd>y</kbd></Link></li>
 
                         <li><Link to='/lesson-5/chapter-4'>Homerow + Top Row</Link></li>
                         <li><Link to='/lesson-5/chapter-5'>Homerow + Top Row</Link></li>
@@ -110,9 +127,9 @@ class Chapters extends React.Component {
 
                     <li><Link to='#' onClick={this.toggleList}>Lesson 6</Link></li>
                     <ul id='Lesson 6'>
-                        <li><Link to='/lesson-6/chapter-1'>New keys - e and i</Link></li>
-                        <li><Link to='/lesson-6/chapter-2'>New keys - e and i</Link></li>
-                        <li><Link to='/lesson-6/chapter-3'>New keys - e and i</Link></li>
+                        <li><Link to='/lesson-6/chapter-1'>New keys - <kbd>e</kbd> and <kbd>i</kbd></Link></li>
+                        <li><Link to='/lesson-6/chapter-2'>New keys - <kbd>e</kbd> and <kbd>i</kbd></Link></li>
+                        <li><Link to='/lesson-6/chapter-3'>New keys - <kbd>e</kbd> and <kbd>i</kbd></Link></li>
 
                         <li><Link to='/lesson-6/chapter-4'>Homerow + Top Row</Link></li>
                         <li><Link to='/lesson-6/chapter-5'>Homerow + Top Row</Link></li>
@@ -127,9 +144,9 @@ class Chapters extends React.Component {
 
                     <li><Link to='#' onClick={this.toggleList}>Lesson 7</Link></li>
                     <ul id='Lesson 7'>
-                        <li><Link to='/lesson-7/chapter-1'>New keys - w and o</Link></li>
-                        <li><Link to='/lesson-7/chapter-2'>New keys - w and o</Link></li>
-                        <li><Link to='/lesson-7/chapter-3'>New keys - w and o</Link></li>
+                        <li><Link to='/lesson-7/chapter-1'>New keys - <kbd>w</kbd> and <kbd>o</kbd></Link></li>
+                        <li><Link to='/lesson-7/chapter-2'>New keys - <kbd>w</kbd> and <kbd>o</kbd></Link></li>
+                        <li><Link to='/lesson-7/chapter-3'>New keys - <kbd>w</kbd> and <kbd>o</kbd></Link></li>
 
                         <li><Link to='/lesson-7/chapter-4'>Homerow + Top Row</Link></li>
                         <li><Link to='/lesson-7/chapter-5'>Homerow + Top Row</Link></li>
@@ -144,7 +161,7 @@ class Chapters extends React.Component {
 
                     <li><Link to='#' onClick={this.toggleList}>Lesson 8</Link></li>
                     <ul id='Lesson 8'>
-                        <li><Link to='/lesson-8/chapter-1'>New keys - q and p</Link></li>
+                        <li><Link to='/lesson-8/chapter-1'>New keys - <kbd>q</kbd> and <kbd>p</kbd></Link></li>
                         <li><Link to='/lesson-8/chapter-2'>New keys - q and p</Link></li>
                         <li><Link to='/lesson-8/chapter-3'>New keys - q and p</Link></li>
 
@@ -161,7 +178,7 @@ class Chapters extends React.Component {
 
                     <li><Link to='#' onClick={this.toggleList}>Lesson 9</Link></li>
                     <ul id='Lesson 9'>
-                        <li><Link to='/lesson-9/chapter-1'>New keys v and m</Link></li>
+                        <li><Link to='/lesson-9/chapter-1'>New keys <kbd>v</kbd> and <kbd>m</kbd></Link></li>
                         <li><Link to='/lesson-9/chapter-2'>New keys v and m</Link></li>
                         <li><Link to='/lesson-9/chapter-3'>New keys v and m</Link></li>
 
@@ -186,7 +203,7 @@ class Chapters extends React.Component {
 
                     <li><Link to='#' onClick={this.toggleList}>Lesson 10</Link></li>
                     <ul id='Lesson 10'>
-                        <li><Link to='/lesson-10/chapter-1'>New keys - c and ,</Link></li>
+                        <li><Link to='/lesson-10/chapter-1'>New keys - <kbd>c</kbd> and <kbd>,</kbd></Link></li>
                         <li><Link to='/lesson-10/chapter-2'>New keys - c and ,</Link></li>
                         <li><Link to='/lesson-10/chapter-3'>New keys - c and ,</Link></li>
 
@@ -207,7 +224,7 @@ class Chapters extends React.Component {
 
                     <li><Link to='#' onClick={this.toggleList}>Lesson 11</Link></li>
                     <ul id='Lesson 11'>
-                        <li><Link to='/lesson-11/chapter-1'>New keys - x and .</Link></li>
+                        <li><Link to='/lesson-11/chapter-1'>New keys - <kbd>x</kbd> and <kbd>.</kbd></Link></li>
                         <li><Link to='/lesson-11/chapter-2'>New keys - x and .</Link></li>
                         <li><Link to='/lesson-11/chapter-3'>New keys - x and .</Link></li>
 
@@ -229,7 +246,7 @@ class Chapters extends React.Component {
 
                     <li><Link to='#' onClick={this.toggleList}>Lesson 12</Link></li>
                     <ul id='Lesson 12'>
-                        <li><Link to='/lesson-12/chapter-1'>New keys - z and /</Link></li>
+                        <li><Link to='/lesson-12/chapter-1'>New keys - <kbd>z</kbd> and <kbd>/</kbd></Link></li>
                         <li><Link to='/lesson-12/chapter-2'>New keys - z and /</Link></li>
                         <li><Link to='/lesson-12/chapter-3'>New keys - z and /</Link></li>
 
@@ -254,7 +271,7 @@ class Chapters extends React.Component {
                     <li><Link to='/games'>Games</Link></li>
 
                 </ul>
-            </div >
+            </nav >
         )
     }
 };
