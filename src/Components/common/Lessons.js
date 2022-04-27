@@ -43,9 +43,9 @@ export const tutorial = {
         chapter5: ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
         chapter6: ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
 
-        chapter7: ['gas', 'lags', 'has',],
-        chapter8: [],
-        chapter9: [],
+        chapter7: ['lags;', 'gash', 'half;', 'gas', 'has', 'had', 'ash', 'ask',],
+        chapter8: ['glass;', 'flask;', 'skald;', 'jags', 'lags', 'gash', 'half'],
+        chapter9: ['glass;', 'flask', 'flash;', 'flags;', 'skald;', 'slag;', 'ask'],
     },
 
     // Second row
