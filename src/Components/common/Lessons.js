@@ -66,7 +66,9 @@ export const tutorial = {
         chapter9: ['r', 'u',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
 
-        chapter10: []
+        chapter10: ['shark', 'guard', 'glads', 'argus', 'dark', 'jars', 'husk', 'had'],
+        chapter11: ['sulfur', 'laughs', 'ducks', 'sugar', 'laugh', 'shard'],
+        chapter12: ['shark;', 'jars;', 'sugar;', 'ducks', 'shard', 'arf', 'has'],
     },
 
     lesson5: {
@@ -85,7 +87,9 @@ export const tutorial = {
         chapter9: ['r', 't', 'y', 'u',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
 
-        chapter10: []
+        chapter10: ['star', 'jury', 'draft', 'flat', 'yard', 'hats', 'stag', 'shy'],
+        chapter11: ['adjust', 'ultra', 'study', 'kraft', 'hast', 'just', 'gray'],
+        chapter12: ['adjust', 'shrug', 'study', 'just', 'days', 'salt', 'tasks'],
     },
 
     lesson6: {
@@ -104,7 +108,9 @@ export const tutorial = {
         chapter9: ['e', 'r', 't', 'y', 'u', 'i',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
 
-        chapter10: []
+        chapter10: ['judge', 'luggage'],
+        chapter11: [],
+        chapter12: [],
     },
 
     lesson7: {
