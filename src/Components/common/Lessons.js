@@ -67,7 +67,7 @@ export const tutorial = {
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
 
         chapter10: ['shark', 'guard', 'glads', 'argus', 'dark', 'jars', 'husk', 'had'],
-        chapter11: ['sulfur', 'laughs', 'ducks', 'sugar', 'laugh', 'shard'],
+        chapter11: ['sulfur', 'laughs', 'ducks', 'sugar', 'laugh', 'shard', 'grass'],
         chapter12: ['shark;', 'jars;', 'sugar;', 'ducks', 'shard', 'arf', 'has'],
     },
 
@@ -87,7 +87,7 @@ export const tutorial = {
         chapter9: ['r', 't', 'y', 'u',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
 
-        chapter10: ['star', 'jury', 'draft', 'flat', 'yard', 'hats', 'stag', 'shy'],
+        chapter10: ['draft', 'star', 'jury', 'flat', 'yard', 'hats', 'stag', 'shy'],
         chapter11: ['adjust', 'ultra', 'study', 'kraft', 'hast', 'just', 'gray'],
         chapter12: ['adjust', 'shrug', 'study', 'just', 'days', 'salt', 'tasks'],
     },
@@ -108,9 +108,9 @@ export const tutorial = {
         chapter9: ['e', 'r', 't', 'y', 'u', 'i',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
 
-        chapter10: ['judge', 'luggage'],
-        chapter11: [],
-        chapter12: [],
+        chapter10: ['fairy', 'fields', 'fresh', 'shake', 'fish', 'desk', 'fade;'],
+        chapter11: ['gratitude', 'luggage', 'juries', 'layers', 'hiked', 'height', 'jade'],
+        chapter12: ['lifeguard', 'satellite', 'feathers', 'fragile', 'fridge', 'files'],
     },
 
     lesson7: {
@@ -129,7 +129,9 @@ export const tutorial = {
         chapter9: ['w', 'e', 'r', 't', 'y', 'u', 'i', 'o',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
 
-        chapter10: []
+        chapter10: ['hideout', 'outlook', 'awesome', 'whale', 'wrist', 'award', 'law'],
+        chapter11: ['sweetheart', 'outside', 'without', 'woody', 'where', 'wire', ],
+        chapter12: ['lightweight', 'wherever', 'afterward', 'await'],
     },
 
     lesson8: {
