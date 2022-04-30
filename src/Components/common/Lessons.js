@@ -129,9 +129,9 @@ export const tutorial = {
         chapter9: ['w', 'e', 'r', 't', 'y', 'u', 'i', 'o',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
 
-        chapter10: ['hideout', 'outlook', 'awesome', 'whale', 'wrist', 'award', 'law'],
-        chapter11: ['sweetheart', 'outside', 'without', 'woody', 'where', 'wire', ],
-        chapter12: ['lightweight', 'wherever', 'afterward', 'await'],
+        chapter10: ['hideout', 'outlook', 'whale', 'wrist', 'award', 'route', 'law', 'low'],
+        chapter11: ['sweetheart', 'outside', 'without', 'woody', 'where', 'wire', 'oak'],
+        chapter12: ['lightweight', 'household', 'afterward', 'towards', 'await', 'how'],
     },
 
     lesson8: {
@@ -150,7 +150,9 @@ export const tutorial = {
         chapter9: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
 
-        chapter10: []
+        chapter10: ['professor', 'prototype', 'squirrel', 'liquid', 'equal', 'aqua', 'plus'],
+        chapter11: ['quality', 'popular', 'perhaps', 'sequoia', 'sheep', 'quick', 'tape'],
+        chapter12: ['philosopher', 'disappear', 'support', 'antique', 'square', 'pass'],
     },
 
     //Third row
@@ -182,11 +184,20 @@ export const tutorial = {
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
             'v', 'm'],
 
-        chapter16: []
+        chapter16: ['masterpiece', 'somehow', 'himself', 'removal', 'almost', 'promise', 'me'],
+        chapter17: ['bathroom', 'comfort', 'resolve','assumed', 'memory', 'dream', 'mirror'],
+        chapter18: ['immediately', 'supermarket', 'trademark', 'summary', 'message', 'massive', 'from'],
 
     },
 
     lesson10: {
+        chapter1: ['b', 'n'],
+        chapter2: ['b', 'n'],
+        chapter3: ['b', 'n'],
+
+    },
+
+    lesson11: {
         chapter1: ['c', ','],
         chapter2: ['c', ','],
         chapter3: ['c', ','],
@@ -212,7 +223,7 @@ export const tutorial = {
         chapter13: []
     },
 
-    lesson11: {
+    lesson12: {
         chapter1: ['x', '.'],
         chapter2: ['x', '.'],
         chapter3: ['x', '.'],
@@ -238,7 +249,7 @@ export const tutorial = {
         chapter13: []
     },
 
-    lesson12: {
+    lesson13: {
         chapter1: ['z', '/'],
         chapter2: ['z', '/'],
         chapter3: ['z', '/'],
