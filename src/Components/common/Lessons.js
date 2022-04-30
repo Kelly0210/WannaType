@@ -185,7 +185,7 @@ export const tutorial = {
             'v', 'm'],
 
         chapter16: ['masterpiece', 'somehow', 'himself', 'removal', 'almost', 'promise', 'me'],
-        chapter17: ['bathroom', 'comfort', 'resolve','assumed', 'memory', 'dream', 'mirror'],
+        chapter17: ['bathroom', 'comfort', 'resolve', 'assumed', 'memory', 'dream', 'mirror'],
         chapter18: ['immediately', 'supermarket', 'trademark', 'summary', 'message', 'massive', 'from'],
 
     },
@@ -194,6 +194,32 @@ export const tutorial = {
         chapter1: ['b', 'n'],
         chapter2: ['b', 'n'],
         chapter3: ['b', 'n'],
+
+        chapter4: ['f', 'b', 'n', 'j'],
+        chapter5: ['f', 'b', 'n', 'j'],
+        chapter6: ['f', 'b', 'n', 'j'],
+
+        chapter7: ['r', 'f', 'b', 'n', 'j', 'u'],
+        chapter8: ['r', 'f', 'b', 'n', 'j', 'u'],
+        chapter9: ['r', 'f', 'b', 'n', 'j', 'u'],
+
+        chapter10: ['r', 't', 'f', 'g', 'v', 'b', 'y', 'u', 'h', 'j', 'n', 'm'],
+        chapter11: ['r', 't', 'f', 'g', 'v', 'b', 'y', 'u', 'h', 'j', 'n', 'm'],
+        chapter12: ['r', 't', 'f', 'g', 'v', 'b', 'y', 'u', 'h', 'j', 'n', 'm'],
+
+        chapter13: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
+            'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
+            'c', 'v', 'b', 'n', 'm', ','],
+        chapter14: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
+            'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
+            'c', 'v', 'b', 'n', 'm', ','],
+        chapter15: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
+            'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
+            'c', 'v', 'b', 'n', 'm', ','],
+
+        chapter16: ['newspaper', 'possible', 'assembly', 'drawing', 'butter', 'ribbon', 'moment', 'and'],
+        chapter17: ['international', 'development', 'window', 'opinion', 'brand', 'began', 'any'],
+        chapter18: ['establishment', 'weekend', 'available', 'natural', 'everyone', 'important', 'sun'],
 
     },
 
@@ -220,7 +246,9 @@ export const tutorial = {
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
             'c', 'v', 'm', ','],
 
-        chapter13: []
+        chapter13: ['percentage', 'successful', 'correct', 'accurate', 'practice', 'because', 'quick', 'check', 'can'],
+        chapter14: ['location', 'technique', 'performance', 'picture', 'pacific', 'canvas', 'grape'],
+        chapter15: ['architecture', 'education', 'accessible', 'conclusion', 'science', 'archives', 'teach'],
     },
 
     lesson12: {
