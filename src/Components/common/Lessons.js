@@ -244,11 +244,11 @@ export const tutorial = {
             'c', 'v', 'm', ','],
         chapter12: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
-            'c', 'v', 'm', ','],
+            'c', 'v', 'b', 'n', 'm', ','],
 
-        chapter13: ['percentage', 'successful', 'correct', 'accurate', 'practice', 'because', 'quick', 'check', 'can'],
-        chapter14: ['location', 'technique', 'performance', 'picture', 'pacific', 'canvas', 'grape'],
-        chapter15: ['architecture', 'education', 'accessible', 'conclusion', 'science', 'archives', 'teach'],
+        chapter13: ['percentage', 'successful', 'correct,', 'accurate', 'practice', 'because', 'quick', 'check', 'can'],
+        chapter14: ['location', 'technique,', 'performance,', 'picture', 'pacific', 'canvas', 'grape'],
+        chapter15: ['architecture,', 'education,', 'accessible', 'conclusion,', 'science,', 'archives', 'teach'],
     },
 
     lesson12: {
@@ -272,9 +272,11 @@ export const tutorial = {
             'x', 'c', 'v', 'm', ',', '.'],
         chapter12: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
-            'x', 'c', 'v', 'm', ',', '.'],
+            'x', 'c', 'v', 'b', 'n', 'm', ',', '.'],
 
-        chapter13: []
+        chapter13: ['proximate', 'beeswax', 'paradox', 'relax.', 'next', 'box'],
+        chapter14: ['experiment', 'expression', 'mixture', 'matrix.', 'galaxy', 'vortex.'],
+        chapter15: ['megapixel.', 'explain', 'texture.', 'parallax', 'oxygen', 'xenon', 'fixed.'],
     },
 
     lesson13: {
@@ -298,11 +300,12 @@ export const tutorial = {
             'z', 'x', 'c', 'v', 'm', ',', '.', '/'],
         chapter12: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
-            'z', 'x', 'c', 'v', 'm', ',', '.', '/'],
+            'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/'],
 
-        chapter13: []
+        chapter13: ['civilization', 'mozzarella', 'hazel', 'topaz', 'jazz', 'zip'],
+        chapter14: ['organization', 'realization', 'sanitize', 'citizen', 'puzzle', 'pizza'],
+        chapter15: ['vaporize', 'recognize', 'blizzard', 'frozen', 'wizard', 'bronze'],
     }
-
 }
 
 // export const Lessonn2 = ['d', 'j', 'k', 'l'];
