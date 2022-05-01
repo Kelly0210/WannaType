@@ -276,56 +276,68 @@ export const tutorial = {
 
         chapter13: ['proximate', 'beeswax', 'paradox', 'relax.', 'next', 'box'],
         chapter14: ['experiment', 'expression', 'mixture', 'matrix.', 'galaxy', 'vortex.'],
-        chapter15: ['megapixel.', 'explain', 'texture.', 'parallax', 'oxygen', 'xenon', 'fixed.'],
+        chapter15: ['megapixel.', 'explain', 'texture.', 'parallax', 'oxygen', 'xenon.', 'fixed.'],
     },
 
     lesson13: {
-        chapter1: ['z', '/'],
-        chapter2: ['z', '/'],
-        chapter3: ['z', '/'],
+        chapter1: ['z', `'`],
+        chapter2: ['z', `'`],
+        chapter3: ['z', `'`],
 
-        chapter4: ['a', 'z', '/', ';'],
-        chapter5: ['a', 'z', '/', ';'],
-        chapter6: ['a', 'z', '/', ';'],
+        chapter4: ['a', 'z', ';',  `'`],
+        chapter5: ['a', 'z', ';',  `'`],
+        chapter6: ['a', 'z', ';',  `'`],
 
-        chapter7: ['q', 'a', 'z', '/', ';', 'p'],
-        chapter8: ['q', 'a', 'z', '/', ';', 'p'],
-        chapter9: ['q', 'a', 'z', '/', ';', 'p'],
+        chapter7: ['q', 'a', 'z', `'`, ';', 'p'],
+        chapter8: ['q', 'a', 'z', `'`, ';', 'p'],
+        chapter9: ['q', 'a', 'z', `'`, ';', 'p'],
 
         chapter10: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
-            'z', 'x', 'c', 'v', 'm', ',', '.', '/'],
+            'z', 'x', 'c', 'v', 'm', ',', '.', `'`],
         chapter11: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
-            'z', 'x', 'c', 'v', 'm', ',', '.', '/'],
+            'z', 'x', 'c', 'v', 'm', ',', '.', `'`],
         chapter12: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
-            'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/'],
+            'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', `'`],
 
         chapter13: ['civilization', 'mozzarella', 'hazel', 'topaz', 'jazz', 'zip'],
         chapter14: ['organization', 'realization', 'sanitize', 'citizen', 'puzzle', 'pizza'],
         chapter15: ['vaporize', 'recognize', 'blizzard', 'frozen', 'wizard', 'bronze'],
-    }
+    },
+
+    randomText: [
+        `Four-bedroom farmhouse in the countryside. All of the four double bedrooms
+         are en suite with luxury shower and bath. Farm kitchen with barbecue, tables
+         and chairs outside. Great for groups of friends. The supermarket is half an hour
+         by car and you can take a train from the village into the city. Escape from
+         normal life for a few days as we have… NO INTERNET and you can only use
+         mobile phones at the bottom of the garden!`,
+
+        `Greenland is a huge island in the far, far north of the world. The weather there is very harsh
+         and cold. Even the 'hottest' summer day on Greenland is like a cool winter's day in England.
+         In the summer months, the sun never sets; it is light all through the night. The warmest part
+         of the island is on the south coast and that is where most Greenlanders live. However, it is
+         still a very hard place to live because of the cold.`,
+
+        `Architecture involves using the most basic of design concepts and mixing them up in a way that
+         not only serves an artistic purpose but is also functional. We have built skyscrapers touching heights
+         beyond our wildest imaginations. All of it wouldn't have been possible without an architect who thought
+         of the impossible and had innovative ideas to make use of every piece of technology at their disposal to make it happen.`,
+
+        `A giant, colorful canyon bakes under a hot sun in Arizona. Carved over
+         millions of years by the Colorado River that flows through it's base, the
+         Grand Canyon is up to 6,000 feet deep (meaning that in some places,
+         it's big enough to fit 19 Statues of Liberty stacked on top of each
+         other!) The floor of the canyon has a diverse landscape, featuring
+         dried up desert areas that can heat up to 120F as well as forests
+         where temperatures sometimes drop to minus 20F.`,
+
+        `Lakes vary greatly in size. Some measure only a few square meters
+         and are small enough to fit in your backyard. Such small lakes are
+         often referred to as ponds. Other lakes are so big that they are called
+         seas. The Caspian Sea, in Europe and Asia, is the world’s largest lake,
+         with an area of more than 370,000 square kilometers (143,000 square miles).`
+    ]
 }
-
-// export const Lessonn2 = ['d', 'j', 'k', 'l'];
-// export const Lesson3 = ['s', 'd', 'j', 'k', 'l', ';'];
-// export const Lesson4 = ['a','s', 'd', 'j', 'k', 'l', ';',"'"];
-
-export const LessonExmp = {
-    chapter1: [],
-    chapter2: [],
-    chapter3: [],
-
-    chapter4: [],
-    chapter5: [],
-    chapter6: [],
-
-    chapter7: [],
-    chapter8: [],
-    chapter9: [],
-
-    chapter10: [],
-    chapter11: [],
-    chapter12: []
-};
