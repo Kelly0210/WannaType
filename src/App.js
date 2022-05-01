@@ -10,26 +10,41 @@ import Chapters from './Components/Chapters/Chapters';
 import FallingKeys from './Components/Games/FallingKeys';
 import Fallback from './Components/common/Fallback';
 
-const App = () => {
-  return (
+class App extends React.Component  {
+
+  constructor() {
+    super()
+    this.state = {
+      generatedText: ''
+    }
+    this.passGeneratedText = this.passGeneratedText.bind(this);
+  }
+
+  passGeneratedText(generatedText) {
+    this.setState({generatedText});
+  }
+
+  render()
+  {return (
     <React.Suspense fallback={<Fallback />}>
     <div className='container'>
       <BrowserRouter>
         <Header />
           <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/:lesson/:chapter' element={<Main />}/>
-          <Route path='/:random' element={<Main />}/>
+          <Route path='/:lesson/:chapter' element={<Main generatedText={this.state.generatedText}/>}/>
+          <Route path='/:random' element={<Main generatedText={this.state.generatedText}/>}/>
           <Route path='/games' element={<FallingKeys />}/>
 
           <Route path='*' element={<Component404 />}/>
           </Routes>
-        <Chapters/>
+        <Chapters passGeneratedText={this.passGeneratedText}/>
         <Footer />
       </BrowserRouter>
     </div>
     </React.Suspense>
   );
+}
 }
 
 export default App;

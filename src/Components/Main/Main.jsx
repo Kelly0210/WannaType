@@ -1,25 +1,21 @@
 import React from 'react';
 import style from './Main.module.css';
 
-import CustomTextArea from '../CustomTextArea/CustomTextArea';
+import CustomInput from '../CustomInput/CustomInput';
 import Keyboard from '../Keyboard/Keyboard';
 import StatusBar from '../StatusBar/StatusBar';
 
-import { generateLesson } from '../common/generateLesson';
-import { tutorial } from '../common/Lessons';
-
 class Main extends React.Component {
 
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
-      lesson: generateLesson(tutorial.lesson1.chapter1, 50),
+      lesson: '',
       mistakeHappened: false,
       numberOfMistake: 0,
       lastLetter: '',
       percentage: 0,
       cpm: 0,
-      // url: window.location.pathname
     }
 
     this.handleMistake = this.handleMistake.bind(this);
@@ -30,6 +26,15 @@ class Main extends React.Component {
 
     this.reloadLesson = this.reloadLesson.bind(this);
     this.passLastLetter = this.passLastLetter.bind(this);
+  }
+
+  shouldComponentUpdate(nextProps) {
+    if (nextProps.generatedText !== this.state.lesson) {
+      this.setState({ lesson: this.props.generatedText });
+      return true
+    } else {
+      return true
+    }
   }
 
   handleMistake(boolean) {
@@ -59,10 +64,11 @@ class Main extends React.Component {
   render() {
     return (
       <main className={style.main}>
+
         <StatusBar numberOfMistake={this.state.numberOfMistake}
           percentage={this.state.percentage} cpm={this.state.cpm} />
 
-        <CustomTextArea
+        <CustomInput
           handleMistake={this.handleMistake}
           mistakeCounter={this.mistakeCounter}
           numberOfMistake={this.state.numberOfMistake}
@@ -74,7 +80,6 @@ class Main extends React.Component {
           passLastLetter={this.passLastLetter}
           charactersPerMinute={this.charactersPerMinute}
         />
-
         <Keyboard mistakeHappened={this.state.mistakeHappened}
           lastLetter={this.state.lastLetter} />
       </main>
@@ -84,19 +89,3 @@ class Main extends React.Component {
 }
 
 export default Main;
-
-  // shouldComponentUpdate(nextProps, nextState) { 
-  //   this.setState({url: window.location.pathname})
-  //   if (this.state.url !== nextState.url) {
-  //     console.log('test')
-  //     return true;
-  //   } else {
-  //     return false
-  //   }
-
-
-  //   // let test = event.target.pathname.replaceAll('/', '.');
-  //   // let testTwo = test.replaceAll('-', '');
-  //   // let testThree = testTwo.slice(1);
-  //   // let testFour = testThree.split('.').reduce((o,i)=> o[i], tutorial);
-  //  }
