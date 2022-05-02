@@ -10,58 +10,39 @@ class Main extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      lesson: '',
       mistakeHappened: false,
       numberOfMistake: 0,
       lastLetter: '',
       percentage: 0,
       cpm: 0,
     }
-
-    this.handleMistake = this.handleMistake.bind(this);
-    this.mistakeCounter = this.mistakeCounter.bind(this);
-
-    this.completionPercentage = this.completionPercentage.bind(this);
-    this.charactersPerMinute = this.charactersPerMinute.bind(this);
-
-    this.reloadLesson = this.reloadLesson.bind(this);
-    this.passLastLetter = this.passLastLetter.bind(this);
   }
 
-  shouldComponentUpdate(nextProps) {
-    if (nextProps.generatedText !== this.state.lesson) {
-      this.setState({ lesson: this.props.generatedText });
-      return true
-    } else {
-      return true
-    }
-  }
-
-  handleMistake(boolean) {
+  handleMistake = (boolean) => {
     this.setState({ mistakeHappened: boolean });
   }
 
-  mistakeCounter() {
+  mistakeCounter = () => {
     this.setState({ numberOfMistake: this.state.numberOfMistake + 1 });
   }
 
-  passLastLetter(lastLetter) {
+  passLastLetter = (lastLetter) => {
     this.setState({ lastLetter });
   }
 
-  completionPercentage(percentage) {
+  completionPercentage = (percentage) => {
     this.setState({ percentage });
   }
 
-  charactersPerMinute(cpm) {
+  charactersPerMinute = (cpm) => {
     this.setState({ cpm });
   }
 
-  reloadLesson() {
-    window.location.reload();
+  reloadLesson = () => {
+    window.location.reload()
   }
 
-  render() {
+  render = () => {
     return (
       <main className={style.main}>
 
@@ -73,7 +54,7 @@ class Main extends React.Component {
           mistakeCounter={this.mistakeCounter}
           numberOfMistake={this.state.numberOfMistake}
 
-          lesson={this.state.lesson}
+          generatedText={this.props.generatedText}
           reloadLesson={this.reloadLesson}
 
           completionPercentage={this.completionPercentage}

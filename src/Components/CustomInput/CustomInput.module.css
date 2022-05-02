@@ -9,20 +9,20 @@
     margin: 3px auto 10px auto;
 }
 
+.InputBox input {
+    width: inherit;
+    min-height: inherit; 
+    position: absolute;
+    z-index: 1;
+    opacity: 0; 
+}
+
 .displayText {
     font-size: 40px;
     letter-spacing: 3px;
     line-height: 60px;
     margin: auto 0;
     user-select: none;
-}
-
-.inputField {
-    width: inherit;
-    min-height: inherit; 
-    position: absolute;
-    z-index: 1;
-    opacity: 0; 
 }
 
 .unfinishedText {

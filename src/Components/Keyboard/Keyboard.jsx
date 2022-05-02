@@ -5,7 +5,7 @@ import * as PropTypes from 'prop-types';
 
 class Keyboard extends React.Component {
 
-    componentDidUpdate() {
+    componentDidUpdate = () => {
         if (this.props.lastLetter) {
             let pressedButton = document.getElementById(this.props.lastLetter);
 
@@ -20,7 +20,7 @@ class Keyboard extends React.Component {
         }
     }
 
-    render() {
+    render = () => {
         return (
             <div className={style.keyboardContainer}>
                 <div className={style.row}>

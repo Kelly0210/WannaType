@@ -5,7 +5,7 @@ import emptyHeart from '../../assets/img/emptyHeart.png';
 
 class StatusBar extends React.Component {
 
-    componentDidUpdate() {
+    componentDidUpdate = () => {
         switch (this.props.numberOfMistake) {
             case 1: document.getElementById('heart-1').src = emptyHeart; break;
             case 2: document.getElementById('heart-2').src = emptyHeart; break;
@@ -14,7 +14,7 @@ class StatusBar extends React.Component {
         }
     }
 
-    render() {
+    render = () => {
 
         return (
             <div className={style.statusBox}>
