@@ -1,7 +1,8 @@
 import React from 'react';
 import * as PropTypes from 'prop-types';
-import FinishBoard from '../Boards/FinishBoard';
+import FinishBoard from '../Board/FinishBoard';
 import style from './CustomInput.module.css';
+import ChangeLayout from '../common/ChangeLayout';
 
 
 class CustomInput extends React.Component {
@@ -10,6 +11,7 @@ class CustomInput extends React.Component {
         super(props)
         this.state = {
             startTimeMs: new Date().getTime(),
+            changeLayout: false,
             disabled: false,
             result: false,
         }
@@ -19,14 +21,21 @@ class CustomInput extends React.Component {
         let inputValue = event.target.value;
         let generatedText = this.props.generatedText;
 
-        this.handleMistake(inputValue, generatedText);
-        this.handleComplete(inputValue, generatedText);
-        this.completionPercentage(inputValue, generatedText);
-        this.charactersPerMinute(inputValue);
+        let regEX = /\d|\w|[\.\$@\*\\\/\+\-\^\!\(\)\[\]\~\%\&\=\?\>\<\{\}\"\'\,\:\;\_]/g;
 
-        this.carriage();
+        if (inputValue.slice(-1).match(regEX)) {
 
-        this.props.passLastLetter(inputValue.slice(-1));
+            this.handleMistake(inputValue, generatedText);
+            this.handleComplete(inputValue, generatedText);
+            this.completionPercentage(inputValue, generatedText);
+            this.charactersPerMinute(inputValue);
+
+            this.carriage();
+            this.props.passLastLetter(inputValue.slice(-1));
+
+        } else {
+            this.layoutHandler(true);
+        }
     }
 
     handleMistake = (inputValue, generatedText) => {
@@ -69,6 +78,10 @@ class CustomInput extends React.Component {
         this.setState({ disabled: true });
     }
 
+    layoutHandler = (boolean) => {
+        this.setState({changeLayout: boolean})
+    }
+
     carriage = () => {
         let leftText = document.getElementById('leftText');
         let finishText = document.getElementById('finishText');
@@ -92,6 +105,8 @@ class CustomInput extends React.Component {
 
                 {this.state.disabled && <FinishBoard result={this.state.result}
                     reloadLesson={this.props.reloadLesson} />}
+
+                {this.state.changeLayout && <ChangeLayout layoutHandler={this.layoutHandler}/>}
             </div>
         )
     }

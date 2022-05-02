@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import style from './Chapters.module.css';
 import collapseLeft from '../../assets/img/collapseLeft.png';
 import { textCollection } from "../common/textCollection";
-import { tutorial } from '../common/Lessons'
+import { tutorial } from '../common/LessonsCollection'
 import { generateLesson } from "../common/generateLesson";
 
 const Chapters = (props) => {

@@ -1,0 +1,12 @@
+ .layoutBox {
+    width: 1000px;
+    height: 200px;
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    top: 18%;
+    z-index: 1;
+    font-size: 35px;
+    text-align: center;
+    margin: auto 0;
+ } 

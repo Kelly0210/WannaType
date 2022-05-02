@@ -39,7 +39,7 @@ class Main extends React.Component {
   }
 
   reloadLesson = () => {
-    window.location.reload()
+    window.location.reload();
   }
 
   render = () => {

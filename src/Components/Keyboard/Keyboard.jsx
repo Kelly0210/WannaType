@@ -7,17 +7,17 @@ class Keyboard extends React.Component {
 
     componentDidUpdate = () => {
         if (this.props.lastLetter) {
-            let pressedButton = document.getElementById(this.props.lastLetter);
+        let pressedButton = document.getElementById(this.props.lastLetter);
 
-            pressedButton.classList.remove(`${style.wrongKey}`);
-            pressedButton.classList.remove(`${style.correctKey}`);
+        pressedButton.classList.remove(`${style.wrongKey}`);
+        pressedButton.classList.remove(`${style.correctKey}`);
 
-            if (this.props.mistakeHappened) {
-                setTimeout(() => { pressedButton.classList.add(`${style.wrongKey}`) }, 0);
-            } else {
-                setTimeout(() => { pressedButton.classList.add(`${style.correctKey}`) }, 0);
-            }
+        if (this.props.mistakeHappened) {
+            setTimeout(() => { pressedButton.classList.add(`${style.wrongKey}`) }, 0);
+        } else {
+            setTimeout(() => { pressedButton.classList.add(`${style.correctKey}`) }, 0);
         }
+    }
     }
 
     render = () => {
