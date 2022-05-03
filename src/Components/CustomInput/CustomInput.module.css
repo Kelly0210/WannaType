@@ -9,7 +9,7 @@
     margin: 3px auto 10px auto;
 }
 
-.InputBox input {
+.InputBox > input {
     width: inherit;
     min-height: inherit; 
     position: absolute;

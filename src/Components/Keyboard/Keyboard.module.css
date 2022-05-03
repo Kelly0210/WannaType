@@ -15,7 +15,7 @@
     border: 2px solid #2c3e50;
     border-radius: 5px;
 
-    line-height: 45px;
+    line-height: 46px;
     margin: 0 1px;
     float: left;
     user-select: none;
@@ -23,23 +23,23 @@
 }
 
 .keyBackSpace {
-    width: 72px;
+    width: 78px;
 }
 
 .keyTab {
-    width: 72px;
+    width: 78px;
 }
 
 .keyCaps {
-    width: 87px;
+    width: 90px;
 }
 
 .keyEnter {
-    width: 84px;
+    width: 87px;
 }
 
 .keyShift {
-    width: 112px;
+    width: 114px;
 }
 
 .keySpace {

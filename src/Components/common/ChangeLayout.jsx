@@ -7,11 +7,11 @@ const ChangeLayout = (props) => {
     }
 
     return <div className={style.layoutBox}>
-        Please change layout
+        <span>Please change layout</span>
         <br/>
-        Right now we support only US layout
-        <br/>
-        <button onClick={hideWindow}>OK</button>
+        <span>Right now we support only US layout</span>
+        <br/> 
+        <button onClick={hideWindow}>Got it!</button>
         </div>
         
 }
