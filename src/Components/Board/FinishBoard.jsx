@@ -5,7 +5,7 @@ import arrowRight from '../../assets/img/arrowRight.png';
 import arrowLeft from '../../assets/img/arrowLeft.png';
 import { Link } from 'react-router-dom';
 
-import { tips } from '../common/Tips';
+import { tipsCollection } from '../common/tipsCollection';
 
 
 const FinishBoard = (props) => {
@@ -15,7 +15,7 @@ const FinishBoard = (props) => {
     }
 
     const randomTip = () => {
-        return tips[Math.floor(Math.random() * tips.length)];
+        return tipsCollection[Math.floor(Math.random() * tipsCollection.length)];
     }
 
     return (

@@ -1,4 +1,4 @@
-export const tips = [
+export const tipsCollection = [
     'Maintain good posture 🙇',
     "Don't look down your hands 👀",
     'Find a comfortable position for your hands ⌨️',

@@ -1,5 +1,7 @@
 .chaptersContainer {
-    grid-area: chapters;
+    width: 200px;
+    float: left;
+    height: 100%;
     background-color: crimson;
 }
 
@@ -47,8 +49,26 @@ li > a:focus {
 }
 
 .collapseLeft {
-    width: 40px;
     float: right;
+    width: 30px;
+    cursor: pointer;
+    padding: 3px;
+    margin: 4px 4px 0 0;
+}
+
+.collapseRight {
+    float: left;
+    width: 30px;
+    cursor: pointer;
+    padding: 3px;
+    margin: 5px 0 0 5px;
+    transform: scaleX(-1);
+}
+
+.collapseLeft:hover,
+.collapseRight:hover {
+    background-color: white;
+    border-radius: 5px;
 }
 
 kbd {

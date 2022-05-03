@@ -1,49 +1,50 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import style from './Chapters.module.css';
-import collapseLeft from '../../assets/img/collapseLeft.png';
+import collapseArrow from '../../assets/img/collapseArrow.png';
 import { textCollection } from "../common/textCollection";
-import { tutorial } from '../common/LessonsCollection'
+import { lessonsCollection } from '../common/lessonsCollection';
 import { generateLesson } from "../common/generateLesson";
 
 const Chapters = (props) => {
+
+    const lessonClick = (event) => {
+        let levelOfDifficulty = event.target.getAttribute('lod');
+        let stepOne = event.target.pathname.replaceAll('/', '.').replaceAll('-', '');
+        let stepThree = stepOne.slice(1);
+        let stepFour = stepThree.split('.').reduce((o, i) => o[i], lessonsCollection);
+        let stepFive = generateLesson(stepFour, levelOfDifficulty)
+        props.passGeneratedText(stepFive);
+    }
+
+    const CollapseComponent = () => {
+        let entireComponent = document.getElementById('entireComponent');
+        entireComponent.classList.toggle(`${style.hide}`);
+
+        let arrowRight = document.getElementById('collapseRight');
+        arrowRight.classList.toggle(`${style.hide}`);
+    }
 
     const toggleList = (event) => {
         let innerUl = document.getElementById(event.target.textContent);
         innerUl.classList.toggle(`${style.expend}`);
     }
 
-    const lessonClick = (event) => {
-        let levelOfDifficulty = event.target.getAttribute('lod');
-
-        let stepOne = event.target.pathname.replaceAll('/', '.').replaceAll('-', '');
-        let stepThree = stepOne.slice(1);
-        let stepFour = stepThree.split('.').reduce((o, i) => o[i], tutorial);
-
-        let stepFive = generateLesson(stepFour, levelOfDifficulty)
-        props.passGeneratedText(stepFive);
-    }
-
     const randomTextClick = () => {
         let randomText = textCollection[Math.floor(Math.random() * textCollection.length)];
-        this.props.passGeneratedText(randomText);
+        props.passGeneratedText(randomText);
     }
 
     const randomExerciseClick = () => {
-
-        this.props.passGeneratedText();
-    }
-
-    const CollapseComponent = () => {
-        let sub = document.getElementById('test');
-        sub.classList.toggle(`${style.hide}`);
     }
 
     return (
-        <nav id='test' className={style.chaptersContainer}>
+        <>
+        <img src={collapseArrow} className={`${style.collapseRight} ${style.hide}`} onClick={CollapseComponent} alt="collapse icon" id='collapseRight'/>
 
-            <img src={collapseLeft} className={style.collapseLeft} onClick={CollapseComponent} alt="collapse icon" />
+        <nav id='entireComponent' className={style.chaptersContainer}>
 
+        <img src={collapseArrow} className={style.collapseLeft} onClick={CollapseComponent} alt="collapse icon" id='collapseLeft'/>
             <ul>
                 <li><Link to='#' onClick={toggleList}>Lesson 1</Link></li>
                 <ul id='Lesson 1'>
@@ -291,7 +292,7 @@ const Chapters = (props) => {
                 </ul>
 
                 <li><Link to='#' onClick={toggleList}>Lesson 13</Link></li>
-                <ul id='Lesson 12'>
+                <ul id='Lesson 13'>
                     <li><Link to='/lesson-13/chapter-1' lod={1} onClick={lessonClick}>New keys - <kbd>z</kbd> and <kbd>'</kbd></Link></li>
                     <li><Link to='/lesson-13/chapter-2' lod={1} onClick={lessonClick}>New keys - <kbd>z</kbd> and <kbd>'</kbd></Link></li>
                     <li><Link to='/lesson-13/chapter-3' lod={1} onClick={lessonClick}>New keys - <kbd>z</kbd> and <kbd>'</kbd></Link></li>
@@ -320,6 +321,7 @@ const Chapters = (props) => {
 
             </ul>
         </nav >
+        </>
     )
 }
 

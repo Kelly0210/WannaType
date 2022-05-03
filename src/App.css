@@ -7,7 +7,7 @@
     grid-auto-flow: row;
     grid-template-areas:
       "header header header"
-      "chapters main main"
+      "main main main"
       "footer footer footer";
     width: 1400px;
     height: 969px;

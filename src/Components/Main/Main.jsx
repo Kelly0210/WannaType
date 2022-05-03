@@ -4,6 +4,7 @@ import style from './Main.module.css';
 import CustomInput from '../CustomInput/CustomInput';
 import Keyboard from '../Keyboard/Keyboard';
 import StatusBar from '../StatusBar/StatusBar';
+import Chapters from '../Chapters/Chapters';
 
 class Main extends React.Component {
 
@@ -45,6 +46,7 @@ class Main extends React.Component {
   render = () => {
     return (
       <main className={style.main}>
+        <Chapters />
 
         <StatusBar numberOfMistake={this.state.numberOfMistake}
           percentage={this.state.percentage} cpm={this.state.cpm} />

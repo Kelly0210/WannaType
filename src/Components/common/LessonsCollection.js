@@ -1,4 +1,4 @@
-export const tutorial = {
+export const lessonsCollection = {
 
     // First - Middle row
 

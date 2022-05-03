@@ -37,7 +37,6 @@ class App extends React.Component {
 
               <Route path='*' element={<Component404 />} />
             </Routes>
-            <Chapters passGeneratedText={this.passGeneratedText} />
             <Footer />
           </BrowserRouter>
         </div>
