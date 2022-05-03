@@ -3,6 +3,7 @@ import * as PropTypes from 'prop-types';
 import FinishBoard from '../Board/FinishBoard';
 import style from './CustomInput.module.css';
 import ChangeLayout from '../common/ChangeLayout';
+// import Display from '../Display/Display';
 
 
 class CustomInput extends React.Component {
@@ -14,6 +15,7 @@ class CustomInput extends React.Component {
             changeLayout: false,
             disabled: false,
             result: false,
+            value: '',
         }
     }
 
@@ -21,9 +23,9 @@ class CustomInput extends React.Component {
         let inputValue = event.target.value;
         let generatedText = this.props.generatedText;
 
-        let regEX = /\d|\w|[\.\$@\*\\\/\+\-\^\!\(\)\[\]\~\%\&\=\?\>\<\{\}\"\'\,\:\;\_]/g;
+        let regEx = /\d|\w|[\.\$@\*\\\/\+\-\^\!\(\)\[\]\~\%\&\=\?\>\<\{\}\"\'\,\:\;\_]/g;
 
-        if (inputValue.slice(-1).match(regEX)) {
+        if (inputValue.slice(-1).match(regEx)) {
 
             this.handleMistake(inputValue, generatedText);
             this.handleComplete(inputValue, generatedText);
@@ -79,7 +81,7 @@ class CustomInput extends React.Component {
     }
 
     layoutHandler = (boolean) => {
-        this.setState({changeLayout: boolean})
+        this.setState({ changeLayout: boolean })
     }
 
     carriage = () => {
@@ -90,23 +92,37 @@ class CustomInput extends React.Component {
         leftText.textContent = leftText.textContent.slice(1);
     }
 
+    reloadLesson = () => {
+        this.setState({
+            startTimeMs: '',
+            changeLayout: false,
+            disabled: false,
+            result: false,
+            value: '',
+        });
+        this.props.reloadLesson();
+
+        let finishText = document.getElementById('finishText');
+        finishText.textContent = '';
+    }
+
     render = () => {
         return (
             <div className={style.InputBox}>
                 <input autoFocus
                     disabled={this.state.disabled}
                     onChange={this.handleChange}
+                    value={this.state.value}
                 />
-
+                {/* <Display generatedText={this.props.generatedText} /> */}
                 <span className={style.displayText}>
-                    <span id='finishText' className={style.cursor} />
-                    <span id='leftText' className={style.unfinishedText}>{this.props.generatedText}</span>
-                </span>
+                <span id='finishText' className={style.cursor} />
+                <span id='leftText' className={style.unfinishedText}>{this.props.generatedText}</span>
+            </span>
 
-                {this.state.disabled && <FinishBoard result={this.state.result}
-                    reloadLesson={this.props.reloadLesson} />}
+                {this.state.disabled && <FinishBoard result={this.state.result} reloadLesson={this.reloadLesson} />}
 
-                {this.state.changeLayout && <ChangeLayout layoutHandler={this.layoutHandler}/>}
+                {this.state.changeLayout && <ChangeLayout layoutHandler={this.layoutHandler} />}
             </div>
         )
     }

@@ -1,8 +1,7 @@
 .container { 
   font-family: Arial, Helvetica, sans-serif;
     display: grid;
-    grid-template-columns: 0.5fr 2.3fr 0.2fr;
-    grid-template-rows: 0.3fr 2.4fr 0.3fr;
+    grid-template-rows: 0.1fr 2.6fr 0.3fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -10,7 +9,8 @@
       "main main main"
       "footer footer footer";
     width: 1400px;
-    height: 969px;
-    margin: auto;
+    height: 100vh;
+    margin: 0 auto;
     background-color: #2c3e50;
+    background-image: url('./assets/img/mainBackground.png');
   }

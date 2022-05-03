@@ -11,6 +11,7 @@ class Main extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      generatedText: '',
       mistakeHappened: false,
       numberOfMistake: 0,
       lastLetter: '',
@@ -39,15 +40,26 @@ class Main extends React.Component {
     this.setState({ cpm });
   }
 
+  passGeneratedText = (generatedText) => {
+    this.setState({ generatedText });
+  }
+
   reloadLesson = () => {
-    window.location.reload();
+    this.setState ( {
+      generatedText: '',
+      mistakeHappened: false,
+      numberOfMistake: 0,
+      lastLetter: '',
+      percentage: 0,
+      cpm: 0,
+    });
   }
 
   render = () => {
     return (
       <main className={style.main}>
-        <Chapters />
-
+        <Chapters passGeneratedText={this.passGeneratedText}/>
+        
         <StatusBar numberOfMistake={this.state.numberOfMistake}
           percentage={this.state.percentage} cpm={this.state.cpm} />
 
@@ -56,7 +68,7 @@ class Main extends React.Component {
           mistakeCounter={this.mistakeCounter}
           numberOfMistake={this.state.numberOfMistake}
 
-          generatedText={this.props.generatedText}
+          generatedText={this.state.generatedText}
           reloadLesson={this.reloadLesson}
 
           completionPercentage={this.completionPercentage}

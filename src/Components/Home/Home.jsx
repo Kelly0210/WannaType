@@ -5,9 +5,11 @@ import style from './Home.module.css';
 const Home = () => {
     return (
         <div className={style.homeContainer}>
+            
             <p>Hello this is Home page!</p>
             <p>Start <Link to='/lesson-1/chapter-1' className={style.linkHome}>typing</Link></p>
             </div>
+
     )
 }
 
