@@ -23,10 +23,18 @@ class CustomInput extends React.Component {
         let inputValue = event.target.value;
         let generatedText = this.props.generatedText;
 
-        let regEx = /\d|\w|[\.\$@\*\\\/\+\-\^\!\(\)\[\]\~\%\&\=\?\>\<\{\}\"\'\,\:\;\_]/g;
+        let allowedSymbols = [
+            'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j',
+            'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
+            'u', 'v', 'w', 'x', 'y', 'z',
+            'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
+            'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
+            'U', 'V', 'W', 'X', 'Y', 'Z',
+            '1', '2', '3', '4', '5', '6', '7', '8', '9', '0',
+            ',', '.', `'`, ' ', ';', ':'
+        ];
 
-        if (inputValue.slice(-1).match(regEx)) {
-
+        if (allowedSymbols.includes(inputValue.slice(-1))) {
             this.handleMistake(inputValue, generatedText);
             this.handleComplete(inputValue, generatedText);
             this.completionPercentage(inputValue, generatedText);
@@ -103,7 +111,10 @@ class CustomInput extends React.Component {
         this.props.reloadLesson();
 
         let finishText = document.getElementById('finishText');
+        let leftText = document.getElementById('leftText');
+        
         finishText.textContent = '';
+        leftText.textContent = '';
     }
 
     render = () => {
@@ -116,9 +127,9 @@ class CustomInput extends React.Component {
                 />
                 {/* <Display generatedText={this.props.generatedText} /> */}
                 <span className={style.displayText}>
-                <span id='finishText' className={style.cursor} />
-                <span id='leftText' className={style.unfinishedText}>{this.props.generatedText}</span>
-            </span>
+                    <span id='finishText' className={style.cursor} />
+                    <span id='leftText' className={style.unfinishedText}>{this.props.generatedText}</span>
+                </span>
 
                 {this.state.disabled && <FinishBoard result={this.state.result} reloadLesson={this.reloadLesson} />}
 

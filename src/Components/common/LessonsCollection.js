@@ -1,19 +1,21 @@
+import {generateLesson} from './generateLesson'
+
 export const lessonsCollection = {
 
     // First - Middle row
 
     lesson1: {
-        chapter1: ['f', 'j'],
-        chapter2: ['f', 'j'],
-        chapter3: ['f', 'j'],
+        chapter1: generateLesson(['f', 'j'], 50),
+        chapter2: generateLesson(['f', 'j'], 120),
+        chapter3: generateLesson(['f', 'j'], 180),
 
-        chapter4: ['d', 'k'],
-        chapter5: ['d', 'k'],
-        chapter6: ['d', 'k'],
+        chapter4: generateLesson(['d', 'k'], 50),
+        chapter5: generateLesson(['d', 'k'], 120),
+        chapter6: generateLesson(['d', 'k'], 180),
 
-        chapter7: ['d', 'f', 'j', 'k'],
-        chapter8: ['d', 'f', 'j', 'k'],
-        chapter9: ['d', 'f', 'j', 'k'],
+        chapter7: generateLesson(['d', 'f', 'j', 'k'], 50),
+        chapter8: generateLesson(['d', 'f', 'j', 'k'], 120),
+        chapter9: generateLesson(['d', 'f', 'j', 'k'], 180),
     },
 
     lesson2: {

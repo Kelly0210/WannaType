@@ -7,15 +7,15 @@
     "arrowLeft result arrowRight"
     "arrowLeft reload arrowRight"
     "arrowLeft tips arrowRight";
-
   width: 1000px;
   height: 500px;
   background-color: white;
-  border-radius: 10px;
+  
   position: absolute;
-  top: 28%;
-  left: 28%;
+  top: 20%;
   z-index: 1;
+  border: 3px solid #2c3e50;
+  border-radius: 10px;
 }
 
 .boardBox > h2 {
@@ -36,35 +36,36 @@
   opacity: 1;
 }
 
-.arrowRightBox {
+.arrowRightLink {
   grid-area: arrowRight;
 }
 
-.arrowRightBox > img {
+.arrowRightLink > img {
   width: 110px;
-  height: 480px;
+  height: 95%;
   border-radius: inherit;
   opacity: 0.8;
-  padding: 10px;
+  margin: 10px;
 }
 
-.arrowRightBox img:hover {
+.arrowRightLink img:hover {
   opacity: 1;
 }
 
-.arrowLeftBox {
+.arrowLeftLink {
   grid-area: arrowLeft;
 }
 
-.arrowLeftBox > img {
+.arrowLeftLink > img {
   width: 110px;
-  height: 480px;
+  height: 95%;
   border-radius: inherit;
   opacity: 0.8;
   padding: 10px;
+  transform: scaleX(-1);
 }
 
-.arrowLeftBox img:hover {
+.arrowLeftLink img:hover {
   opacity: 1;
 }
 

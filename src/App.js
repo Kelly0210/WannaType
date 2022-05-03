@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Component404 from './Components/common/Component404';
@@ -7,8 +7,11 @@ import Header from './Components/Header/Header';
 import Main from './Components/Main/Main';
 import Home from './Components/Home/Home';
 import FallingKeys from './Components/Games/FallingKeys';
+import Chapters from './Components/Chapters/Chapters';
 
 const App = () => {
+
+  const [generatedText, generateText] = useState('');
 
   return (
     <div className='container'>
@@ -16,12 +19,13 @@ const App = () => {
         <Header />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/:lesson/:chapter' element={<Main />} />
+          <Route path='/:lesson/:chapter' element={<Main generatedText={generatedText}/>} />
           <Route path='/random-text' element={<Main />} />
           <Route path='/games' element={<FallingKeys />} />
 
           <Route path='*' element={<Component404 />} />
         </Routes>
+        <Chapters generateText={generateText}/>
         <Footer />
       </BrowserRouter>
     </div>

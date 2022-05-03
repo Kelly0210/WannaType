@@ -9,12 +9,10 @@ import { generateLesson } from "../common/generateLesson";
 const Chapters = (props) => {
 
     const lessonClick = (event) => {
-        let levelOfDifficulty = event.target.getAttribute('lod');
         let stepOne = event.target.pathname.replaceAll('/', '.').replaceAll('-', '');
         let stepThree = stepOne.slice(1);
         let stepFour = stepThree.split('.').reduce((o, i) => o[i], lessonsCollection);
-        let stepFive = generateLesson(stepFour, levelOfDifficulty)
-        props.passGeneratedText(stepFive);
+        props.generateText(stepFour);
     }
 
     const CollapseComponent = () => {
@@ -32,7 +30,7 @@ const Chapters = (props) => {
 
     const randomTextClick = () => {
         let randomText = textCollection[Math.floor(Math.random() * textCollection.length)];
-        props.passGeneratedText(randomText);
+        props.generateText(randomText);
     }
 
     const randomExerciseClick = () => {
@@ -51,13 +49,13 @@ const Chapters = (props) => {
                         <li><Link to='/lesson-1/chapter-2' lod={100} onClick={lessonClick}>New keys - <kbd>f</kbd> and <kbd>j</kbd></Link></li>
                         <li><Link to='/lesson-1/chapter-3' lod={150} onClick={lessonClick}>New keys - <kbd>f</kbd> and <kbd>j</kbd></Link></li>
 
-                        <li><Link to='/lesson-1/chapter-4' lod={1} onClick={lessonClick}>New keys - <kbd>d</kbd> and <kbd>k</kbd></Link></li>
-                        <li><Link to='/lesson-1/chapter-5' lod={1} onClick={lessonClick}>New keys - <kbd>d</kbd> and <kbd>k</kbd></Link></li>
-                        <li><Link to='/lesson-1/chapter-6' lod={1} onClick={lessonClick}>New keys - <kbd>d</kbd> and <kbd>k</kbd></Link></li>
+                        <li><Link to='/lesson-1/chapter-4' lod={50} onClick={lessonClick}>New keys - <kbd>d</kbd> and <kbd>k</kbd></Link></li>
+                        <li><Link to='/lesson-1/chapter-5' lod={100} onClick={lessonClick}>New keys - <kbd>d</kbd> and <kbd>k</kbd></Link></li>
+                        <li><Link to='/lesson-1/chapter-6' lod={150} onClick={lessonClick}>New keys - <kbd>d</kbd> and <kbd>k</kbd></Link></li>
 
-                        <li><Link to='/lesson-1/chapter-7' lod={1} onClick={lessonClick}>All keys</Link></li>
-                        <li><Link to='/lesson-1/chapter-8' lod={1} onClick={lessonClick}>All keys</Link></li>
-                        <li><Link to='/lesson-1/chapter-9' lod={1} onClick={lessonClick}>All keys</Link></li>
+                        <li><Link to='/lesson-1/chapter-7' lod={50} onClick={lessonClick}>All keys</Link></li>
+                        <li><Link to='/lesson-1/chapter-8' lod={100} onClick={lessonClick}>All keys</Link></li>
+                        <li><Link to='/lesson-1/chapter-9' lod={150} onClick={lessonClick}>All keys</Link></li>
                     </ul>
 
                     <li><Link to='#' onClick={toggleList}>Lesson 2</Link></li>

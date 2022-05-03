@@ -5,6 +5,8 @@ import CustomInput from '../CustomInput/CustomInput';
 import Keyboard from '../Keyboard/Keyboard';
 import StatusBar from '../StatusBar/StatusBar';
 import Chapters from '../Chapters/Chapters';
+import { generateLesson } from '../common/generateLesson';
+import { lessonsCollection } from '../common/lessonsCollection';
 
 class Main extends React.Component {
 
@@ -18,6 +20,28 @@ class Main extends React.Component {
       percentage: 0,
       cpm: 0,
     }
+  }
+
+  // componentDidMount() {
+  //   if (!this.state.generatedText) {
+  //     this.generateText();
+  //   }
+  // }
+
+  shouldComponentUpdate(nextState, nextProps) {
+    if (nextState.generatedText !== this.state.generatedText || !nextState.generatedText) {
+      this.setState({ generatedText: this.props.generatedText });
+      return true
+    } else {
+      return true
+    }
+  }
+
+  generateText = () => {
+    let stepOne = window.location.pathname.replaceAll('/', '.').replaceAll('-', '');
+    let stepTwo = stepOne.slice(1);
+    let stepThree = stepTwo.split('.').reduce((o, i) => o[i], lessonsCollection);
+    this.setState({ generatedText: stepThree });
   }
 
   handleMistake = (boolean) => {
@@ -45,8 +69,8 @@ class Main extends React.Component {
   }
 
   reloadLesson = () => {
-    this.setState ( {
-      generatedText: '',
+    this.setState({
+      generatedText: this.props.generatedText,
       mistakeHappened: false,
       numberOfMistake: 0,
       lastLetter: '',
@@ -58,9 +82,8 @@ class Main extends React.Component {
   render = () => {
     return (
       <main className={style.main}>
-        <Chapters passGeneratedText={this.passGeneratedText}/>
-        
-        <StatusBar numberOfMistake={this.state.numberOfMistake}
+
+        <StatusBar numberOfMistake={this.state.numberOfMistake} mistakeHappened={this.state.mistakeHappened}
           percentage={this.state.percentage} cpm={this.state.cpm} />
 
         <CustomInput

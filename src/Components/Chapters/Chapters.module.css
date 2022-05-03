@@ -1,4 +1,5 @@
 .chaptersContainer {
+    grid-area: chapters;
     width: 200px;
     float: left;
     height: 100%;

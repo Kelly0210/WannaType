@@ -2,11 +2,12 @@
   font-family: Arial, Helvetica, sans-serif;
     display: grid;
     grid-template-rows: 0.1fr 2.6fr 0.3fr;
+    grid-template-columns: 0.1fr 2.6fr 0.3fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
       "header header header"
-      "main main main"
+      "chapters main main"
       "footer footer footer";
     width: 1400px;
     height: 100vh;
