@@ -15,7 +15,6 @@ class CustomInput extends React.Component {
             changeLayout: false,
             disabled: false,
             result: false,
-            value: '',
         }
     }
 
@@ -32,7 +31,7 @@ class CustomInput extends React.Component {
             'U', 'V', 'W', 'X', 'Y', 'Z',
             '1', '2', '3', '4', '5', '6', '7', '8', '9', '0',
             ',', '.', `'`, ' ', ';', ':'
-        ];
+        ]
 
         if (allowedSymbols.includes(inputValue.slice(-1))) {
             this.handleMistake(inputValue, generatedText);
@@ -106,15 +105,17 @@ class CustomInput extends React.Component {
             changeLayout: false,
             disabled: false,
             result: false,
-            value: '',
         });
-        this.props.reloadLesson();
-
+        
         let finishText = document.getElementById('finishText');
         let leftText = document.getElementById('leftText');
+        let inputField = document.getElementById('inputField');
         
         finishText.textContent = '';
         leftText.textContent = '';
+        inputField.value = '';
+
+        this.props.reloadLesson();
     }
 
     render = () => {
@@ -123,7 +124,7 @@ class CustomInput extends React.Component {
                 <input autoFocus
                     disabled={this.state.disabled}
                     onChange={this.handleChange}
-                    value={this.state.value}
+                    id='inputField'
                 />
                 {/* <Display generatedText={this.props.generatedText} /> */}
                 <span className={style.displayText}>
