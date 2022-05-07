@@ -8,10 +8,15 @@ import Main from './Components/Main/Main';
 import Home from './Components/Home/Home';
 import FallingKeys from './Components/Games/FallingKeys';
 import Chapters from './Components/Chapters/Chapters';
+import FAQ from './Components/FAQ/FAQ';
 
 const App = () => {
 
   const [generatedText, generateText] = useState('');
+
+  const reloadLesson = () => {
+    generateText('');
+  }
 
   return (
     <div className='container'>
@@ -19,13 +24,14 @@ const App = () => {
         <Header />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/:lesson/:chapter' element={<Main generatedText={generatedText}/>} />
+          <Route path='/:lesson/:chapter' element={<Main generatedText={generatedText} reloadLesson={reloadLesson} />} />
           <Route path='/random-text' element={<Main />} />
           <Route path='/games' element={<FallingKeys />} />
 
           <Route path='*' element={<Component404 />} />
+          <Route path='/FAQ' element={<FAQ />} />
         </Routes>
-        <Chapters generateText={generateText}/>
+        <Chapters generateText={generateText} generatedText={generatedText} />
         <Footer />
       </BrowserRouter>
     </div>

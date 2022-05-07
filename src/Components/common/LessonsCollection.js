@@ -1,311 +1,947 @@
-import {generateLesson} from './generateLesson'
-
 export const lessonsCollection = {
 
-    // First - Middle row
+    // First - Homerow
 
     lesson1: {
-        chapter1: generateLesson(['f', 'j'], 50),
-        chapter2: generateLesson(['f', 'j'], 120),
-        chapter3: generateLesson(['f', 'j'], 180),
-
-        chapter4: generateLesson(['d', 'k'], 50),
-        chapter5: generateLesson(['d', 'k'], 120),
-        chapter6: generateLesson(['d', 'k'], 180),
-
-        chapter7: generateLesson(['d', 'f', 'j', 'k'], 50),
-        chapter8: generateLesson(['d', 'f', 'j', 'k'], 120),
-        chapter9: generateLesson(['d', 'f', 'j', 'k'], 180),
+        chapter1: {
+            content: ['f', 'j'],
+            numberOfSymbols: 50,
+            spaceBetweenWords: 4,
+        },
+        chapter2: {
+            content: ['f', 'j'],
+            numberOfSymbols: 120,
+            spaceBetweenWords: 4,
+        },
+        chapter3: {
+            content: ['f', 'j'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter4: {
+            content: ['d', 'k'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter5: {
+            content: ['d', 'k'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter6: {
+            content: ['d', 'k'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter7: {
+            content: ['d', 'f', 'j', 'k'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter8: {
+            content: ['d', 'f', 'j', 'k'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter9: {
+            content: ['d', 'f', 'j', 'k'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        }
     },
 
     lesson2: {
-        chapter1: ['s', 'l'],
-        chapter2: ['s', 'l'],
-        chapter3: ['s', 'l'],
-
-        chapter4: ['s', 'd', 'f', 'j', 'k', 'l'],
-        chapter5: ['s', 'd', 'f', 'j', 'k', 'l'],
-        chapter6: ['s', 'd', 'f', 'j', 'k', 'l'],
-
-        chapter7: ['a', ';'],
-        chapter8: ['a', ';'],
-        chapter9: ['a', ';'],
-
-        chapter10: ['a', 's', 'd', 'f', 'j', 'k', 'l', ';'],
-        chapter11: ['a', 's', 'd', 'f', 'j', 'k', 'l', ';'],
-        chapter12: ['a', 's', 'd', 'f', 'j', 'k', 'l', ';'],
+        chapter1: {
+            content: ['s', 'l'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter2: {
+            content: ['s', 'l'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter3: {
+            content: ['s', 'l'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter4: {
+            content: ['s', 'd', 'f', 'j', 'k', 'l'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter5: {
+            content: ['s', 'd', 'f', 'j', 'k', 'l'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter6: {
+            content: ['s', 'd', 'f', 'j', 'k', 'l'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter7: {
+            content: ['a', ';'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter8: {
+            content: ['a', ';'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter9: {
+            content: ['a', ';'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter10: {
+            content: ['a', 's', 'd', 'f', 'j', 'k', 'l', ';'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter11: {
+            content: ['a', 's', 'd', 'f', 'j', 'k', 'l', ';'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter12: {
+            content: ['a', 's', 'd', 'f', 'j', 'k', 'l', ';'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
     },
 
     lesson3: {
-        chapter1: ['g', 'h'],
-        chapter2: ['g', 'h'],
-        chapter3: ['g', 'h'],
-
-        chapter4: ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
-        chapter5: ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
-        chapter6: ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
-
-        chapter7: ['lags;', 'gash', 'half;', 'gas', 'has', 'had', 'ash', 'ask',],
-        chapter8: ['glass;', 'flask;', 'skald;', 'jags', 'lags', 'gash', 'half'],
-        chapter9: ['glass;', 'flask', 'flash;', 'flags;', 'skald;', 'slag;', 'ask'],
+        chapter1: {
+            content: ['g', 'h'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter2: {
+            content: ['g', 'h'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter3: {
+            content: ['g', 'h'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter4: {
+            content: ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter5: {
+            content: ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter6: {
+            content: ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter7: {
+            content: ['lags;', 'gash', 'half;', 'gas', 'has', 'had', 'ash', 'ask'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter8: {
+            content: ['glass;', 'flask;', 'skald;', 'jags', 'lags', 'gash', 'half'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter9: {
+            content: ['glass;', 'flask', 'flash;', 'flags;', 'skald;', 'slag;', 'ask'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        }
     },
 
-    // Second row
+    // Top row
 
     lesson4: {
-        chapter1: ['r', 'u'],
-        chapter2: ['r', 'u'],
-        chapter3: ['r', 'u'],
-
-        chapter4: ['r', 'f', 'j', 'u'],
-        chapter5: ['r', 'f', 'j', 'u'],
-        chapter6: ['r', 'f', 'j', 'u'],
-
-        chapter7: ['r', 'u',
+        chapter1: {
+            content: ['r', 'u'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter2: {
+            content: ['r', 'u'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter3: {
+            content: ['r', 'u'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter4: {
+            content: ['r', 'f', 'j', 'u'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter5: {
+            content: ['r', 'f', 'j', 'u'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        }, 
+        chapter6: {
+            content: ['r', 'f', 'j', 'u'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter7: {
+            content: ['r', 'u',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
-        chapter8: ['r', 'u',
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter8: {
+            content: ['r', 'u',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
-        chapter9: ['r', 'u',
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter9: {
+            content: ['r', 'u',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
-
-        chapter10: ['shark', 'guard', 'glads', 'argus', 'dark', 'jars', 'husk', 'had'],
-        chapter11: ['sulfur', 'laughs', 'ducks', 'sugar', 'laugh', 'shard', 'grass'],
-        chapter12: ['shark;', 'jars;', 'sugar;', 'ducks', 'shard', 'arf', 'has'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter10: {
+            content: ['shark', 'guard', 'glads', 'argus', 'dark', 'jars', 'husk', 'had'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter11: {
+            content: ['sulfur', 'laughs', 'ducks', 'sugar', 'laugh', 'shard', 'grass'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter12: {
+            content: ['shark;', 'jars;', 'sugar;', 'ducks', 'shard', 'arf', 'has'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        }
     },
 
     lesson5: {
-        chapter1: ['t', 'y'],
-        chapter2: ['t', 'y'],
-        chapter3: ['t', 'y'],
-
-        chapter4: ['r', 't', 'f', 'j', 'y', 'u'],
-        chapter5: ['r', 't', 'f', 'j', 'y', 'u'],
-        chapter6: ['r', 't', 'f', 'j', 'y', 'u'],
-
-        chapter7: ['r', 't', 'y', 'u',
+        chapter1: {
+            content: ['t', 'y'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter2: {
+            content: ['t', 'y'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter3: {
+            content: ['t', 'y'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter4: {
+            content: ['r', 't', 'f', 'j', 'y', 'u'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter5: {
+            content: ['r', 't', 'f', 'j', 'y', 'u'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter6: {
+            content: ['r', 't', 'f', 'j', 'y', 'u'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter7: {
+            content: ['r', 't', 'y', 'u',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
-        chapter8: ['r', 't', 'y', 'u',
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter8: {
+            content: ['r', 't', 'y', 'u',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
-        chapter9: ['r', 't', 'y', 'u',
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter9: {
+            content: ['r', 't', 'y', 'u',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
-
-        chapter10: ['draft', 'star', 'jury', 'flat', 'yard', 'hats', 'stag', 'shy'],
-        chapter11: ['adjust', 'ultra', 'study', 'kraft', 'hast', 'just', 'gray'],
-        chapter12: ['adjust', 'shrug', 'study', 'just', 'days', 'salt', 'tasks'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter10: {
+            content: ['draft', 'star', 'jury', 'flat', 'yard', 'hats', 'stag', 'shy'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter11: {
+            content: ['adjust', 'ultra', 'study', 'kraft', 'hast', 'just', 'gray'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter12: {
+            content: ['adjust', 'shrug', 'study', 'just', 'days', 'salt', 'tasks'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        }
     },
 
     lesson6: {
-        chapter1: ['e', 'i'],
-        chapter2: ['e', 'i'],
-        chapter3: ['e', 'i'],
-
-        chapter4: ['e', 'd', 'k', 'i'],
-        chapter5: ['e', 'd', 'k', 'i'],
-        chapter6: ['e', 'd', 'k', 'i'],
-
-        chapter7: ['e', 'r', 't', 'y', 'u', 'i',
+        chapter1: {
+            content: ['e', 'i'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter2: {
+            content: ['e', 'i'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter3: {
+            content: ['e', 'i'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter4: {
+            content: ['e', 'd', 'k', 'i'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter5: {
+            content: ['e', 'd', 'k', 'i'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter6: {
+            content: ['e', 'd', 'k', 'i'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter7: {
+            content: ['e', 'r', 't', 'y', 'u', 'i',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
-        chapter8: ['e', 'r', 't', 'y', 'u', 'i',
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter8: {
+            content: ['e', 'r', 't', 'y', 'u', 'i',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
-        chapter9: ['e', 'r', 't', 'y', 'u', 'i',
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter9: {
+            content: ['e', 'r', 't', 'y', 'u', 'i',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
-
-        chapter10: ['fairy', 'fields', 'fresh', 'shake', 'fish', 'desk', 'fade;'],
-        chapter11: ['gratitude', 'luggage', 'juries', 'layers', 'hiked', 'height', 'jade'],
-        chapter12: ['lifeguard', 'satellite', 'feathers', 'fragile', 'fridge', 'files'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter10: {
+            content: ['fairy', 'fields', 'fresh', 'shake', 'fish', 'desk', 'fade;'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter11: {
+            content: ['gratitude', 'luggage', 'juries', 'layers', 'hiked', 'height', 'jade'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter12: {
+            content: ['lifeguard', 'satellite', 'feathers', 'fragile', 'fridge', 'files'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        }
     },
 
     lesson7: {
-        chapter1: ['w', 'o'],
-        chapter2: ['w', 'o'],
-        chapter3: ['w', 'o'],
-
-        chapter4: ['w', 's', 'o', 'l'],
-        chapter5: ['w', 's', 'o', 'l'],
-        chapter6: ['w', 's', 'o', 'l'],
-
-        chapter7: ['w', 'e', 'r', 't', 'y', 'u', 'i', 'o',
+        chapter1: {
+            content: ['w', 'o'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter2: {
+            content: ['w', 'o'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter3: {
+            content: ['w', 'o'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter4: {
+            content: ['w', 's', 'o', 'l'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter5: {
+            content: ['w', 's', 'o', 'l'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter6: {
+            content: ['w', 's', 'o', 'l'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter7: {
+            content: ['w', 'e', 'r', 't', 'y', 'u', 'i', 'o',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
-        chapter8: ['w', 'e', 'r', 't', 'y', 'u', 'i', 'o',
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter8: {
+            content: ['w', 'e', 'r', 't', 'y', 'u', 'i', 'o',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
-        chapter9: ['w', 'e', 'r', 't', 'y', 'u', 'i', 'o',
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter9: {
+            content: ['w', 'e', 'r', 't', 'y', 'u', 'i', 'o',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
-
-        chapter10: ['hideout', 'outlook', 'whale', 'wrist', 'award', 'route', 'law', 'low'],
-        chapter11: ['sweetheart', 'outside', 'without', 'woody', 'where', 'wire', 'oak'],
-        chapter12: ['lightweight', 'household', 'afterward', 'towards', 'await', 'how'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter10: {
+            content: ['hideout', 'outlook', 'whale', 'wrist', 'award', 'route', 'law', 'low'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter11: {
+            content: ['sweetheart', 'outside', 'without', 'woody', 'where', 'wire', 'oak'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter12: {
+            content: ['lightweight', 'household', 'afterward', 'towards', 'await', 'how'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        }
     },
 
     lesson8: {
-        chapter1: ['q', 'p'],
-        chapter2: ['q', 'p'],
-        chapter3: ['q', 'p'],
-
-        chapter4: ['q', 'a', ';', 'p'],
-        chapter5: ['q', 'a', ';', 'p'],
-        chapter6: ['q', 'a', ';', 'p'],
-
-        chapter7: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
+        chapter1: {
+            content: ['q', 'p'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter2: {
+            content: ['q', 'p'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter3: {
+            content: ['q', 'p'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter4: {
+            content: ['q', 'a', ';', 'p'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter5: {
+            content: ['q', 'a', ';', 'p'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter6: {
+            content: ['q', 'a', ';', 'p'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter7: {
+            content: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
-        chapter8: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter8: {
+            content: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
-        chapter9: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter9: {
+            content: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
-
-        chapter10: ['professor', 'prototype', 'squirrel', 'liquid', 'equal', 'aqua', 'plus'],
-        chapter11: ['quality', 'popular', 'perhaps', 'sequoia', 'sheep', 'quick', 'tape'],
-        chapter12: ['philosopher', 'disappear', 'support', 'antique', 'square', 'pass'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter10: {
+            content: ['professor', 'prototype', 'squirrel', 'liquid', 'equal', 'aqua', 'plus'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter11: {
+            content: ['quality', 'popular', 'perhaps', 'sequoia', 'sheep', 'quick', 'tape'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter12: {
+            content: ['philosopher', 'disappear', 'support', 'antique', 'square', 'pass'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        }
     },
 
-    //Third row
+    //Bottom row
 
     lesson9: {
-        chapter1: ['v', 'm'],
-        chapter2: ['v', 'm'],
-        chapter3: ['v', 'm'],
-
-        chapter4: ['v', 'f', 'j', 'm'],
-        chapter5: ['v', 'f', 'j', 'm'],
-        chapter6: ['v', 'f', 'j', 'm'],
-
-        chapter7: ['r', 'v', 'f', 'j', 'm', 'u'],
-        chapter8: ['r', 'v', 'f', 'j', 'm', 'u'],
-        chapter9: ['r', 'v', 'f', 'j', 'm', 'u'],
-
-        chapter10: ['r', 't', 'v', 'f', 'g', 'h', 'j', 'm', 'u', 'y'],
-        chapter11: ['r', 't', 'v', 'f', 'g', 'h', 'j', 'm', 'u', 'y'],
-        chapter12: ['r', 't', 'v', 'f', 'g', 'h', 'j', 'm', 'u', 'y'],
-
-        chapter13: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
+        chapter1: {
+            content: ['v', 'm'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter2: {
+            content: ['v', 'm'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter3: {
+            content: ['v', 'm'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter4: {
+            content: ['v', 'f', 'j', 'm'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter5: {
+            content: ['v', 'f', 'j', 'm'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter6: {
+            content: ['v', 'f', 'j', 'm'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter7: {
+            content: ['r', 'v', 'f', 'j', 'm', 'u'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter8: {
+            content: ['r', 'v', 'f', 'j', 'm', 'u'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter9: {
+            content: ['r', 'v', 'f', 'j', 'm', 'u'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter10: {
+            content: ['r', 't', 'v', 'f', 'g', 'h', 'j', 'm', 'u', 'y'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter11: {
+            content: ['r', 't', 'v', 'f', 'g', 'h', 'j', 'm', 'u', 'y'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter12: {
+            content: ['r', 't', 'v', 'f', 'g', 'h', 'j', 'm', 'u', 'y'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter13: {
+            content: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
             'v', 'm'],
-        chapter14: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter14: {
+            content: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
             'v', 'm'],
-        chapter15: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter15: {
+            content: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
             'v', 'm'],
-
-        chapter16: ['masterpiece', 'somehow', 'himself', 'removal', 'almost', 'promise', 'me'],
-        chapter17: ['bathroom', 'comfort', 'resolve', 'assumed', 'memory', 'dream', 'mirror'],
-        chapter18: ['immediately', 'supermarket', 'trademark', 'summary', 'message', 'massive', 'from'],
-
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter16: {
+            content: ['masterpiece', 'somehow', 'himself', 'removal', 'almost', 'promise', 'me'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter17: {
+            content: ['bathroom', 'comfort', 'resolve', 'assumed', 'memory', 'dream', 'mirror'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter18: {
+            content: ['immediately', 'supermarket', 'trademark', 'summary', 'message', 'massive', 'from'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        }
     },
 
     lesson10: {
-        chapter1: ['b', 'n'],
-        chapter2: ['b', 'n'],
-        chapter3: ['b', 'n'],
-
-        chapter4: ['f', 'b', 'n', 'j'],
-        chapter5: ['f', 'b', 'n', 'j'],
-        chapter6: ['f', 'b', 'n', 'j'],
-
-        chapter7: ['r', 'f', 'b', 'n', 'j', 'u'],
-        chapter8: ['r', 'f', 'b', 'n', 'j', 'u'],
-        chapter9: ['r', 'f', 'b', 'n', 'j', 'u'],
-
-        chapter10: ['r', 't', 'f', 'g', 'v', 'b', 'y', 'u', 'h', 'j', 'n', 'm'],
-        chapter11: ['r', 't', 'f', 'g', 'v', 'b', 'y', 'u', 'h', 'j', 'n', 'm'],
-        chapter12: ['r', 't', 'f', 'g', 'v', 'b', 'y', 'u', 'h', 'j', 'n', 'm'],
-
-        chapter13: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
+        chapter1: {
+            content: ['b', 'n'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter2: {
+            content: ['b', 'n'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter3: {
+            content: ['b', 'n'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter4: {
+            content: ['f', 'b', 'n', 'j'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter5: {
+            content: ['f', 'b', 'n', 'j'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter6: {
+            content: ['f', 'b', 'n', 'j'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter7: {
+            content: ['r', 'f', 'b', 'n', 'j', 'u'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter8: {
+            content: ['r', 'f', 'b', 'n', 'j', 'u'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter9: {
+            content: ['r', 'f', 'b', 'n', 'j', 'u'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter10: {
+            content: ['r', 't', 'f', 'g', 'v', 'b', 'y', 'u', 'h', 'j', 'n', 'm'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter11: {
+            content: ['r', 't', 'f', 'g', 'v', 'b', 'y', 'u', 'h', 'j', 'n', 'm'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter12: {
+            content: ['r', 't', 'f', 'g', 'v', 'b', 'y', 'u', 'h', 'j', 'n', 'm'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter13: {
+            content: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
             'c', 'v', 'b', 'n', 'm', ','],
-        chapter14: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter14: {
+            content: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
             'c', 'v', 'b', 'n', 'm', ','],
-        chapter15: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter15: {
+            content: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
             'c', 'v', 'b', 'n', 'm', ','],
-
-        chapter16: ['newspaper', 'possible', 'assembly', 'drawing', 'butter', 'ribbon', 'moment', 'and'],
-        chapter17: ['international', 'development', 'window', 'opinion', 'brand', 'began', 'any'],
-        chapter18: ['establishment', 'weekend', 'available', 'natural', 'everyone', 'important', 'sun'],
-
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter16: {
+            content: ['newspaper', 'possible', 'assembly', 'drawing', 'butter', 'ribbon', 'moment', 'and'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter17: {
+            content: ['international', 'development', 'window', 'opinion', 'brand', 'began', 'any'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter18: {
+            content: ['establishment', 'weekend', 'available', 'natural', 'everyone', 'important', 'sun'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        }
     },
 
     lesson11: {
-        chapter1: ['c', ','],
-        chapter2: ['c', ','],
-        chapter3: ['c', ','],
-
-        chapter4: ['d', 'c', ',', 'k'],
-        chapter5: ['d', 'c', ',', 'k'],
-        chapter6: ['d', 'c', ',', 'k'],
-
-        chapter7: ['e', 'd', 'c', ',', 'k', 'i'],
-        chapter8: ['e', 'd', 'c', ',', 'k', 'i'],
-        chapter9: ['e', 'd', 'c', ',', 'k', 'i'],
-
-        chapter10: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
+        chapter1: {
+            content: ['c', ','],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter2: {
+            content: ['c', ','],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter3: {
+            content: ['c', ','],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter4: {
+            content: ['d', 'c', ',', 'k'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter5: {
+            content: ['d', 'c', ',', 'k'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter6: {
+            content: ['d', 'c', ',', 'k'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter7: {
+            content: ['e', 'd', 'c', ',', 'k', 'i'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter8: {
+            content: ['e', 'd', 'c', ',', 'k', 'i'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter9: {
+            content: ['e', 'd', 'c', ',', 'k', 'i'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter10: {
+            content: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
             'c', 'v', 'm', ','],
-        chapter11: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter11: {
+            content: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
             'c', 'v', 'm', ','],
-        chapter12: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter12: {
+            content: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
-            'c', 'v', 'b', 'n', 'm', ','],
-
-        chapter13: ['percentage', 'successful', 'correct,', 'accurate', 'practice', 'because', 'quick', 'check', 'can'],
-        chapter14: ['location', 'technique,', 'performance,', 'picture', 'pacific', 'canvas', 'grape'],
-        chapter15: ['architecture,', 'education,', 'accessible', 'conclusion,', 'science,', 'archives', 'teach'],
+            'c', 'v', 'm', ','],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter13: {
+            content: ['percentage', 'successful', 'correct,', 'accurate', 'practice', 'because', 'quick', 'check', 'can'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter14: {
+            content: ['location', 'technique,', 'performance,', 'picture', 'pacific', 'canvas', 'grape'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter15: {
+            content: ['architecture,', 'education,', 'accessible', 'conclusion,', 'science,', 'archives', 'teach'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        }
     },
 
     lesson12: {
-        chapter1: ['x', '.'],
-        chapter2: ['x', '.'],
-        chapter3: ['x', '.'],
-
-        chapter4: ['s', 'x', '.', 'l'],
-        chapter5: ['s', 'x', '.', 'l'],
-        chapter6: ['s', 'x', '.', 'l'],
-
-        chapter7: ['w', 's', 'x', '.', 'l', 'o'],
-        chapter8: ['w', 's', 'x', '.', 'l', 'o'],
-        chapter9: ['w', 's', 'x', '.', 'l', 'o'],
-
-        chapter10: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
+        chapter1: {
+            content: ['x', '.'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter2: {
+            content: ['x', '.'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter3: {
+            content: ['x', '.'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter4: {
+            content: ['s', 'x', '.', 'l'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter5: {
+            content: ['s', 'x', '.', 'l'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter6: {
+            content: ['s', 'x', '.', 'l'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter7: {
+            content: ['w', 's', 'x', '.', 'l', 'o'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter8: {
+            content: ['w', 's', 'x', '.', 'l', 'o'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter9: {
+            content: ['w', 's', 'x', '.', 'l', 'o'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter10: {
+            content: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
             'x', 'c', 'v', 'm', ',', '.'],
-        chapter11: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter11: {
+            content: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
             'x', 'c', 'v', 'm', ',', '.'],
-        chapter12: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter12: {
+            content: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
-            'x', 'c', 'v', 'b', 'n', 'm', ',', '.'],
-
-        chapter13: ['proximate', 'beeswax', 'paradox', 'relax.', 'next', 'box'],
-        chapter14: ['experiment', 'expression', 'mixture', 'matrix.', 'galaxy', 'vortex.'],
-        chapter15: ['megapixel.', 'explain', 'texture.', 'parallax', 'oxygen', 'xenon.', 'fixed.'],
+            'x', 'c', 'v', 'm', ',', '.'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter13: {
+            content: ['proximate', 'beeswax', 'paradox', 'relax.', 'next', 'box'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter14: {
+            content: ['experiment', 'expression', 'mixture', 'matrix.', 'galaxy', 'vortex.'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter15: {
+            content: ['megapixel.', 'explain', 'texture.', 'parallax', 'oxygen', 'xenon.', 'fixed.'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        }
     },
 
     lesson13: {
-        chapter1: ['z', `'`],
-        chapter2: ['z', `'`],
-        chapter3: ['z', `'`],
-
-        chapter4: ['a', 'z', ';',  `'`],
-        chapter5: ['a', 'z', ';',  `'`],
-        chapter6: ['a', 'z', ';',  `'`],
-
-        chapter7: ['q', 'a', 'z', `'`, ';', 'p'],
-        chapter8: ['q', 'a', 'z', `'`, ';', 'p'],
-        chapter9: ['q', 'a', 'z', `'`, ';', 'p'],
-
-        chapter10: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
+        chapter1: {
+            content: ['z', `'`],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter2: {
+            content: ['z', `'`],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter3: {
+            content: ['z', `'`],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter4: {
+            content: ['a', 'z', ';', `'`],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter5: {
+            content: ['a', 'z', ';', `'`],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter6: {
+            content: ['a', 'z', ';', `'`],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter7: {
+            content: ['q', 'a', 'z', `'`, ';', 'p'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter8: {
+            content: ['q', 'a', 'z', `'`, ';', 'p'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter9: {
+            content: ['q', 'a', 'z', `'`, ';', 'p'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter10: {
+            content: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
             'z', 'x', 'c', 'v', 'm', ',', '.', `'`],
-        chapter11: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter11: {
+            content: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
             'z', 'x', 'c', 'v', 'm', ',', '.', `'`],
-        chapter12: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter12: {
+            content: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
-            'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', `'`],
-
-        chapter13: ['civilization', 'mozzarella', 'hazel', 'topaz', 'jazz', 'zip'],
-        chapter14: ['organization', 'realization', 'sanitize', 'citizen', 'puzzle', 'pizza'],
-        chapter15: ['vaporize', 'recognize', 'blizzard', 'frozen', 'wizard', 'bronze'],
+            'z', 'x', 'c', 'v', 'm', ',', '.', `'`],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter13: {
+            content: ['civilization', 'mozzarella', 'hazel', 'topaz', 'jazz', 'zip'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter14: {
+            content: ['organization', 'realization', 'sanitize', 'citizen', 'puzzle', 'pizza'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        },
+        chapter15: {
+            content: ['vaporize', 'recognize', 'blizzard', 'frozen', 'wizard', 'bronze'],
+            numberOfSymbols: 180,
+            spaceBetweenWords: 4,
+        }
     }
 }

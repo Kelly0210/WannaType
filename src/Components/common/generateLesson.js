@@ -1,22 +1,5 @@
-export const generateLesson = (initialLetters = 'Please, reload page', levelOfDifficulty = 120) => {
+export const generateLesson = (initialLetters = 'initial', levelOfDifficulty = 120, spacesBetweenWords = 4) => {
     let generatedLesson = '';
-    let spacesBetweenWords = 4;
-
-    switch (levelOfDifficulty) {
-        case 'easy': 
-            levelOfDifficulty = 120;
-            spacesBetweenWords = 4;
-            break;
-        case 'average': 
-            levelOfDifficulty = 240;
-            spacesBetweenWords = 6;
-            break;
-        case 'hard':
-            levelOfDifficulty = 480;
-            spacesBetweenWords = 8;
-            break;
-        default: 
-    }
 
     for (let i = 0; i < levelOfDifficulty; i++) {
         let generateLetter = initialLetters[Math.floor(Math.random() * initialLetters.length)];

@@ -4,44 +4,19 @@ import style from './Main.module.css';
 import CustomInput from '../CustomInput/CustomInput';
 import Keyboard from '../Keyboard/Keyboard';
 import StatusBar from '../StatusBar/StatusBar';
-import Chapters from '../Chapters/Chapters';
-import { generateLesson } from '../common/generateLesson';
-import { lessonsCollection } from '../common/lessonsCollection';
+
 
 class Main extends React.Component {
 
   constructor(props) {
     super(props)
     this.state = {
-      generatedText: '',
       mistakeHappened: false,
       numberOfMistake: 0,
       lastLetter: '',
       percentage: 0,
       cpm: 0,
     }
-  }
-
-  // componentDidMount() {
-  //   if (!this.state.generatedText) {
-  //     this.generateText();
-  //   }
-  // }
-
-  shouldComponentUpdate(nextState, nextProps) {
-    if (nextState.generatedText !== this.state.generatedText || !nextState.generatedText) {
-      this.setState({ generatedText: this.props.generatedText });
-      return true
-    } else {
-      return true
-    }
-  }
-
-  generateText = () => {
-    let stepOne = window.location.pathname.replaceAll('/', '.').replaceAll('-', '');
-    let stepTwo = stepOne.slice(1);
-    let stepThree = stepTwo.split('.').reduce((o, i) => o[i], lessonsCollection);
-    this.setState({ generatedText: stepThree });
   }
 
   handleMistake = (boolean) => {
@@ -64,19 +39,15 @@ class Main extends React.Component {
     this.setState({ cpm });
   }
 
-  passGeneratedText = (generatedText) => {
-    this.setState({ generatedText });
-  }
-
   reloadLesson = () => {
     this.setState({
-      generatedText: this.props.generatedText,
       mistakeHappened: false,
       numberOfMistake: 0,
       lastLetter: '',
       percentage: 0,
       cpm: 0,
     });
+    this.props.reloadLesson();
   }
 
   render = () => {
@@ -91,7 +62,7 @@ class Main extends React.Component {
           mistakeCounter={this.mistakeCounter}
           numberOfMistake={this.state.numberOfMistake}
 
-          generatedText={this.state.generatedText}
+          generatedText={this.props.generatedText}
           reloadLesson={this.reloadLesson}
 
           completionPercentage={this.completionPercentage}

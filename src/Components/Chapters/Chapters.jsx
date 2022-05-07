@@ -8,11 +8,20 @@ import { generateLesson } from "../common/generateLesson";
 
 const Chapters = (props) => {
 
-    const lessonClick = (event) => {
-        let stepOne = event.target.pathname.replaceAll('/', '.').replaceAll('-', '');
-        let stepThree = stepOne.slice(1);
-        let stepFour = stepThree.split('.').reduce((o, i) => o[i], lessonsCollection);
-        props.generateText(stepFour);
+    const lessonClick = () => {
+        let stepOne = window.location.pathname.replaceAll('/', '.').replaceAll('-', '');
+        let stepTwo = stepOne.slice(1);
+        
+        let blankForContent = stepTwo + '.content';
+        let blankForNumbers = stepTwo + '.numberOfSymbols';
+        
+        let contentObject = blankForContent.split('.').reduce((o, i) => o[i], lessonsCollection);
+        let numbersObject = blankForNumbers.split('.').reduce((o, i) => o[i], lessonsCollection);
+
+        let stepFive = generateLesson(contentObject, numbersObject);
+        
+        console.log(numbersObject)
+        props.generateText(stepFive);
     }
 
     const CollapseComponent = () => {
@@ -34,6 +43,10 @@ const Chapters = (props) => {
     }
 
     const randomExerciseClick = () => {
+    }
+
+    if(!props.generatedText) {
+        lessonClick();
     }
 
     return (
