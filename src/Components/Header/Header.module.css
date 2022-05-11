@@ -25,3 +25,23 @@
   color: yellow;
   text-decoration: underline;
 }
+
+.loginContainer {
+  display: table;
+  width: fit-content;
+  float: right;
+  margin: 5px 10px;
+}
+
+.loginText {
+  display: table-cell;
+  vertical-align: middle;
+  color: white;
+  padding: 5px;
+}
+
+.loginText > a {
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid white;
+}

@@ -11,7 +11,7 @@ class CustomInput extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            startTimeMs: new Date().getTime(),
+            startTimeMs: 0,
             changeLayout: false,
             disabled: false,
             result: false,
@@ -33,6 +33,10 @@ class CustomInput extends React.Component {
             ',', '.', `'`, ' ', ';', ':'
         ]
 
+        if (inputValue.length === 1) {
+            this.setState({ startTimeMs: new Date().getTime() });
+        }
+        
         if (allowedSymbols.includes(inputValue.slice(-1))) {
             this.handleMistake(inputValue, generatedText);
             this.handleComplete(inputValue, generatedText);
@@ -101,7 +105,7 @@ class CustomInput extends React.Component {
 
     reloadLesson = () => {
         this.setState({
-            startTimeMs: '',
+            startTimeMs: 0,
             changeLayout: false,
             disabled: false,
             result: false,

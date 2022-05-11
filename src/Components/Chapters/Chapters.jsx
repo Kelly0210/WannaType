@@ -8,18 +8,19 @@ import { generateLesson } from "../common/generateLesson";
 
 const Chapters = (props) => {
 
-    const lessonClick = () => {
+    const lessonClick = (event) => {
         let stepOne = window.location.pathname.replaceAll('/', '.').replaceAll('-', '');
         let stepTwo = stepOne.slice(1);
+        // event.target.classList.add(`${style.active}`)
         
-        let blankForContent = stepTwo + '.content';
+        let blankForUnits = stepTwo + '.units';
         let blankForNumbers = stepTwo + '.numberOfUnits';
-        
-        let contentObject = blankForContent.split('.').reduce((o, i) => o[i], lessonsCollection);
+
+        let contentObject = blankForUnits.split('.').reduce((o, i) => o[i], lessonsCollection);
         let numbersObject = blankForNumbers.split('.').reduce((o, i) => o[i], lessonsCollection);
 
-        let stepFive = generateLesson(contentObject, numbersObject);
-        props.generateText(stepFive);
+        let stepThree = generateLesson(contentObject, numbersObject);
+        props.generateText(stepThree);
     }
 
     const CollapseComponent = () => {
@@ -27,12 +28,14 @@ const Chapters = (props) => {
         entireComponent.classList.toggle(`${style.hide}`);
         
         let arrowRight = document.getElementById('collapseRight');
-        arrowRight.classList.toggle(`${style.hide}`);
+        arrowRight.classList.toggle(`${style.show}`);
     }
 
     const toggleList = (event) => {
         let innerUl = document.getElementById(event.target.textContent);
-        innerUl.classList.toggle(`${style.expend}`);
+        innerUl.classList.toggle(`${style.show}`);
+
+        event.target.classList.toggle(`${style.active}`);
     }
 
     const randomTextClick = () => {
@@ -41,21 +44,22 @@ const Chapters = (props) => {
     }
 
     const randomExerciseClick = () => {
+        let obj = lessonsCollection.lesson1.chapter1;
     }
 
-    if(!props.generatedText) {
-        lessonClick();
-    }
+    // if(!props.generatedText) {
+    //     lessonClick();
+    // }
 
     return (
         <>
-            <img src={collapseArrow} className={`${style.collapseRight} ${style.hide}`} onClick={CollapseComponent} alt="collapse icon" id='collapseRight' />
+            <img src={collapseArrow} className={style.collapseRight} onClick={CollapseComponent} alt="collapse icon" id='collapseRight' />
 
             <nav id='entireComponent' className={style.chaptersContainer}>
                 <img src={collapseArrow} className={style.collapseLeft} onClick={CollapseComponent} alt="collapse icon" id='collapseLeft' />
                 <ul>
                     <li><Link to='#' onClick={toggleList}>Lesson 1</Link></li>
-                    <ul id='Lesson 1'>
+                    <ul id='Lesson 1' className={style.innerUl}>
                         <li><Link to='/lesson-1/chapter-1' onClick={lessonClick}>New keys - <kbd>f</kbd> and <kbd>j</kbd></Link></li>
                         <li><Link to='/lesson-1/chapter-2' onClick={lessonClick}>New keys - <kbd>f</kbd> and <kbd>j</kbd></Link></li>
                         <li><Link to='/lesson-1/chapter-3' onClick={lessonClick}>New keys - <kbd>f</kbd> and <kbd>j</kbd></Link></li>
@@ -70,7 +74,7 @@ const Chapters = (props) => {
                     </ul>
 
                     <li><Link to='#' onClick={toggleList}>Lesson 2</Link></li>
-                    <ul id='Lesson 2'>
+                    <ul id='Lesson 2' className={style.innerUl}>
                         <li><Link to='/lesson-2/chapter-1' onClick={lessonClick}>New keys - <kbd>s</kbd> and <kbd>l</kbd></Link></li>
                         <li><Link to='/lesson-2/chapter-2' onClick={lessonClick}>New keys - <kbd>s</kbd> and <kbd>l</kbd></Link></li>
                         <li><Link to='/lesson-2/chapter-3' onClick={lessonClick}>New keys - <kbd>s</kbd> and <kbd>l</kbd></Link></li>

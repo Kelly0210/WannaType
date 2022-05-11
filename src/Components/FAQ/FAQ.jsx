@@ -2,7 +2,10 @@ import React from 'react';
 
 const FAQ = () => {
     return(
-        <div>Test</div>
+        <div>
+            What is CPM?
+            CPM - Characters Per Minute
+        </div>
     )
 }
 

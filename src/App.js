@@ -17,15 +17,15 @@ const App = () => {
   const reloadLesson = () => {
     generateText('');
   }
-
   return (
     <div className='container'>
       <BrowserRouter>
         <Header />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/:lesson/:chapter' element={<Main generatedText={generatedText} reloadLesson={reloadLesson} />} />
-          <Route path='/random-text' element={<Main />} />
+          <Route path='/:lesson/:chapter' element={<Main generatedText={generatedText} reloadLesson={reloadLesson}/>} />
+          <Route path='/random-text' element={<Main generatedText={generatedText} reloadLesson={reloadLesson}/>} />
+          <Route path='/random-test' element={<Main generatedText={generatedText} reloadLesson={reloadLesson}/>} />
           <Route path='/games' element={<FallingKeys />} />
 
           <Route path='*' element={<Component404 />} />

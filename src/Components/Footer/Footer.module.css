@@ -1,26 +1,40 @@
-.footer { 
+.footer {
     grid-area: footer;
     color: #2c3258;
     background-color: #f1c40f;
-    text-align: end;
-    padding: 10px 15px;
 }
 
-.mailContainer {
-    padding-bottom: 7px;
+.linksContainer {
+    float: left;
+    width: fit-content;
+    margin: 10px 0px 10px 30px;
 }
 
-.mail {
-    text-decoration: none;
-    color: #2c3258;
+.linksContainer > ul {
+    font-size: 0.9em;
+    padding: 0px;
+} 
+
+.linksContainer > ul > li {
+    margin: 7px 0;
+} 
+
+.infoContainer {
+    float: left;
+    width: fit-content;
+    margin: 15px 0px 0px 15px;
 }
 
-.mail:hover {
-    color: white;
+.copyrightContainer {
+    padding-top: 5px;
+    font-size: 0.75em;
+    text-align: center;
 }
 
-.logoContainer {
-    padding-bottom: 4px;
+.footerLink {
+    border-bottom: 1px solid black;
 }
 
-
+.footerLink:hover {
+    border-bottom: 1px solid white;
+}
