@@ -1,0 +1,20 @@
+.blank {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    background-color: #0087ca;
+    animation: loading 3s infinite ease-in-out;
+}
+
+@keyframes loading {
+    0% {
+        width: 0;
+        
+    }
+    100% {
+        width: 100%;
+    }
+}
