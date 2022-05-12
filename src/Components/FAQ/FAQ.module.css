@@ -1,0 +1,22 @@
+.FAQcontainer {
+    grid-area: main;
+    color: white;
+    font-size: 1.2em;
+}
+
+.questionContainer{
+    width: fit-content;
+    margin: 20px 0px 0px 15px;
+    border-bottom: 1px solid white;
+}
+
+.questionContainer > dl {
+    margin: 10px 18px;
+    font-size: 0.9em;
+}
+
+.questionContainer > dl > a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+}

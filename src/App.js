@@ -10,6 +10,7 @@ import FallingKeys from './Components/Games/FallingKeys';
 import Chapters from './Components/Chapters/Chapters';
 import Fallback from './Components/common/Fallback';
 import FAQ from './Components/FAQ/FAQ';
+import About from './Components/About/About';
 
 const App = () => {
 
@@ -18,6 +19,7 @@ const App = () => {
   const reloadLesson = () => {
     generateText('');
   }
+  
   return (
     <div className='container'>
       <React.Suspense fallback={<Fallback />}>
@@ -25,13 +27,15 @@ const App = () => {
           <Header />
           <Routes>
             <Route path='/' element={<Home />} />
+            <Route path='*' element={<Component404 />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/FAQ' element={<FAQ />} />
+
             <Route path='/:lesson/:chapter' element={<Main generatedText={generatedText} reloadLesson={reloadLesson} />} />
             <Route path='/random-text' element={<Main generatedText={generatedText} reloadLesson={reloadLesson} />} />
             <Route path='/random-test' element={<Main generatedText={generatedText} reloadLesson={reloadLesson} />} />
-            <Route path='/games' element={<FallingKeys />} />
 
-            <Route path='*' element={<Component404 />} />
-            <Route path='/FAQ' element={<FAQ />} />
+            <Route path='/games' element={<FallingKeys />} />
           </Routes>
           <Chapters generateText={generateText} generatedText={generatedText} />
           <Footer />
