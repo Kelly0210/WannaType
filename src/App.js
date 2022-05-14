@@ -19,7 +19,7 @@ const App = () => {
   const reloadLesson = () => {
     generateText('');
   }
-  
+
   return (
     <div className='container'>
       <React.Suspense fallback={<Fallback />}>
@@ -42,8 +42,7 @@ const App = () => {
         </BrowserRouter>
       </React.Suspense>
     </div>
-  );
-
+  )
 }
 
 export default App;

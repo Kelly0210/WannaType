@@ -1,0 +1,48 @@
+.aboutContainer {
+    grid-area: main;
+}
+
+.about {
+    color: white;
+    margin: 20px 0px 0px 15px;
+}
+
+.randomizedString {
+    margin: 0 25px;
+    font-size: 1.1em;
+}
+
+.randomizedString > span {
+    display: inline-block;
+    text-align: center;
+    width: 15px;
+    color: black;
+    border-radius: 10%;
+    padding: 4px;
+    margin: 2px;
+}
+
+.firstBlock {
+    background-color: #9ad3fa;
+}
+
+.secondBlock {
+    background-color: #78e2aa;
+}
+
+.thirdBlock {
+    background-color: #63e3ff;
+}
+
+.fourthBlock {
+    background-color: #f69ec4;
+}
+
+.fifthBlock {
+    background-color: #ffc07e;
+}
+
+.sixthBlock {
+    background-color: #ffef7e;
+}
+

@@ -24,7 +24,7 @@ class Keyboard extends React.Component {
         return (
             <div className={style.keyboardContainer}>
                 <div className={style.row}>
-                    <div id='`' className={`${style.key} ${style.FirstBlock}`}>`</div>
+                    <div id='`' className={`${style.key} ${style.firstBlock}`}>`</div>
                     <div id='1' className={`${style.key} ${style.secondBlock}`}>1</div>
                     <div id='2' className={`${style.key} ${style.secondBlock}`}>2</div>
                     <div id='3' className={`${style.key} ${style.thirdBlock}`}>3</div>
@@ -37,10 +37,10 @@ class Keyboard extends React.Component {
                     <div id='0' className={`${style.key} ${style.secondBlock}`}>0</div>
                     <div id='-' className={`${style.key} ${style.secondBlock}`}>-</div>
                     <div id='=' className={`${style.key} ${style.secondBlock}`}>=</div>
-                    <div className={`${style.key} ${style.keyBackSpace} ${style.FirstBlock}`}>←</div>
+                    <div className={`${style.key} ${style.keyBackSpace} ${style.firstBlock}`}>←</div>
                 </div>
                 <div className={style.row}>
-                    <div className={`${style.key} ${style.keyTab} ${style.FirstBlock}`}>TAB</div>
+                    <div className={`${style.key} ${style.keyTab} ${style.firstBlock}`}>TAB</div>
                     <div id='q' className={`${style.key} ${style.secondBlock}`}>Q</div>
                     <div id='w' className={`${style.key} ${style.thirdBlock}`}>W</div>
                     <div id='e' className={`${style.key} ${style.fourthBlock}`}>E</div>
@@ -53,10 +53,10 @@ class Keyboard extends React.Component {
                     <div id='p' className={`${style.key} ${style.secondBlock}`}>P</div>
                     <div id='[' className={`${style.key} ${style.secondBlock}`}>[</div>
                     <div id=']' className={`${style.key} ${style.secondBlock}`}>]</div>
-                    <div id='\' className={`${style.key} ${style.FirstBlock}`}>\</div>
+                    <div id='\' className={`${style.key} ${style.firstBlock}`}>\</div>
                 </div>
                 <div className={style.row}>
-                    <div className={`${style.key} ${style.keyCaps} ${style.FirstBlock}`}>CAPS</div>
+                    <div className={`${style.key} ${style.keyCaps} ${style.firstBlock}`}>CAPS</div>
                     <div id='a' className={`${style.key} ${style.secondBlock}`}>A</div>
                     <div id='s' className={`${style.key} ${style.thirdBlock}`}>S</div>
                     <div id='d' className={`${style.key} ${style.fourthBlock}`}>D</div>
@@ -68,10 +68,10 @@ class Keyboard extends React.Component {
                     <div id='l' className={`${style.key} ${style.thirdBlock}`}>L</div>
                     <div id=';' className={`${style.key} ${style.secondBlock}`}>;</div>
                     <div id="'" className={`${style.key} ${style.secondBlock}`}>'</div>
-                    <div className={`${style.key} ${style.keyEnter} ${style.FirstBlock}`}>ENTER</div>
+                    <div className={`${style.key} ${style.keyEnter} ${style.firstBlock}`}>ENTER</div>
                 </div>
                 <div className={style.row}>
-                    <div className={`${style.key} ${style.keyShift} ${style.FirstBlock}`}>SHIFT</div>
+                    <div className={`${style.key} ${style.keyShift} ${style.firstBlock}`}>SHIFT</div>
                     <div id='z' className={`${style.key} ${style.secondBlock}`}>Z</div>
                     <div id='x' className={`${style.key} ${style.thirdBlock}`}>X</div>
                     <div id='c' className={`${style.key} ${style.fourthBlock}`}>C</div>
@@ -82,10 +82,10 @@ class Keyboard extends React.Component {
                     <div id=',' className={`${style.key} ${style.fourthBlock}`}>,</div>
                     <div id='.' className={`${style.key} ${style.thirdBlock}`}>.</div>
                     <div id='/' className={`${style.key} ${style.secondBlock}`}>/</div>
-                    <div className={`${style.key} ${style.keyShift} ${style.FirstBlock}`}>SHIFT</div>
+                    <div className={`${style.key} ${style.keyShift} ${style.firstBlock}`}>SHIFT</div>
                 </div>
                 <div className={style.row}>
-                    <div id=' ' className={`${style.key} ${style.keySpace} ${style.FirstBlock}`}></div>
+                    <div id=' ' className={`${style.key} ${style.keySpace} ${style.firstBlock}`}></div>
                 </div>
             </div>
         )
