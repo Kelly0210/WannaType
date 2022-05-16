@@ -6,7 +6,6 @@ import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import Main from './Components/Main/Main';
 import Home from './Components/Home/Home';
-import FallingKeys from './Components/Games/FallingKeys';
 import Chapters from './Components/Chapters/Chapters';
 import Fallback from './Components/common/Fallback';
 import FAQ from './Components/FAQ/FAQ';
@@ -35,7 +34,6 @@ const App = () => {
             <Route path='/random-text' element={<Main generatedText={generatedText} reloadLesson={reloadLesson} />} />
             <Route path='/random-test' element={<Main generatedText={generatedText} reloadLesson={reloadLesson} />} />
 
-            <Route path='/games' element={<FallingKeys />} />
           </Routes>
           <Chapters generateText={generateText} generatedText={generatedText} />
           <Footer />

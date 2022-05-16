@@ -329,8 +329,6 @@ const Chapters = (props) => {
                     <li><Link to='/random-test' onClick={randomExerciseClick}>Random Exercise</Link></li>
                     <li><Link to='/random-text' onClick={randomTextClick}>Random Text</Link></li>
 
-                    <li><Link to='/games'>Games</Link></li>
-
                 </ul>
             </nav >
         </>
