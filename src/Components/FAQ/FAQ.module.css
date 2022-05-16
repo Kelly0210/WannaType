@@ -1,13 +1,13 @@
 .FAQcontainer {
     grid-area: main;
-    color: white;
+    color: #eee;
     font-size: 1.2em;
 }
 
 .questionContainer{
     width: fit-content;
     margin: 20px 0px 0px 15px;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #eee;
 }
 
 .questionContainer > dl {
@@ -16,7 +16,7 @@
 }
 
 .questionContainer > dl > a {
-    color: white;
+    color: #eee;
     text-decoration: none;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #eee;
 }

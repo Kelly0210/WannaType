@@ -8,6 +8,8 @@
     background-position: 10px 0, 10px 0, 0 0, 0 0;
     background-size: 20px 20px;
     box-shadow: 0 0 5px 0 #333333;
+    
+    color: #eee;
 }
 
 .companyName {
@@ -16,7 +18,7 @@
 }
 
 .linkHome {
-  color: white;
+  color: #eee;
   font-size: 35px;
   text-decoration: none;
 }
@@ -36,12 +38,11 @@
 .loginText {
   display: table-cell;
   vertical-align: middle;
-  color: white;
   padding: 5px;
 }
 
 .loginText > a {
-  color: white;
+  color: #eee;
   text-decoration: none;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #eee;
 }

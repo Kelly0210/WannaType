@@ -10,16 +10,15 @@ const About = () => {
             `${style.thirdBlock}`,
             `${style.fourthBlock}`,
             `${style.fifthBlock}`,
-            `${style.sixthBlock}`,
+            `${style.sixthBlock}`
         ]
-
-        return  initialStyles[Math.floor(Math.random() * initialStyles.length)];
+        return initialStyles[Math.floor(Math.random() * initialStyles.length)];
     }
 
     return (
         <div className={style.aboutContainer}>
 
-            <section className={style.about}>
+            <section className={style.aboutSection}>
                 <h2>What key advantage of Wanna Type?</h2>
                 <p className={style.randomizedString}>
                     Of course it's <span className={randomColor()}>R</span>
@@ -32,6 +31,14 @@ const About = () => {
                     <span className={randomColor()}>Z</span>
                     <span className={randomColor()}>E</span>
                 </p>
+
+            </section >
+
+            <section className={style.aboutSection}>
+                <p>Wanna Type is a resource for those who want to learn how to type faster.</p>
+                <p>The resource offers a system of lessons where words and symbols are random every time.</p>
+                <p>This improves the memorization of characters and does not sharpen you for specific lines.</p>
+                <p>And you may also learn new words. Have fun! :)</p>
             </section>
 
         </div>

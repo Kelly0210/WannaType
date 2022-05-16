@@ -1,14 +1,14 @@
 .homeContainer {
     grid-area: main;
-    color: white;
+    color: #eee;
     font-size: 40px;
     margin: 0 auto;
 }
 
 .linkHome {
-    color: white;
+    color: #eee;
     text-decoration: none;
-    border-bottom: 3px solid white;
+    border-bottom: 3px solid #eee;
     padding-bottom : 1px;
 }
 

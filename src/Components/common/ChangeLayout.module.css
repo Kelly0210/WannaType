@@ -1,7 +1,7 @@
  .layoutBox {
     width: 1000px;
     height: 200px;
-    background-color: white;
+    background-color: #eee;
     position: absolute;
     top: 18%;
     z-index: 1;
