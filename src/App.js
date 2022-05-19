@@ -32,7 +32,7 @@ const App = () => {
 
             <Route path='/:lesson/:chapter' element={<Main generatedText={generatedText} reloadLesson={reloadLesson} />} />
             <Route path='/random-text' element={<Main generatedText={generatedText} reloadLesson={reloadLesson} />} />
-            <Route path='/random-test' element={<Main generatedText={generatedText} reloadLesson={reloadLesson} />} />
+            <Route path='/random-exercise' element={<Main generatedText={generatedText} reloadLesson={reloadLesson} />} />
 
           </Routes>
           <Chapters generateText={generateText} generatedText={generatedText} />

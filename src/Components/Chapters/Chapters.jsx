@@ -1,32 +1,38 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import style from './Chapters.module.css';
 import collapseArrow from '../../assets/img/collapseArrow.png';
 import { textCollection } from "../common/textCollection";
-import { lessonsCollection } from '../common/lessonsCollection';
+import { lessonsCollection } from '../common/LessonsCollection';
 import { generateLesson } from "../common/generateLesson";
 
 const Chapters = (props) => {
 
-    const lessonClick = (event) => {
-        let stepOne = window.location.pathname.replaceAll('/', '.').replaceAll('-', '');
-        let stepTwo = stepOne.slice(1);
-        // event.target.classList.add(`${style.active}`)
-        
-        let blankForUnits = stepTwo + '.units';
-        let blankForNumbers = stepTwo + '.numberOfUnits';
+    useEffect(() => {
+        if (!props.generatedText) {
+            switch (true) {
+                case '/random-text': randomTextClick(); break;
+                case '/random-exercise': randomExerciseClick(); break;
+                default: lessonClick(); break;
+            }
+        }
+    }, [props.generatedText])
+
+    const urlConvertor = (url) => {
+
+        let blankForUnits = url + '.units';
+        let blankForNumbers = url + '.numberOfUnits';
 
         let contentObject = blankForUnits.split('.').reduce((o, i) => o[i], lessonsCollection);
         let numbersObject = blankForNumbers.split('.').reduce((o, i) => o[i], lessonsCollection);
 
-        let stepThree = generateLesson(contentObject, numbersObject);
-        props.generateText(stepThree);
+        return generateLesson(contentObject, numbersObject);
     }
 
     const CollapseComponent = () => {
         let entireComponent = document.getElementById('entireComponent');
         entireComponent.classList.toggle(`${style.hide}`);
-        
+
         let arrowRight = document.getElementById('collapseRight');
         arrowRight.classList.toggle(`${style.show}`);
     }
@@ -38,18 +44,28 @@ const Chapters = (props) => {
         event.target.classList.toggle(`${style.active}`);
     }
 
+    const lessonClick = () => {
+        setTimeout(() => {
+            let lessonUrl = window.location.pathname.replaceAll('/', '.').replaceAll('-', '');
+            lessonUrl = lessonUrl.slice(1);
+
+            props.generateText(urlConvertor(lessonUrl));
+        }, 0)
+    }
+
     const randomTextClick = () => {
         let randomText = textCollection[Math.floor(Math.random() * textCollection.length)];
         props.generateText(randomText);
     }
 
     const randomExerciseClick = () => {
-        let obj = lessonsCollection.lesson1.chapter1;
-    }
+        const random = () => {
+            return Math.ceil(Math.random() * 12);
+        }
 
-    // if(!props.generatedText) {
-    //     lessonClick();
-    // }
+        let randomExercise = `lesson${random()}.chapter${random()}`;
+        props.generateText(urlConvertor(randomExercise));
+    }
 
     return (
         <>
@@ -326,7 +342,7 @@ const Chapters = (props) => {
                         <li><Link to='/lesson-13/chapter-15' onClick={lessonClick}>Try Words</Link></li>
                     </ul>
 
-                    <li><Link to='/random-test' onClick={randomExerciseClick}>Random Exercise</Link></li>
+                    <li><Link to='/random-exercise' onClick={randomExerciseClick}>Random Exercise</Link></li>
                     <li><Link to='/random-text' onClick={randomTextClick}>Random Text</Link></li>
 
                 </ul>
