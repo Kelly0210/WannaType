@@ -9,7 +9,6 @@ class Display extends React.Component {
     
             finishText.textContent += leftText.textContent[0];
             leftText.textContent = leftText.textContent.slice(1);
-            console.log(finishText.textContent)
     }
 
     render = () => {

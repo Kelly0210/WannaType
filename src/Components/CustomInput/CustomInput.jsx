@@ -3,7 +3,6 @@ import * as PropTypes from 'prop-types';
 import FinishBoard from '../Board/FinishBoard';
 import style from './CustomInput.module.css';
 import ChangeLayout from '../common/ChangeLayout';
-// import Display from '../Display/Display';
 
 
 class CustomInput extends React.Component {
@@ -31,12 +30,12 @@ class CustomInput extends React.Component {
             'U', 'V', 'W', 'X', 'Y', 'Z',
             '1', '2', '3', '4', '5', '6', '7', '8', '9', '0',
             ',', '.', `'`, ' ', ';', ':'
-        ]
+        ];
 
         if (inputValue.length === 1) {
             this.setState({ startTimeMs: new Date().getTime() });
         }
-        
+
         if (allowedSymbols.includes(inputValue.slice(-1))) {
             this.handleMistake(inputValue, generatedText);
             this.handleComplete(inputValue, generatedText);
@@ -110,11 +109,11 @@ class CustomInput extends React.Component {
             disabled: false,
             result: false,
         });
-        
+
         let finishText = document.getElementById('finishText');
         let leftText = document.getElementById('leftText');
         let inputField = document.getElementById('inputField');
-        
+
         finishText.textContent = '';
         leftText.textContent = '';
         inputField.value = '';
@@ -130,7 +129,6 @@ class CustomInput extends React.Component {
                     onChange={this.handleChange}
                     id='inputField'
                 />
-                {/* <Display generatedText={this.props.generatedText} /> */}
                 <span className={style.displayText}>
                     <span id='finishText' className={style.cursor} />
                     <span id='leftText' className={style.unfinishedText}>{this.props.generatedText}</span>

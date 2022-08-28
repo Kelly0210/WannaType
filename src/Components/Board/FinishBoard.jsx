@@ -42,6 +42,7 @@ const FinishBoard = (props) => {
     }
 
 
+
     return (
 
         <div className={style.boardBox}>
