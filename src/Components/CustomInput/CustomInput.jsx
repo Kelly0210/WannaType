@@ -1,146 +1,80 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react';
 import * as PropTypes from 'prop-types';
 import FinishBoard from '../Board/FinishBoard';
+import DisplayText from '../Display/DisplayText';
 import style from './CustomInput.module.css';
-import ChangeLayout from '../common/ChangeLayout';
 
+const CustomInput = (props) => {
+    const [isDisabled, disableInput] = React.useState(false);
+    const [isPassed, passedResult] = React.useState(false);
+    const [startTimeMs, setStopwatch] = React.useState(0);
+    const [value, changeValue] = React.useState('');
 
-class CustomInput extends React.Component {
-
-    constructor(props) {
-        super(props)
-        this.state = {
-            startTimeMs: 0,
-            changeLayout: false,
-            disabled: false,
-            result: false,
+    React.useEffect(() => {
+        if (value.length !== 0) {
+            props.passLastLetter(value.slice(-1));
         }
-    }
+    }, [value]);
 
-    handleChange = (event) => {
-        let inputValue = event.target.value;
-        let generatedText = this.props.generatedText;
-
-        let allowedSymbols = [
-            'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j',
-            'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
-            'u', 'v', 'w', 'x', 'y', 'z',
-            'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
-            'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
-            'U', 'V', 'W', 'X', 'Y', 'Z',
-            '1', '2', '3', '4', '5', '6', '7', '8', '9', '0',
-            ',', '.', `'`, ' ', ';', ':'
-        ];
-
-        if (inputValue.length === 1) {
-            this.setState({ startTimeMs: new Date().getTime() });
+    React.useEffect(() => {
+        if (value.slice(-1) !== props.generatedText[value.length - 1]) {
+            props.mistakeCounter();
         }
 
-        if (allowedSymbols.includes(inputValue.slice(-1))) {
-            this.handleMistake(inputValue, generatedText);
-            this.handleComplete(inputValue, generatedText);
-            this.completionPercentage(inputValue, generatedText);
-            this.charactersPerMinute(inputValue);
-
-            this.carriage();
-            this.props.passLastLetter(inputValue.slice(-1));
-
-        } else {
-            this.layoutHandler(true);
+        if (props.numberOfMistakes === 3) {
+            disableInput(true);
+            passedResult(false);
         }
-    }
+    }, [value]);
 
-    handleMistake = (inputValue, generatedText) => {
-
-        if (this.props.numberOfMistake === 2) {
-            this.handleDisable();
+    React.useEffect(() => {
+        if (value.length === 1) {
+            setStopwatch(new Date().getTime());
         }
+        if (value.length !== 0) {
+            let timePassedMs = new Date().getTime();
+            let timePassedMin = (timePassedMs - startTimeMs) / 1000 / 60;
+            let CPM = Math.ceil(value.length / timePassedMin);
 
-        if (inputValue.slice(-1) !== generatedText[inputValue.length - 1]) {
-            this.props.mistakeCounter();
-            this.props.handleMistake(true);
-        } else {
-            this.props.handleMistake(false);
+            props.charactersPerMinute(CPM);
         }
-    }
+    }, [value.length]);
 
-    completionPercentage = (inputValue, generatedText) => {
-        let percentage = Math.ceil(inputValue.length / generatedText.length * 100);
-        this.props.completionPercentage(percentage);
-    }
-
-    charactersPerMinute = (inputValue) => {
-        let startTimeMs = this.state.startTimeMs;
-
-        let timePassedMs = new Date().getTime();
-        let timePassedMin = (timePassedMs - startTimeMs) / 1000 / 60;
-        let cpm = Math.ceil(inputValue.length / timePassedMin);
-
-        this.props.charactersPerMinute(cpm);
-    }
-
-    handleComplete = (inputValue, generatedText) => {
-        if (inputValue.length === generatedText.length) {
-            this.setState({ result: true });
-            this.handleDisable();
+    React.useEffect(() => {
+        if (value.length === props.generatedText.length) {
+            passedResult(true);
+            disableInput(true);
         }
-    }
+    }, [value.length, props.generatedText.length]);
 
-    handleDisable = () => {
-        this.setState({ disabled: true });
-    }
+    React.useEffect(() => {
+        let percentage = Math.ceil(value.length / props.generatedText.length * 100);
+        props.completionPercentage(percentage);
+    });
 
-    layoutHandler = (boolean) => {
-        this.setState({ changeLayout: boolean })
-    }
+    const reloadLesson = () => {
+        setStopwatch(0);
+        disableInput(false);
+        passedResult(false);
+        changeValue('');
 
-    carriage = () => {
-        let leftText = document.getElementById('leftText');
-        let finishText = document.getElementById('finishText');
+        props.reloadLesson();
+    };
 
-        finishText.textContent += leftText.textContent[0];
-        leftText.textContent = leftText.textContent.slice(1);
-    }
+    return (
+        <div className={style.InputBox}>
+            <DisplayText generatedText={props.generatedText} value={value} />
 
-    reloadLesson = () => {
-        this.setState({
-            startTimeMs: 0,
-            changeLayout: false,
-            disabled: false,
-            result: false,
-        });
+            <input autoFocus
+                value={value}
+                disabled={isDisabled}
+                onChange={event => changeValue(event.target.value)} />
 
-        let finishText = document.getElementById('finishText');
-        let leftText = document.getElementById('leftText');
-        let inputField = document.getElementById('inputField');
-
-        finishText.textContent = '';
-        leftText.textContent = '';
-        inputField.value = '';
-
-        this.props.reloadLesson();
-    }
-
-    render = () => {
-        return (
-            <div className={style.InputBox}>
-                <input autoFocus
-                    disabled={this.state.disabled}
-                    onChange={this.handleChange}
-                    id='inputField'
-                />
-                <span className={style.displayText}>
-                    <span id='finishText' className={style.cursor} />
-                    <span id='leftText' className={style.unfinishedText}>{this.props.generatedText}</span>
-                </span>
-
-                {this.state.disabled && <FinishBoard result={this.state.result} reloadLesson={this.reloadLesson} />}
-
-                {this.state.changeLayout && <ChangeLayout layoutHandler={this.layoutHandler} />}
-            </div>
-        )
-    }
-}
+            {isDisabled && <FinishBoard isPassed={isPassed} reloadLesson={reloadLesson} />}
+        </div>
+    )
+};
 
 CustomInput.propTypes = {
     generatedText: PropTypes.string,
@@ -152,8 +86,7 @@ CustomInput.propTypes = {
 
     completionPercentage: PropTypes.func,
     charactersPerMinute: PropTypes.func,
-
     passLastLetter: PropTypes.func
-}
+};
 
 export default CustomInput;
