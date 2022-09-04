@@ -20,6 +20,9 @@ const CustomInput = (props) => {
     React.useEffect(() => {
         if (value.slice(-1) !== props.generatedText[value.length - 1]) {
             props.mistakeCounter();
+            props.mistakeHappenedToggle(true);
+        } else {
+            props.mistakeHappenedToggle(false);
         }
 
         if (props.numberOfMistakes === 3) {
