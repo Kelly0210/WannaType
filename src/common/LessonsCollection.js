@@ -4,38 +4,56 @@ export const lessonsCollection = {
 
     lesson1: {
         chapter1: {
+            title: 'New keys - <kbd>f</kbd> and <kbd>j</kbd>',
+            url: '/lesson-1/chapter-1',
             units: ['f', 'j'],
             numberOfUnits: 52,
         },
         chapter2: {
+            title: 'New keys - <kbd>f</kbd> and <kbd>j</kbd>',
+            url: '/lesson-1/chapter-2',
             units: ['f', 'j'],
             numberOfUnits: 120,
         },
         chapter3: {
+            title: 'New keys - <kbd>f</kbd> and <kbd>j</kbd>',
+            url: '/lesson-1/chapter-3',
             units: ['f', 'j'],
             numberOfUnits: 180,
         },
         chapter4: {
+            title: 'New keys - <kbd>d</kbd> and <kbd>k</kbd>',
+            url: '/lesson-1/chapter-4',
             units: ['d', 'k'],
             numberOfUnits: 72,
         },
         chapter5: {
+            title: 'New keys - <kbd>d</kbd> and <kbd>k</kbd>',
+            url: '/lesson-1/chapter-5',
             units: ['d', 'k'],
             numberOfUnits: 108,
         },
         chapter6: {
+            title: 'New keys - <kbd>d</kbd> and <kbd>k</kbd>',
+            url: '/lesson-1/chapter-6',
             units: ['d', 'k'],
             numberOfUnits: 144,
         },
         chapter7: {
+            title: 'All keys',
+            url: '/lesson-1/chapter-7',
             units: ['d', 'f', 'j', 'k'],
             numberOfUnits: 88,
         },
         chapter8: {
+            title: 'All keys',
+            url: '/lesson-1/chapter-8',
             units: ['d', 'f', 'j', 'k'],
             numberOfUnits: 120,
         },
         chapter9: {
+            title: 'All keys',
+            url: '/lesson-1/chapter-9',
             units: ['d', 'f', 'j', 'k'],
             numberOfUnits: 172,
         }
@@ -43,50 +61,74 @@ export const lessonsCollection = {
 
     lesson2: {
         chapter1: {
+            title: 'New keys - <kbd>s</kbd> and <kbd>l</kbd>',
+            url: '/lesson-2/chapter-1',
             units: ['s', 'l'],
             numberOfUnits: 88,
         },
         chapter2: {
+            title: 'New keys - <kbd>s</kbd> and <kbd>l</kbd>',
+            url: '/lesson-2/chapter-2',
             units: ['s', 'l'],
             numberOfUnits: 130,
         },
         chapter3: {
+            title: 'New keys - <kbd>s</kbd> and <kbd>l</kbd>',
+            url: '/lesson-2/chapter-3',
             units: ['s', 'l'],
             numberOfUnits: 180,
         },
         chapter4: {
+            title: 'All keys',
+            url: '/lesson-2/chapter-4',
             units: ['s', 'd', 'f', 'j', 'k', 'l'],
             numberOfUnits: 88,
         },
         chapter5: {
+            title: 'All keys',
+            url: '/lesson-2/chapter-5',
             units: ['s', 'd', 'f', 'j', 'k', 'l'],
             numberOfUnits: 130,
         },
         chapter6: {
+            title: 'All keys',
+            url: '/lesson-2/chapter-6',
             units: ['s', 'd', 'f', 'j', 'k', 'l'],
             numberOfUnits: 180,
         },
         chapter7: {
+            title: 'New Keys - <kbd>a</kbd> and <kbd>;</kbd>',
+            url: '/lesson-2/chapter-7',
             units: ['a', ';'],
             numberOfUnits: 80,
         },
         chapter8: {
+            title: 'New Keys - <kbd>a</kbd> and <kbd>;</kbd>',
+            url: '/lesson-2/chapter-8',
             units: ['a', ';'],
             numberOfUnits: 120,
         },
         chapter9: {
+            title: 'New Keys - <kbd>a</kbd> and <kbd>;</kbd>',
+            url: '/lesson-2/chapter-9',
             units: ['a', ';'],
             numberOfUnits: 160,
         },
         chapter10: {
+            title: 'All keys',
+            url: '/lesson-2/chapter-10',
             units: ['a', 's', 'd', 'f', 'j', 'k', 'l', ';'],
             numberOfUnits: 84,
         },
         chapter11: {
+            title: 'All keys',
+            url: '/lesson-2/chapter-11',
             units: ['a', 's', 'd', 'f', 'j', 'k', 'l', ';'],
             numberOfUnits: 130,
         },
         chapter12: {
+            title: 'All keys',
+            url: '/lesson-2/chapter-12',
             units: ['a', 's', 'd', 'f', 'j', 'k', 'l', ';'],
             numberOfUnits: 172,
         },
@@ -94,38 +136,56 @@ export const lessonsCollection = {
 
     lesson3: {
         chapter1: {
+            title: 'New keys - <kbd>g</kbd> and <kbd>h</kbd>',
+            url: '/lesson-3/chapter-1',
             units: ['g', 'h'],
             numberOfUnits: 64,
         },
         chapter2: {
+            title: 'New keys - <kbd>g</kbd> and <kbd>h</kbd>',
+            url: '/lesson-3/chapter-2',
             units: ['g', 'h'],
             numberOfUnits: 96,
         },
         chapter3: {
+            title: 'New keys - <kbd>g</kbd> and <kbd>h</kbd>',
+            url: '/lesson-3/chapter-3',
             units: ['g', 'h'],
             numberOfUnits: 128,
         },
         chapter4: {
+            title: 'All keys',
+            url: '/lesson-3/chapter-4',
             units: ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
             numberOfUnits: 76,
         },
         chapter5: {
+            title: 'All keys',
+            url: '/lesson-3/chapter-5',
             units: ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
             numberOfUnits: 120,
         },
         chapter6: {
+            title: 'All keys',
+            url: '/lesson-3/chapter-6',
             units: ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
             numberOfUnits: 168,
         },
         chapter7: {
+            title: 'Try Words',
+            url: '/lesson-3/chapter-7',
             units: ['lags;', 'gash', 'half;', 'gas', 'has', 'had', 'ash', 'ask'],
             numberOfUnits: 30,
         },
         chapter8: {
+            title: 'Try Words',
+            url: '/lesson-3/chapter-8',
             units: ['glass;', 'flask;', 'skald;', 'jags', 'lags', 'gash', 'half'],
             numberOfUnits: 34,
         },
         chapter9: {
+            title: 'Try Words',
+            url: '/lesson-3/chapter-9',
             units: ['glass;', 'flask', 'flash;', 'flags;', 'skald;', 'slag;', 'ask'],
             numberOfUnits: 40,
         }
@@ -135,53 +195,77 @@ export const lessonsCollection = {
 
     lesson4: {
         chapter1: {
+            title: 'New keys - <kbd>r</kbd> and <kbd>u</kbd>',
+            url: '/lesson-4/chapter-1',
             units: ['r', 'u'],
             numberOfUnits: 80,
         },
         chapter2: {
+            title: 'New keys - <kbd>r</kbd> and <kbd>u</kbd>',
+            url: '/lesson-4/chapter-2',
             units: ['r', 'u'],
             numberOfUnits: 120,
         },
         chapter3: {
+            title: 'New keys - <kbd>r</kbd> and <kbd>u</kbd>',
+            url: '/lesson-4/chapter-3',
             units: ['r', 'u'],
             numberOfUnits: 160,
         },
         chapter4: {
+            title: 'Homerow + Top Row',
+            url: '/lesson-4/chapter-4',
             units: ['r', 'f', 'j', 'u'],
             numberOfUnits: 92,
         },
         chapter5: {
+            title: 'Homerow + Top Row',
+            url: '/lesson-4/chapter-5',
             units: ['r', 'f', 'j', 'u'],
             numberOfUnits: 140,
         },
         chapter6: {
+            title: 'Homerow + Top Row',
+            url: '/lesson-4/chapter-6',
             units: ['r', 'f', 'j', 'u'],
             numberOfUnits: 188,
         },
         chapter7: {
+            title: 'All keys',
+            url: '/lesson-4/chapter-7',
             units: ['r', 'u',
                 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
             numberOfUnits: 80,
         },
         chapter8: {
+            title: 'All keys',
+            url: '/lesson-4/chapter-8',
             units: ['r', 'u',
                 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
             numberOfUnits: 120,
         },
         chapter9: {
+            title: 'All keys',
+            url: '/lesson-4/chapter-9',
             units: ['r', 'u',
                 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
             numberOfUnits: 160,
         },
         chapter10: {
+            title: 'Try Words',
+            url: '/lesson-4/chapter-10',
             units: ['shark', 'guard', 'glads', 'argus', 'dark', 'jars', 'husk', 'had'],
             numberOfUnits: 25,
         },
         chapter11: {
+            title: 'Try Words',
+            url: '/lesson-4/chapter-11',
             units: ['sulfur', 'laughs', 'ducks', 'sugar', 'laugh', 'shard', 'grass'],
             numberOfUnits: 28,
         },
         chapter12: {
+            title: 'Try Words',
+            url: '/lesson-4/chapter-12',
             units: ['shark;', 'jars;', 'sugar;', 'ducks', 'shard', 'arf', 'has'],
             numberOfUnits: 32,
         }
@@ -189,53 +273,77 @@ export const lessonsCollection = {
 
     lesson5: {
         chapter1: {
+            title: 'New keys - <kbd>t</kbd> and <kbd>y</kbd>',
+            url: '/lesson-5/chapter-1',
             units: ['t', 'y'],
             numberOfUnits: 84,
         },
         chapter2: {
+            title: 'New keys - <kbd>t</kbd> and <kbd>y</kbd>',
+            url: '/lesson-5/chapter-2',
             units: ['t', 'y'],
             numberOfUnits: 128,
         },
         chapter3: {
+            title: 'New keys - <kbd>t</kbd> and <kbd>y</kbd>',
+            url: '/lesson-5/chapter-3',
             units: ['t', 'y'],
             numberOfUnits: 172,
         },
         chapter4: {
+            title: 'Homerow + Top Row',
+            url: '/lesson-5/chapter-4',
             units: ['r', 't', 'f', 'j', 'y', 'u'],
             numberOfUnits: 88,
         },
         chapter5: {
+            title: 'Homerow + Top Row',
+            url: '/lesson-5/chapter-5',
             units: ['r', 't', 'f', 'j', 'y', 'u'],
             numberOfUnits: 136,
         },
         chapter6: {
+            title: 'Homerow + Top Row',
+            url: '/lesson-5/chapter-6',
             units: ['r', 't', 'f', 'j', 'y', 'u'],
             numberOfUnits: 180,
         },
         chapter7: {
+            title: 'All keys',
+            url: '/lesson-5/chapter-7',
             units: ['r', 't', 'y', 'u',
                 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
             numberOfUnits: 84,
         },
         chapter8: {
+            title: 'All keys',
+            url: '/lesson-5/chapter-8',
             units: ['r', 't', 'y', 'u',
                 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
             numberOfUnits: 124,
         },
         chapter9: {
+            title: 'All keys',
+            url: '/lesson-5/chapter-9',
             units: ['r', 't', 'y', 'u',
                 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
             numberOfUnits: 160,
         },
         chapter10: {
+            title: 'Try Words',
+            url: '/lesson-5/chapter-10',
             units: ['draft', 'star', 'jury', 'flat', 'yard', 'hats', 'stag', 'shy'],
             numberOfUnits: 30,
         },
         chapter11: {
+            title: 'Try Words',
+            url: '/lesson-5/chapter-11',
             units: ['adjust', 'ultra', 'study', 'kraft', 'hast', 'just', 'gray'],
             numberOfUnits: 34,
         },
         chapter12: {
+            title: 'Try Words',
+            url: '/lesson-5/chapter-12',
             units: ['adjust', 'shrug', 'study', 'just', 'days', 'salt', 'tasks'],
             numberOfUnits: 40,
         }
@@ -243,53 +351,77 @@ export const lessonsCollection = {
 
     lesson6: {
         chapter1: {
+            title: 'New keys - <kbd>e</kbd> and <kbd>i</kbd>',
+            url: '/lesson-6/chapter-1',
             units: ['e', 'i'],
             numberOfUnits: 88,
         },
         chapter2: {
+            title: 'New keys - <kbd>e</kbd> and <kbd>i</kbd>',
+            url: '/lesson-6/chapter-2',
             units: ['e', 'i'],
             numberOfUnits: 128,
         },
         chapter3: {
+            title: 'New keys - <kbd>e</kbd> and <kbd>i</kbd>',
+            url: '/lesson-6/chapter-3',
             units: ['e', 'i'],
             numberOfUnits: 172,
         },
         chapter4: {
+            title: 'Homerow + Top Row',
+            url: '/lesson-6/chapter-4',
             units: ['e', 'd', 'k', 'i'],
             numberOfUnits: 80,
         },
         chapter5: {
+            title: 'Homerow + Top Row',
+            url: '/lesson-6/chapter-5',
             units: ['e', 'd', 'k', 'i'],
             numberOfUnits: 120,
         },
         chapter6: {
+            title: 'Homerow + Top Row',
+            url: '/lesson-6/chapter-6',
             units: ['e', 'd', 'k', 'i'],
             numberOfUnits: 156,
         },
         chapter7: {
+            title: 'All keys',
+            url: '/lesson-6/chapter-7',
             units: ['e', 'r', 't', 'y', 'u', 'i',
                 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
             numberOfUnits: 80,
         },
         chapter8: {
+            title: 'All keys',
+            url: '/lesson-6/chapter-8',
             units: ['e', 'r', 't', 'y', 'u', 'i',
                 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
             numberOfUnits: 120,
         },
         chapter9: {
+            title: 'All keys',
+            url: '/lesson-6/chapter-9',
             units: ['e', 'r', 't', 'y', 'u', 'i',
                 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
             numberOfUnits: 160,
         },
         chapter10: {
+            title: 'Try Words',
+            url: '/lesson-6/chapter-10',
             units: ['fairy', 'fields', 'fresh', 'shake', 'fish', 'desk', 'fade;'],
             numberOfUnits: 25,
         },
         chapter11: {
+            title: 'Try Words',
+            url: '/lesson-6/chapter-11',
             units: ['gratitude', 'luggage', 'juries', 'layers', 'hiked', 'height', 'jade'],
             numberOfUnits: 28,
         },
         chapter12: {
+            title: 'Try Words',
+            url: '/lesson-6/chapter-12',
             units: ['lifeguard', 'satellite', 'feathers', 'fragile', 'fridge', 'files'],
             numberOfUnits: 30,
         }
@@ -297,53 +429,77 @@ export const lessonsCollection = {
 
     lesson7: {
         chapter1: {
+            title: 'New keys - <kbd>w</kbd> and <kbd>o</kbd>',
+            url: '/lesson-7/chapter-1',
             units: ['w', 'o'],
             numberOfUnits: 60,
         },
         chapter2: {
+            title: 'New keys - <kbd>w</kbd> and <kbd>o</kbd>',
+            url: '/lesson-7/chapter-2',
             units: ['w', 'o'],
             numberOfUnits: 92,
         },
         chapter3: {
+            title: 'New keys - <kbd>w</kbd> and <kbd>o</kbd>',
+            url: '/lesson-7/chapter-3',
             units: ['w', 'o'],
             numberOfUnits: 116,
         },
         chapter4: {
+            title: 'Homerow + Top Row',
+            url: '/lesson-7/chapter-4',
             units: ['w', 's', 'o', 'l'],
             numberOfUnits: 80,
         },
         chapter5: {
+            title: 'Homerow + Top Row',
+            url: '/lesson-7/chapter-5',
             units: ['w', 's', 'o', 'l'],
             numberOfUnits: 120,
         },
         chapter6: {
+            title: 'Homerow + Top Row',
+            url: '/lesson-7/chapter-6',
             units: ['w', 's', 'o', 'l'],
             numberOfUnits: 152,
         },
         chapter7: {
+            title: 'All keys',
+            url: '/lesson-7/chapter-7',
             units: ['w', 'e', 'r', 't', 'y', 'u', 'i', 'o',
                 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
             numberOfUnits: 84,
         },
         chapter8: {
+            title: 'All keys',
+            url: '/lesson-7/chapter-8',
             units: ['w', 'e', 'r', 't', 'y', 'u', 'i', 'o',
                 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
             numberOfUnits: 120,
         },
         chapter9: {
+            title: 'All keys',
+            url: '/lesson-7/chapter-9',
             units: ['w', 'e', 'r', 't', 'y', 'u', 'i', 'o',
                 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
             numberOfUnits: 160,
         },
         chapter10: {
+            title: 'Try Words',
+            url: '/lesson-7/chapter-10',
             units: ['hideout', 'outlook', 'whale', 'wrist', 'award', 'route', 'law', 'low'],
             numberOfUnits: 24,
         },
         chapter11: {
+            title: 'Try Words',
+            url: '/lesson-7/chapter-11',
             units: ['sweetheart', 'outside', 'without', 'woody', 'where', 'wire', 'oak'],
             numberOfUnits: 28,
         },
         chapter12: {
+            title: 'Try Words',
+            url: '/lesson-7/chapter-12',
             units: ['lightweight', 'household', 'afterward', 'towards', 'await', 'how'],
             numberOfUnits: 30,
         }
@@ -351,53 +507,77 @@ export const lessonsCollection = {
 
     lesson8: {
         chapter1: {
+            title: 'New keys - <kbd>q</kbd> and <kbd>p</kbd>',
+            url: '/lesson-8/chapter-1',
             units: ['q', 'p'],
             numberOfUnits: 64,
         },
         chapter2: {
+            title: 'New keys - <kbd>q</kbd> and <kbd>p</kbd>',
+            url: '/lesson-8/chapter-2',
             units: ['q', 'p'],
             numberOfUnits: 96,
         },
         chapter3: {
+            title: 'New keys - <kbd>q</kbd> and <kbd>p</kbd>',
+            url: '/lesson-8/chapter-3',
             units: ['q', 'p'],
             numberOfUnits: 128,
         },
         chapter4: {
+            title: 'Homerow + Top Row',
+            url: '/lesson-8/chapter-4',
             units: ['q', 'a', ';', 'p'],
             numberOfUnits: 76,
         },
         chapter5: {
+            title: 'Homerow + Top Row',
+            url: '/lesson-8/chapter-5',
             units: ['q', 'a', ';', 'p'],
             numberOfUnits: 112,
         },
         chapter6: {
+            title: 'Homerow + Top Row',
+            url: '/lesson-8/chapter-6',
             units: ['q', 'a', ';', 'p'],
             numberOfUnits: 140,
         },
         chapter7: {
+            title: 'All keys',
+            url: '/lesson-8/chapter-7',
             units: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
                 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
             numberOfUnits: 80,
         },
         chapter8: {
+            title: 'All keys',
+            url: '/lesson-8/chapter-8',
             units: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
                 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
             numberOfUnits: 120,
         },
         chapter9: {
+            title: 'All keys',
+            url: '/lesson-8/chapter-9',
             units: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
                 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';'],
             numberOfUnits: 156,
         },
         chapter10: {
+            title: 'Try Words',
+            url: '/lesson-8/chapter-10',
             units: ['professor', 'prototype', 'squirrel', 'liquid', 'equal', 'aqua', 'plus'],
             numberOfUnits: 20,
         },
         chapter11: {
+            title: 'Try Words',
+            url: '/lesson-8/chapter-11',
             units: ['quality', 'popular', 'perhaps', 'sequoia', 'sheep', 'quick', 'tape'],
             numberOfUnits: 24,
         },
         chapter12: {
+            title: 'Try Words',
+            url: '/lesson-8/chapter-12',
             units: ['philosopher', 'disappear', 'support', 'antique', 'square', 'pass'],
             numberOfUnits: 26,
         }
@@ -407,80 +587,116 @@ export const lessonsCollection = {
 
     lesson9: {
         chapter1: {
+            title: 'New keys <kbd>v</kbd> and <kbd>m</kbd>',
+            url: '/lesson-9/chapter-1',
             units: ['v', 'm'],
             numberOfUnits: 60,
         },
         chapter2: {
+            title: 'New keys <kbd>v</kbd> and <kbd>m</kbd>',
+            url: '/lesson-9/chapter-2',
             units: ['v', 'm'],
             numberOfUnits: 84,
         },
         chapter3: {
+            title: 'New keys <kbd>v</kbd> and <kbd>m</kbd>',
+            url: '/lesson-9/chapter-3',
             units: ['v', 'm'],
             numberOfUnits: 112,
         },
         chapter4: {
+            title: 'Homerow + Bot Row',
+            url: '/lesson-9/chapter-4',
             units: ['v', 'f', 'j', 'm'],
             numberOfUnits: 76,
         },
         chapter5: {
+            title: 'Homerow + Bot Row',
+            url: '/lesson-9/chapter-5',
             units: ['v', 'f', 'j', 'm'],
             numberOfUnits: 108,
         },
         chapter6: {
+            title: 'Homerow + Bot Row',
+            url: '/lesson-9/chapter-6',
             units: ['v', 'f', 'j', 'm'],
             numberOfUnits: 144,
         },
         chapter7: {
+            title: 'All Rows',
+            url: '/lesson-9/chapter-7',
             units: ['r', 'v', 'f', 'j', 'm', 'u'],
             numberOfUnits: 80,
         },
         chapter8: {
+            title: 'All Rows',
+            url: '/lesson-9/chapter-8',
             units: ['r', 'v', 'f', 'j', 'm', 'u'],
             numberOfUnits: 120,
         },
         chapter9: {
+            title: 'All Rows',
+            url: '/lesson-9/chapter-9',
             units: ['r', 'v', 'f', 'j', 'm', 'u'],
             numberOfUnits: 180,
         },
         chapter10: {
+            title: 'All Rows + Moving',
+            url: '/lesson-9/chapter-10',
             units: ['r', 't', 'v', 'f', 'g', 'h', 'j', 'm', 'u', 'y'],
             numberOfUnits: 80,
         },
         chapter11: {
+            title: 'All Rows + Moving',
+            url: '/lesson-9/chapter-11',
             units: ['r', 't', 'v', 'f', 'g', 'h', 'j', 'm', 'u', 'y'],
             numberOfUnits: 120,
         },
         chapter12: {
+            title: 'All Rows + Moving',
+            url: '/lesson-9/chapter-12',
             units: ['r', 't', 'v', 'f', 'g', 'h', 'j', 'm', 'u', 'y'],
             numberOfUnits: 160,
         },
         chapter13: {
+            title: 'All keys',
+            url: '/lesson-9/chapter-13',
             units: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
                 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
                 'v', 'm'],
             numberOfUnits: 80,
         },
         chapter14: {
+            title: 'All keys',
+            url: '/lesson-9/chapter-14',
             units: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
                 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
                 'v', 'm'],
             numberOfUnits: 120,
         },
         chapter15: {
+            title: 'All keys',
+            url: '/lesson-9/chapter-15',
             units: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
                 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
                 'v', 'm'],
             numberOfUnits: 160,
         },
         chapter16: {
+            title: 'Try Words',
+            url: '/lesson-9/chapter-16',
             units: ['masterpiece', 'somehow', 'himself', 'removal', 'almost', 'promise', 'me'],
             numberOfUnits: 18,
         },
         chapter17: {
+            title: 'Try Words',
+            url: '/lesson-9/chapter-17',
             units: ['bathroom', 'comfort', 'resolve', 'assumed', 'memory', 'dream', 'mirror'],
             numberOfUnits: 22,
         },
         chapter18: {
+            title: 'Try Words',
+            url: '/lesson-9/chapter-18',
             units: ['immediately', 'supermarket', 'trademark', 'summary', 'message', 'massive', 'from'],
             numberOfUnits: 24,
         }
@@ -488,80 +704,116 @@ export const lessonsCollection = {
 
     lesson10: {
         chapter1: {
+            title: 'New keys - <kbd>b</kbd> and <kbd>n</kbd>',
+            url: '/lesson-10/chapter-1',
             units: ['b', 'n'],
             numberOfUnits: 64,
         },
         chapter2: {
+            title: 'New keys - <kbd>b</kbd> and <kbd>n</kbd>',
+            url: '/lesson-10/chapter-2',
             units: ['b', 'n'],
             numberOfUnits: 96,
         },
         chapter3: {
+            title: 'New keys - <kbd>b</kbd> and <kbd>n</kbd>',
+            url: '/lesson-10/chapter-3',
             units: ['b', 'n'],
             numberOfUnits: 128,
         },
         chapter4: {
+            title: 'Homerow + Bot Row',
+            url: '/lesson-10/chapter-4',
             units: ['f', 'b', 'n', 'j'],
             numberOfUnits: 84,
         },
         chapter5: {
+            title: 'Homerow + Bot Row',
+            url: '/lesson-10/chapter-5',
             units: ['f', 'b', 'n', 'j'],
             numberOfUnits: 124,
         },
         chapter6: {
+            title: 'Homerow + Bot Row',
+            url: '/lesson-10/chapter-6',
             units: ['f', 'b', 'n', 'j'],
             numberOfUnits: 164,
         },
         chapter7: {
+            title: 'All Rows',
+            url: '/lesson-10/chapter-7',
             units: ['r', 'f', 'b', 'n', 'j', 'u'],
             numberOfUnits: 84,
         },
         chapter8: {
+            title: 'All Rows',
+            url: '/lesson-10/chapter-8',
             units: ['r', 'f', 'b', 'n', 'j', 'u'],
             numberOfUnits: 124,
         },
         chapter9: {
+            title: 'All Rows',
+            url: '/lesson-10/chapter-9',
             units: ['r', 'f', 'b', 'n', 'j', 'u'],
             numberOfUnits: 164,
         },
         chapter10: {
+            title: 'All Rows + Moving',
+            url: '/lesson-10/chapter-10',
             units: ['r', 't', 'f', 'g', 'v', 'b', 'y', 'u', 'h', 'j', 'n', 'm'],
             numberOfUnits: 76,
         },
         chapter11: {
+            title: 'All Rows + Moving',
+            url: '/lesson-10/chapter-11',
             units: ['r', 't', 'f', 'g', 'v', 'b', 'y', 'u', 'h', 'j', 'n', 'm'],
             numberOfUnits: 112,
         },
         chapter12: {
+            title: 'All Rows + Moving',
+            url: '/lesson-10/chapter-12',
             units: ['r', 't', 'f', 'g', 'v', 'b', 'y', 'u', 'h', 'j', 'n', 'm'],
             numberOfUnits: 152,
         },
         chapter13: {
+            title: 'All keys',
+            url: '/lesson-10/chapter-13',
             units: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
                 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
                 'c', 'v', 'b', 'n', 'm', ','],
             numberOfUnits: 76,
         },
         chapter14: {
+            title: 'All keys',
+            url: '/lesson-10/chapter-14',
             units: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
                 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
                 'c', 'v', 'b', 'n', 'm', ','],
             numberOfUnits: 108,
         },
         chapter15: {
+            title: 'All keys',
+            url: '/lesson-10/chapter-15',
             units: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
                 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
                 'c', 'v', 'b', 'n', 'm', ','],
             numberOfUnits: 148,
         },
         chapter16: {
+            title: 'Try Words',
+            url: '/lesson-10/chapter-16',
             units: ['newspaper', 'possible', 'assembly', 'drawing', 'butter', 'ribbon', 'moment', 'and'],
             numberOfUnits: 18,
         },
         chapter17: {
+            title: 'Try Words',
+            url: '/lesson-10/chapter-17',
             units: ['international', 'development', 'window', 'opinion', 'brand', 'began', 'any'],
             numberOfUnits: 20,
         },
         chapter18: {
+            title: 'Try Words',
+            url: '/lesson-10/chapter-18',
             units: ['establishment', 'weekend', 'available', 'natural', 'everyone', 'important', 'sun'],
             numberOfUnits: 22
         }
@@ -569,68 +821,98 @@ export const lessonsCollection = {
 
     lesson11: {
         chapter1: {
+            title: 'New keys - <kbd>c</kbd> and <kbd>,</kbd>',
+            url: '/lesson-11/chapter-1',
             units: ['c', ','],
             numberOfUnits: 88,
         },
         chapter2: {
+            title: 'New keys - <kbd>c</kbd> and <kbd>,</kbd>',
+            url: '/lesson-11/chapter-2',
             units: ['c', ','],
             numberOfUnits: 128,
         },
         chapter3: {
+            title: 'New keys - <kbd>c</kbd> and <kbd>,</kbd>',
+            url: '/lesson-11/chapter-3',
             units: ['c', ','],
             numberOfUnits: 132,
         },
         chapter4: {
+            title: 'Homerow + Bot Row',
+            url: '/lesson-11/chapter-4',
             units: ['d', 'c', ',', 'k'],
             numberOfUnits: 80,
         },
         chapter5: {
+            title: 'Homerow + Bot Row',
+            url: '/lesson-11/chapter-5',
             units: ['d', 'c', ',', 'k'],
             numberOfUnits: 116,
         },
         chapter6: {
+            title: 'Homerow + Bot Row',
+            url: '/lesson-11/chapter-6',
             units: ['d', 'c', ',', 'k'],
             numberOfUnits: 152,
         },
         chapter7: {
+            title: 'All Rows',
+            url: '/lesson-11/chapter-7',
             units: ['e', 'd', 'c', ',', 'k', 'i'],
             numberOfUnits: 80,
         },
         chapter8: {
+            title: 'All Rows',
+            url: '/lesson-11/chapter-8',
             units: ['e', 'd', 'c', ',', 'k', 'i'],
             numberOfUnits: 120,
         },
         chapter9: {
+            title: 'All Rows',
+            url: '/lesson-11/chapter-9',
             units: ['e', 'd', 'c', ',', 'k', 'i'],
             numberOfUnits: 160,
         },
         chapter10: {
+            title: 'All keys',
+            url: '/lesson-11/chapter-10',
             units: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
                 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
                 'c', 'v', 'm', ','],
             numberOfUnits: 80,
         },
         chapter11: {
+            title: 'All keys',
+            url: '/lesson-11/chapter-11',
             units: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
                 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
                 'c', 'v', 'm', ','],
             numberOfUnits: 120,
         },
         chapter12: {
+            title: 'All keys',
+            url: '/lesson-11/chapter-12',
             units: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
                 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
                 'c', 'v', 'm', ','],
             numberOfUnits: 156,
         },
         chapter13: {
+            title: 'Try Words',
+            url: '/lesson-11/chapter-13',
             units: ['percentage', 'successful', 'correct,', 'accurate', 'practice', 'because', 'quick', 'check', 'can'],
             numberOfUnits: 18,
         },
         chapter14: {
+            title: 'Try Words',
+            url: '/lesson-11/chapter-14',
             units: ['location', 'technique,', 'performance,', 'picture', 'pacific', 'canvas', 'grape'],
             numberOfUnits: 20,
         },
         chapter15: {
+            title: 'Try Words',
+            url: '/lesson-11/chapter-15',
             units: ['architecture,', 'education,', 'accessible', 'conclusion,', 'science,', 'archives', 'teach'],
             numberOfUnits: 22,
         }
@@ -638,68 +920,98 @@ export const lessonsCollection = {
 
     lesson12: {
         chapter1: {
+            title: 'New keys - <kbd>x</kbd> and <kbd>.</kbd>',
+            url: '/lesson-12/chapter-1',
             units: ['x', '.'],
             numberOfUnits: 88,
         },
         chapter2: {
+            title: 'New keys - <kbd>x</kbd> and <kbd>.</kbd>',
+            url: '/lesson-12/chapter-2',
             units: ['x', '.'],
             numberOfUnits: 128,
         },
         chapter3: {
+            title: 'New keys - <kbd>x</kbd> and <kbd>.</kbd>',
+            url: '/lesson-12/chapter-3',
             units: ['x', '.'],
             numberOfUnits: 168,
         },
         chapter4: {
+            title: 'Homerow + Bot Row',
+            url: '/lesson-12/chapter-4',
             units: ['s', 'x', '.', 'l'],
             numberOfUnits: 88,
         },
         chapter5: {
+            title: 'Homerow + Bot Row',
+            url: '/lesson-12/chapter-5',
             units: ['s', 'x', '.', 'l'],
             numberOfUnits: 124,
         },
         chapter6: {
+            title: 'Homerow + Bot Row',
+            url: '/lesson-12/chapter-6',
             units: ['s', 'x', '.', 'l'],
             numberOfUnits: 172,
         },
         chapter7: {
+            title: 'All Rows',
+            url: '/lesson-12/chapter-7',
             units: ['w', 's', 'x', '.', 'l', 'o'],
             numberOfUnits: 76,
         },
         chapter8: {
+            title: 'All Rows',
+            url: '/lesson-12/chapter-8',
             units: ['w', 's', 'x', '.', 'l', 'o'],
             numberOfUnits: 116,
         },
         chapter9: {
+            title: 'All Rows',
+            url: '/lesson-12/chapter-9',
             units: ['w', 's', 'x', '.', 'l', 'o'],
             numberOfUnits: 152,
         },
         chapter10: {
+            title: 'All keys',
+            url: '/lesson-12/chapter-10',
             units: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
                 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
                 'x', 'c', 'v', 'm', ',', '.'],
             numberOfUnits: 80,
         },
         chapter11: {
+            title: 'All keys',
+            url: '/lesson-12/chapter-11',
             units: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
                 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
                 'x', 'c', 'v', 'm', ',', '.'],
             numberOfUnits: 120,
         },
         chapter12: {
+            title: 'All keys',
+            url: '/lesson-12/chapter-12',
             units: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
                 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
                 'x', 'c', 'v', 'm', ',', '.'],
             numberOfUnits: 160,
         },
         chapter13: {
+            title: 'Try Words',
+            url: '/lesson-12/chapter-13',
             units: ['proximate', 'beeswax', 'paradox', 'relax.', 'next', 'box'],
             numberOfUnits: 20,
         },
         chapter14: {
+            title: 'Try Words',
+            url: '/lesson-12/chapter-14',
             units: ['experiment', 'expression', 'mixture', 'matrix.', 'galaxy', 'vortex.'],
             numberOfUnits: 22,
         },
         chapter15: {
+            title: 'Try Words',
+            url: '/lesson-12/chapter-15',
             units: ['megapixel.', 'explain', 'texture.', 'parallax', 'oxygen', 'xenon.', 'fixed.'],
             numberOfUnits: 26,
         }
@@ -707,68 +1019,98 @@ export const lessonsCollection = {
 
     lesson13: {
         chapter1: {
+            title: "New keys - <kbd>z</kbd> and <kbd>'</kbd>",
+            url: '/lesson-13/chapter-1',
             units: ['z', `'`],
             numberOfUnits: 88,
         },
         chapter2: {
+            title: "New keys - <kbd>z</kbd> and <kbd>'</kbd>",
+            url: '/lesson-13/chapter-2',
             units: ['z', `'`],
             numberOfUnits: 132,
         },
         chapter3: {
+            title: "New keys - <kbd>z</kbd> and <kbd>'</kbd>",
+            url: '/lesson-13/chapter-3',
             units: ['z', `'`],
             numberOfUnits: 168,
         },
         chapter4: {
+            title: 'Homerow + Bot Row',
+            url: '/lesson-13/chapter-4',
             units: ['a', 'z', ';', `'`],
             numberOfUnits: 80,
         },
         chapter5: {
+            title: 'Homerow + Bot Row',
+            url: '/lesson-13/chapter-5',
             units: ['a', 'z', ';', `'`],
             numberOfUnits: 128,
         },
         chapter6: {
+            title: 'Homerow + Bot Row',
+            url: '/lesson-13/chapter-6',
             units: ['a', 'z', ';', `'`],
             numberOfUnits: 180,
         },
         chapter7: {
+            title: 'All Rows',
+            url: '/lesson-13/chapter-7',
             units: ['q', 'a', 'z', `'`, ';', 'p'],
             numberOfUnits: 80,
         },
         chapter8: {
+            title: 'All Rows',
+            url: '/lesson-13/chapter-8',
             units: ['q', 'a', 'z', `'`, ';', 'p'],
             numberOfUnits: 120,
         },
         chapter9: {
+            title: 'All Rows',
+            url: '/lesson-13/chapter-9',
             units: ['q', 'a', 'z', `'`, ';', 'p'],
             numberOfUnits: 160,
         },
         chapter10: {
+            title: 'All keys',
+            url: '/lesson-13/chapter-10',
             units: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
                 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
                 'z', 'x', 'c', 'v', 'm', ',', '.', `'`],
             numberOfUnits: 80,
         },
         chapter11: {
+            title: 'All keys',
+            url: '/lesson-13/chapter-11',
             units: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
                 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
                 'z', 'x', 'c', 'v', 'm', ',', '.', `'`],
             numberOfUnits: 120,
         },
         chapter12: {
+            title: 'All keys',
+            url: '/lesson-13/chapter-12',
             units: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
                 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
                 'z', 'x', 'c', 'v', 'm', ',', '.', `'`],
             numberOfUnits: 152,
         },
         chapter13: {
+            title: 'Try Words',
+            url: '/lesson-13/chapter-13',
             units: ['civilization', 'mozzarella', 'hazel', 'topaz', 'jazz', 'zip'],
             numberOfUnits: 20,
         },
         chapter14: {
+            title: 'Try Words',
+            url: '/lesson-13/chapter-14',
             units: ['organization', 'realization', 'sanitize', 'citizen', 'puzzle', 'pizza'],
             numberOfUnits: 22,
         },
         chapter15: {
+            title: 'Try Words',
+            url: '/lesson-13/chapter-15',
             units: ['vaporize', 'recognize', 'blizzard', 'frozen', 'wizard', 'bronze'],
             numberOfUnits: 24,
         }
