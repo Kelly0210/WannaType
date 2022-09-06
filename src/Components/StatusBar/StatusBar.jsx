@@ -3,37 +3,31 @@ import style from './StatusBar.module.css';
 import heart from '../../assets/img/heart.png';
 import emptyHeart from '../../assets/img/emptyHeart.png';
 
-class StatusBar extends React.Component {
+const StatusBar = ({ numberOfMistakes, percentage, CPM }) => {
+    let heartsCollection = [];
 
-    componentDidUpdate = () => {
-        if (this.props.mistakeHappened) {
-            let index = this.props.numberOfMistake;
-            document.getElementById(`heart-${index}`).src = emptyHeart;
+    const calculateHearts = () => {
+        heartsCollection = [];
+        for (let i = 0; i < 4 - numberOfMistakes; i++) {
+            heartsCollection.push(<img key={i} src={heart} alt='heart' className={style.heart} />)
         }
-
-        if (this.props.numberOfMistake === 0) {
-            let allHearts = document.getElementsByClassName(`${style.heart}`);
-
-            for (let i = 1; i < allHearts.length + 1; i++) {
-                document.getElementById(`heart-${i}`).src = heart;
-            }
+        for (let i = 0; i < numberOfMistakes - 1; i++) {
+            heartsCollection.push(<img key={i} src={emptyHeart} alt='empty heart' className={style.heart} />)
         }
     }
+    calculateHearts();
 
-    render = () => {
-        return (
-            <div className={style.statusBox}>
-                <span className={style.heartsBox}>
-                    <img id='heart-3' src={heart} alt='heart icon' className={style.heart} />
-                    <img id='heart-2' src={heart} alt='heart icon' className={style.heart} />
-                    <img id='heart-1' src={heart} alt='heart icon' className={style.heart} />
-                </span>
+    return (
+        <div className={style.statusBox}>
+            <span className={style.heartsBox}>
+                {heartsCollection}
+            </span>
 
-                <span className={style.percentageBox}> Progress: {this.props.percentage}%</span>
-                <span className={style.cpmBox}> CPM: {this.props.cpm}</span>
-            </div>
-        )
-    }
+            <span className={style.percentageBox}> Progress: {percentage}%</span>
+            <span className={style.cpmBox}> CPM: {CPM}</span>
+        </div>
+    )
+
 }
 
 export default StatusBar;

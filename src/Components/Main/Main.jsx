@@ -5,76 +5,48 @@ import CustomInput from '../CustomInput/CustomInput';
 import Keyboard from '../Keyboard/Keyboard';
 import StatusBar from '../StatusBar/StatusBar';
 
+const Main = (props) => {
+  const [numberOfMistakes, mistakeCounter] = React.useState(0);
+  const [percentage, completionPercentage] = React.useState(0);
+  const [CPM, charactersPerMinute] = React.useState(0);
+  const [lastLetter, passLastLetter] = React.useState('');
+  const [mistakeHappened, mistakeHappenedToggle] = React.useState(false);
 
-class Main extends React.Component {
-
-  constructor(props) {
-    super(props)
-    this.state = {
-      mistakeHappened: false,
-      numberOfMistake: 0,
-      lastLetter: '',
-      percentage: 0,
-      cpm: 0,
-    }
+  const mistakesHandler = () => {
+    mistakeCounter(numberOfMistakes + 1);
   }
 
-  handleMistake = (boolean) => {
-    this.setState({ mistakeHappened: boolean });
+  const reloadLesson = () => {
+    mistakeCounter(0);
+    completionPercentage(0);
+    charactersPerMinute(0);
+    passLastLetter('');
+    mistakeHappenedToggle(false);
+
+    props.reloadLesson();
   }
 
-  mistakeCounter = () => {
-    this.setState({ numberOfMistake: this.state.numberOfMistake + 1 });
-  }
+  return (
+    <main className={style.main}>
 
-  passLastLetter = (lastLetter) => {
-    this.setState({ lastLetter });
-  }
+      <StatusBar numberOfMistakes={numberOfMistakes}
+        percentage={percentage} CPM={CPM} />
 
-  completionPercentage = (percentage) => {
-    this.setState({ percentage });
-  }
+      <CustomInput
+        mistakeCounter={mistakesHandler}
+        numberOfMistakes={numberOfMistakes}
+        mistakeHappenedToggle={mistakeHappenedToggle}
 
-  charactersPerMinute = (cpm) => {
-    this.setState({ cpm });
-  }
+        generatedText={props.generatedText}
+        reloadLesson={reloadLesson}
 
-  reloadLesson = () => {
-    this.setState({
-      mistakeHappened: false,
-      numberOfMistake: 0,
-      lastLetter: '',
-      percentage: 0,
-      cpm: 0,
-    });
-    this.props.reloadLesson();
-  }
-
-  render = () => {
-    return (
-      <main className={style.main}>
-
-        <StatusBar numberOfMistake={this.state.numberOfMistake} mistakeHappened={this.state.mistakeHappened}
-          percentage={this.state.percentage} cpm={this.state.cpm} />
-
-        <CustomInput
-          handleMistake={this.handleMistake}
-          mistakeCounter={this.mistakeCounter}
-          numberOfMistake={this.state.numberOfMistake}
-
-          generatedText={this.props.generatedText}
-          reloadLesson={this.reloadLesson}
-
-          completionPercentage={this.completionPercentage}
-          passLastLetter={this.passLastLetter}
-          charactersPerMinute={this.charactersPerMinute}
-        />
-        <Keyboard mistakeHappened={this.state.mistakeHappened}
-          lastLetter={this.state.lastLetter} />
-      </main>
-    )
-  }
-
+        completionPercentage={completionPercentage}
+        passLastLetter={passLastLetter}
+        charactersPerMinute={charactersPerMinute}
+      />
+      <Keyboard lastLetter={lastLetter}
+        mistakeHappened={mistakeHappened} numberOfMistakes={numberOfMistakes} />
+    </main>)
 }
 
 export default Main;
