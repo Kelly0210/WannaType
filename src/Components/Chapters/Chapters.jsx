@@ -7,58 +7,60 @@ import { lessonsCollection } from '../../common/LessonsCollection';
 import { generateLesson } from "../../common/generateLesson";
 
 const Chapters = (props) => {
-    // useEffect(() => {
-    //     if (!props.generatedText) {
-    //         switch (true) {
-    //             case '/random-text': randomTextClick(); break;
-    //             case '/random-exercise': randomExerciseClick(); break;
-    //             default: lessonClick(); break;
-    //         }
-    //     }
-    // }, [props.generatedText])
+    const [units, setUnits] = React.useState('');
+    const [numberOfUnits, setNumberOfUnits] = React.useState('');
 
-    useEffect(() => {
-        if (!props.generatedText) {
-            switch (true) {
-                case '/random-text': randomTextClick(); break;
-                case '/random-exercise': randomExerciseClick(); break;
-                default: lessonClick(); break;
-            }
-        }
-    }, [])
+    const createLessonsCollection = (allLessons) => {
+        let collection = [];
+        let i = 0;
 
-    const urlConvertor = (url) => {
-        let blankForUnits = url + '.units';
-        let blankForNumbers = url + '.numberOfUnits';
-
-        let contentObject = blankForUnits.split('.').reduce((o, i) => o[i], lessonsCollection);
-        let numbersObject = blankForNumbers.split('.').reduce((o, i) => o[i], lessonsCollection);
-
-        return generateLesson(contentObject, numbersObject);
+        Object.values(allLessons).map(lesson => collection.push(
+            <React.Fragment key={`Lesson ${i}`}>
+                <li onClick={toggleList} className={style.toggleList}>{`Lesson ${++i}`}</li>
+                <ul id={`Lesson ${i}`} className={style.innerUl}>
+                    {createChaptersCollection(lesson)}
+                </ul>
+            </React.Fragment>
+        ))
+        return collection;
     }
 
-    const lessonClick = () => {
-        setTimeout(() => {
-            let lessonUrl = window.location.pathname.replaceAll('/', '.').replaceAll('-', '');
-            lessonUrl = lessonUrl.slice(1);
+    const createChaptersCollection = (object) => {
+        let collection = [];
 
-            props.generateText(urlConvertor(lessonUrl));
-        }, 0)
+        Object.values(object).map(chapter => collection.push(
+            <li key={chapter.url}>
+                <Link to={chapter.url}
+                    onClick={() => lessonClick(chapter.units, chapter.numberOfUnits)}
+                    dangerouslySetInnerHTML={{ __html: chapter.title }} />
+            </li>
+        ))
+        return collection;
+    }
+
+    const lessonClick = (units, numberOfUnits) => {
+        setUnits(units);
+        setNumberOfUnits(numberOfUnits);
+        props.passGeneratedText(generateLesson(units, numberOfUnits));
+    }
+
+    const randomTextClick = () => {
+        let randomText = textCollection[Math.floor(Math.random() * textCollection.length)];
+        props.passGeneratedText(randomText);
     }
 
     const randomExerciseClick = () => {
-        const random = () => {
-            return Math.ceil(Math.random() * 12);
-        }
+        const lessonsKeys = Object.keys(lessonsCollection);
+        const randomLesson = lessonsKeys[Math.floor(Math.random() * lessonsKeys.length)];
+        const findLesson = Object.getOwnPropertyDescriptor(lessonsCollection, randomLesson);
 
-        let randomExercise = `lesson${random()}.chapter${random()}`;
-        props.generateText(urlConvertor(randomExercise));
-    }
+        const chaptersKeys = Object.keys(findLesson.value);
+        const randomChapter = chaptersKeys[Math.floor(Math.random() * chaptersKeys.length)];
+        const findChapter = Object.getOwnPropertyDescriptor(findLesson.value, randomChapter);
 
-    //ALL GOOD
-    const randomTextClick = () => {
-        let randomText = textCollection[Math.floor(Math.random() * textCollection.length)];
-        props.generateText(randomText);
+        setUnits(findChapter.value.units);
+        setNumberOfUnits(findChapter.value.numberOfUnits);
+        props.passGeneratedText(generateLesson(findChapter.value.units, findChapter.value.numberOfUnits));
     }
 
     const toggleList = (event) => {
@@ -76,94 +78,14 @@ const Chapters = (props) => {
         arrowRight.classList.toggle(`${style.show}`);
     }
 
-    let createLesson = (object) => {
-        let collection = [];
-
-        Object.values(object).map(item => {
-            return collection.push(<li><Link
-                key={item.url}
-                to={item.url}
-                onClick={lessonClick}
-                dangerouslySetInnerHTML={{ __html: item.title }}>
-            </Link></li>)
-        })
-
-        return collection;
-    }
-
     return (
         <>
             <img src={collapseArrow} className={style.collapseRight} onClick={collapseComponent} alt="collapse icon" id='collapseRight' />
 
             <nav id='entireComponent' className={style.chaptersContainer}>
                 <img src={collapseArrow} className={style.collapseLeft} onClick={collapseComponent} alt="collapse icon" id='collapseLeft' />
-
                 <ul>
-                    <li><Link to='#' onClick={toggleList}>Lesson 1</Link></li>
-                    <ul id='Lesson 1' className={style.innerUl}>
-                        {createLesson(lessonsCollection.lesson1)}
-                    </ul>
-
-                    <li><Link to='#' onClick={toggleList}>Lesson 2</Link></li>
-                    <ul id='Lesson 2' className={style.innerUl}>
-                        {createLesson(lessonsCollection.lesson2)}
-                    </ul>
-
-                    <li><Link to='#' onClick={toggleList}>Lesson 3</Link></li>
-                    <ul id='Lesson 3'>
-                        {createLesson(lessonsCollection.lesson3)}
-                    </ul>
-
-                    <li><Link to='#' onClick={toggleList}>Lesson 4</Link></li>
-                    <ul id='Lesson 4'>
-                        {createLesson(lessonsCollection.lesson4)}
-                    </ul>
-
-                    <li><Link to='#' onClick={toggleList}>Lesson 5</Link></li>
-                    <ul id='Lesson 5'>
-                        {createLesson(lessonsCollection.lesson5)}
-                    </ul>
-
-                    <li><Link to='#' onClick={toggleList}>Lesson 6</Link></li>
-                    <ul id='Lesson 6'>
-                        {createLesson(lessonsCollection.lesson6)}
-                    </ul>
-
-                    <li><Link to='#' onClick={toggleList}>Lesson 7</Link></li>
-                    <ul id='Lesson 7'>
-                        {createLesson(lessonsCollection.lesson7)}
-                    </ul>
-
-                    <li><Link to='#' onClick={toggleList}>Lesson 8</Link></li>
-                    <ul id='Lesson 8'>
-                        {createLesson(lessonsCollection.lesson8)}
-                    </ul>
-
-                    <li><Link to='#' onClick={toggleList}>Lesson 9</Link></li>
-                    <ul id='Lesson 9'>
-                        {createLesson(lessonsCollection.lesson9)}
-                    </ul>
-
-                    <li><Link to='#' onClick={toggleList}>Lesson 10</Link></li>
-                    <ul id='Lesson 10'>
-                        {createLesson(lessonsCollection.lesson10)}
-                    </ul>
-
-                    <li><Link to='#' onClick={toggleList}>Lesson 11</Link></li>
-                    <ul id='Lesson 11'>
-                        {createLesson(lessonsCollection.lesson11)}
-                    </ul>
-
-                    <li><Link to='#' onClick={toggleList}>Lesson 12</Link></li>
-                    <ul id='Lesson 12'>
-                        {createLesson(lessonsCollection.lesson12)}
-                    </ul>
-
-                    <li><Link to='#' onClick={toggleList}>Lesson 13</Link></li>
-                    <ul id='Lesson 13'>
-                        {createLesson(lessonsCollection.lesson13)}
-                    </ul>
-
+                    {createLessonsCollection(lessonsCollection)}
                     <li><Link to='/random-exercise' onClick={randomExerciseClick}>Random Exercise</Link></li>
                     <li><Link to='/random-text' onClick={randomTextClick}>Random Text</Link></li>
                 </ul>

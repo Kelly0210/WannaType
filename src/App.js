@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Component404 from './Components/common/Component404';
+import Component404 from './common/Component404';
 import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import Main from './Components/Main/Main';
 import Home from './Components/Home/Home';
 import Chapters from './Components/Chapters/Chapters';
-import Fallback from './Components/common/Fallback';
+import Fallback from './common/Fallback';
 import FAQ from './Components/FAQ/FAQ';
 import About from './Components/About/About';
 
 const App = () => {
 
-  const [generatedText, generateText] = useState('');
+  const [generatedText, passGeneratedText] = useState('');
 
   const reloadLesson = () => {
-    generateText('');
+    passGeneratedText(' ');
   }
 
   return (
@@ -35,7 +35,7 @@ const App = () => {
             <Route path='/random-exercise' element={<Main generatedText={generatedText} reloadLesson={reloadLesson} />} />
 
           </Routes>
-          <Chapters generateText={generateText} generatedText={generatedText} />
+          <Chapters passGeneratedText={passGeneratedText} generatedText={generatedText} />
           <Footer />
         </BrowserRouter>
       </React.Suspense>
