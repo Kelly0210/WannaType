@@ -13,10 +13,26 @@ import About from './Components/About/About';
 
 const App = () => {
 
-  const [generatedText, passGeneratedText] = useState('');
+  const [generatedLesson, passGeneratedLesson] = useState({
+    lessonInfo: {
+        type: '',
+        title: 'title',
+        units: [],
+        numberOfUnits: 0
+    },
+    generatedText: 'Hello!'
+});
 
   const reloadLesson = () => {
-    passGeneratedText(' ');
+    passGeneratedLesson({
+      lessonInfo: {
+          type: '',
+          title: 'title',
+          units: [],
+          numberOfUnits: 0
+      },
+      generatedText: 'Hello!'
+  });
   }
 
   return (
@@ -30,12 +46,12 @@ const App = () => {
             <Route path='/about' element={<About />} />
             <Route path='/FAQ' element={<FAQ />} />
 
-            <Route path='/:lesson/:chapter' element={<Main generatedText={generatedText} reloadLesson={reloadLesson} />} />
-            <Route path='/random-text' element={<Main generatedText={generatedText} reloadLesson={reloadLesson} />} />
-            <Route path='/random-exercise' element={<Main generatedText={generatedText} reloadLesson={reloadLesson} />} />
+            <Route path='/:lesson/:chapter' element={<Main generatedLesson={generatedLesson} reloadLesson={reloadLesson} />} />
+            <Route path='/random-text' element={<Main generatedLesson={generatedLesson} reloadLesson={reloadLesson} />} />
+            <Route path='/random-exercise' element={<Main generatedLesson={generatedLesson} reloadLesson={reloadLesson} />} />
 
           </Routes>
-          <Chapters passGeneratedText={passGeneratedText} generatedText={generatedText} />
+          <Chapters passGeneratedLesson={passGeneratedLesson} generatedLesson={generatedLesson} />
           <Footer />
         </BrowserRouter>
       </React.Suspense>

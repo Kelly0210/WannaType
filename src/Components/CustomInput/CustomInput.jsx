@@ -18,7 +18,7 @@ const CustomInput = (props) => {
     }, [value]);
 
     React.useEffect(() => {
-        if (value.slice(-1) !== props.generatedText[value.length - 1]) {
+        if (value.slice(-1) !== props.generatedLesson.generatedText[value.length - 1]) {
             props.mistakeCounter();
             props.mistakeHappenedToggle(true);
         } else {
@@ -45,14 +45,14 @@ const CustomInput = (props) => {
     }, [value.length]);
 
     React.useEffect(() => {
-        if (value.length === props.generatedText.length) {
+        if (value.length === props.generatedLesson.generatedText.length) {
             passedResult(true);
             disableInput(true);
         }
-    }, [value.length, props.generatedText.length]);
+    }, [value.length, props.generatedLesson.generatedText.length]);
 
     React.useEffect(() => {
-        let percentage = Math.ceil(value.length / props.generatedText.length * 100);
+        let percentage = Math.ceil(value.length / props.generatedLesson.generatedText.length * 100);
         props.completionPercentage(percentage);
     });
 
@@ -67,7 +67,7 @@ const CustomInput = (props) => {
 
     return (
         <div className={style.InputBox}>
-            <DisplayText generatedText={props.generatedText} value={value} />
+            <DisplayText generatedText={props.generatedLesson.generatedText} value={value} />
 
             <input autoFocus
                 value={value}

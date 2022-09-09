@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import style from './Chapters.module.css';
 import collapseArrow from '../../assets/img/collapseArrow.png';
@@ -7,8 +7,21 @@ import { lessonsCollection } from '../../common/LessonsCollection';
 import { generateLesson } from "../../common/generateLesson";
 
 const Chapters = (props) => {
-    const [units, setUnits] = React.useState('');
-    const [numberOfUnits, setNumberOfUnits] = React.useState('');
+    const [lesson, setLessonInfo] = React.useState({
+        lessonInfo: {
+            type: '',
+            units: [],
+            numberOfUnits: 0
+        },
+        title: '',
+        generatedText: ''
+    });
+
+    // React.useEffect(() => {
+    //     if (props.generatedText === '' && lesson.lessonInfo.type !== '') {
+            
+    //     }
+    // }, [props.generatedText])
 
     const createLessonsCollection = (allLessons) => {
         let collection = [];
@@ -31,21 +44,30 @@ const Chapters = (props) => {
         Object.values(object).map(chapter => collection.push(
             <li key={chapter.url}>
                 <Link to={chapter.url}
-                    onClick={() => lessonClick(chapter.units, chapter.numberOfUnits)}
+                    onClick={() => lessonClick(chapter)}
                     dangerouslySetInnerHTML={{ __html: chapter.title }} />
             </li>
         ))
         return collection;
     }
 
-    const lessonClick = (units, numberOfUnits) => {
-        setUnits(units);
-        setNumberOfUnits(numberOfUnits);
-        props.passGeneratedText(generateLesson(units, numberOfUnits));
+    const lessonClick = (chapter) => {
+        setLessonInfo({
+            ...lesson.lessonInfo,
+            type: 'lesson',
+            title: chapter.title,
+        });
+        props.passGeneratedText(generateLesson(chapter.units, chapter.numberOfUnits));
     }
 
     const randomTextClick = () => {
         let randomText = textCollection[Math.floor(Math.random() * textCollection.length)];
+
+        setLessonInfo({
+            ...lesson.lessonInfo,
+            type: 'random-text',
+            title: 'Random Text',
+        });
         props.passGeneratedText(randomText);
     }
 
@@ -58,8 +80,13 @@ const Chapters = (props) => {
         const randomChapter = chaptersKeys[Math.floor(Math.random() * chaptersKeys.length)];
         const findChapter = Object.getOwnPropertyDescriptor(findLesson.value, randomChapter);
 
-        setUnits(findChapter.value.units);
-        setNumberOfUnits(findChapter.value.numberOfUnits);
+        setLessonInfo({
+            ...lesson.lessonInfo,
+            type: 'random-exercise',
+            title: findChapter.value.title,
+            units: findChapter.value.units,
+            numberOfUnits: findChapter.value.numberOfUnits
+        });
         props.passGeneratedText(generateLesson(findChapter.value.units, findChapter.value.numberOfUnits));
     }
 
