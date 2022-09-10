@@ -1,9 +1,13 @@
-.main { 
+.main {
     grid-area: main;
     background-color: #2c3e50;
     background-image: url('../../assets/img/mainBackground.png');
- }
+}
 
- main > h2{
-text-align: center;
+.lessonTitle {
+    text-align: center;
+    color: #eee;
+    font-size: 3em;
+    letter-spacing: 3px;
+    margin: 15px 0 15px 0;
 }

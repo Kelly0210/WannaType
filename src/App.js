@@ -10,29 +10,30 @@ import Chapters from './Components/Chapters/Chapters';
 import Fallback from './common/Fallback';
 import FAQ from './Components/FAQ/FAQ';
 import About from './Components/About/About';
+import { generateLesson } from './common/generateLesson';
+
 
 const App = () => {
-
   const [generatedLesson, passGeneratedLesson] = useState({
     lessonInfo: {
-        type: '',
-        title: 'title',
-        units: [],
-        numberOfUnits: 0
+      type: '',
+      units: [],
+      numberOfUnits: 0
     },
+    title: 'title',
     generatedText: 'Hello!'
-});
+  });
 
   const reloadLesson = () => {
     passGeneratedLesson({
       lessonInfo: {
-          type: '',
-          title: 'title',
-          units: [],
-          numberOfUnits: 0
+        type: generatedLesson.lessonInfo.type,
+        units: [...generatedLesson.lessonInfo.units],
+        numberOfUnits: generatedLesson.numberOfUnits
       },
-      generatedText: 'Hello!'
-  });
+      title: generatedLesson.title,
+      generatedText: generateLesson(generatedLesson.lessonInfo.units, generatedLesson.lessonInfo.numberOfUnits)
+    });
   }
 
   return (
@@ -49,7 +50,6 @@ const App = () => {
             <Route path='/:lesson/:chapter' element={<Main generatedLesson={generatedLesson} reloadLesson={reloadLesson} />} />
             <Route path='/random-text' element={<Main generatedLesson={generatedLesson} reloadLesson={reloadLesson} />} />
             <Route path='/random-exercise' element={<Main generatedLesson={generatedLesson} reloadLesson={reloadLesson} />} />
-
           </Routes>
           <Chapters passGeneratedLesson={passGeneratedLesson} generatedLesson={generatedLesson} />
           <Footer />

@@ -29,7 +29,7 @@ const Main = (props) => {
   return (
     <main className={style.main}>
 
-    <h2 dangerouslySetInnerHTML={{__html: props.generatedLesson.lessonInfo.title}}/>
+    <h2 className={style.lessonTitle} dangerouslySetInnerHTML={{__html: props.generatedLesson.title}}/>
 
       <StatusBar numberOfMistakes={numberOfMistakes}
         percentage={percentage} CPM={CPM} />
@@ -45,7 +45,7 @@ const Main = (props) => {
         completionPercentage={completionPercentage}
         passLastLetter={passLastLetter}
         charactersPerMinute={charactersPerMinute}
-        {...props}
+        generatedLesson={props.generatedLesson}
       />
       <Keyboard lastLetter={lastLetter}
         mistakeHappened={mistakeHappened} numberOfMistakes={numberOfMistakes} />

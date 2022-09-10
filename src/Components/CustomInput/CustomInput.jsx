@@ -67,14 +67,18 @@ const CustomInput = (props) => {
 
     return (
         <div className={style.InputBox}>
-            <DisplayText generatedText={props.generatedLesson.generatedText} value={value} />
+            <DisplayText value={value}
+                generatedText={props.generatedLesson.generatedText} />
 
             <input autoFocus
                 value={value}
                 disabled={isDisabled}
                 onChange={event => changeValue(event.target.value)} />
 
-            {isDisabled && <FinishBoard isPassed={isPassed} reloadLesson={reloadLesson} />}
+            {isDisabled && <FinishBoard isPassed={isPassed}
+                lessonInfo={props.generatedLesson.lessonInfo}
+                reloadLesson={reloadLesson}
+            />}
         </div>
     )
 };
