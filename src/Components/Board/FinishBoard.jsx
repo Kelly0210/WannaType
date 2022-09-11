@@ -23,20 +23,21 @@ const FinishBoard = (props) => {
     }
 
     return (
-        <div className={style.boardBox}>
-            {props.isPassed ? <h2>Congratulation!</h2> : <h2>Try again?</h2>}
-            <img src={reload} onClick={reloadLesson} className={style.reloadIcon} alt='reload icon' />
+        <div className={style.blockWindow}>
+            <div className={style.boardBox}>
+                {props.isPassed ? <h2>Congratulation!</h2> : <h2>Try again?</h2>}
+                <img src={reload} onClick={reloadLesson} className={style.reloadIcon} alt='reload icon' />
 
-            {props.lessonInfo.type === 'lesson' &&
-                <>
-                    <Link to={decrementChapter()} onClick={reloadLesson} className={style.arrowLeftLink}><img src={boardArrow} alt='arrow left' /></Link>
-                    <Link to={incrementChapter()} onClick={reloadLesson} className={style.arrowRightLink}><img src={boardArrow} alt='arrow right' /></Link>
-                </>
-            }
+                {props.lessonInfo.type === 'lesson' &&
+                    <>
+                        <Link to={decrementChapter()} onClick={reloadLesson} className={style.arrowLeftLink}><img src={boardArrow} alt='arrow left' /></Link>
+                        <Link to={incrementChapter()} onClick={reloadLesson} className={style.arrowRightLink}><img src={boardArrow} alt='arrow right' /></Link>
+                    </>
+                }
 
-            <div className={style.tips}>{randomTip()}</div>
+                <div className={style.tips}>{randomTip()}</div>
+            </div>
         </div>
-
     )
 }
 

@@ -1,7 +1,7 @@
 .boardBox {
   display: grid;
   grid-template-columns: 0.4fr 2.2fr 0.4fr;
-  grid-template-rows: 0.7fr 1.2fr 1.1fr; 
+  grid-template-rows: 0.7fr 1.2fr 1.1fr;
   gap: 0px 0px;
   grid-template-areas:
     "arrowLeft result arrowRight"
@@ -10,15 +10,17 @@
   width: 1000px;
   height: 500px;
   background-color: #eee;
-  
+
+
   position: absolute;
   top: 20%;
-  z-index: 1;
+  left: 24%;
   border: 3px solid #2c3e50;
   border-radius: 10px;
+  z-index: 1;
 }
 
-.boardBox > h2 {
+.boardBox>h2 {
   grid-area: result;
   text-transform: uppercase;
   font-size: 50px;
@@ -40,7 +42,7 @@
   grid-area: arrowRight;
 }
 
-.arrowRightLink > img {
+.arrowRightLink>img {
   width: 110px;
   height: 95%;
   border-radius: inherit;
@@ -56,7 +58,7 @@
   grid-area: arrowLeft;
 }
 
-.arrowLeftLink > img {
+.arrowLeftLink>img {
   width: 110px;
   height: 95%;
   border-radius: inherit;
@@ -79,4 +81,13 @@
 
   font-size: 35px;
   text-align: center;
+}
+
+.blockWindow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  top: 0%;
+  z-index: 10;
 }
