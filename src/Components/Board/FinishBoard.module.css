@@ -2,35 +2,55 @@
   display: grid;
   grid-template-columns: 0.4fr 2.2fr 0.4fr;
   grid-template-rows: 0.7fr 1.2fr 1.1fr;
-  gap: 0px 0px;
   grid-template-areas:
     "arrowLeft result arrowRight"
     "arrowLeft reload arrowRight"
     "arrowLeft tips arrowRight";
-  width: 1000px;
-  height: 500px;
+  width: 50%;
+  height: 50%;
   background-color: #eee;
-
 
   position: absolute;
   top: 20%;
-  left: 24%;
+  left: 30%;
+
   border: 3px solid #2c3e50;
   border-radius: 10px;
-  z-index: 1;
 }
 
-.boardBox>h2 {
+.result {
   grid-area: result;
+  margin: 30px 0;
+}
+
+.result>h2 {
   text-transform: uppercase;
-  font-size: 50px;
   text-align: center;
+  font-size: 3em;
+  margin: 0;
+}
+
+.hideWindow {
+  cursor: pointer;
+  width: fit-content;
+  margin: 0 auto;
+  border-bottom: 1px solid black;
+  opacity: 0.8;
+}
+
+.result>div:hover {
+  opacity: 1;
+}
+
+.hideWindow {
+  grid-area: result;
+  margin: 0 auto;
 }
 
 .reloadIcon {
   grid-area: reload;
   margin: 0 auto;
-  width: 200px;
+  width: 30%;
   opacity: 0.8;
 }
 
@@ -43,7 +63,7 @@
 }
 
 .arrowRightLink>img {
-  width: 110px;
+  width: 80%;
   height: 95%;
   border-radius: inherit;
   opacity: 0.8;
@@ -59,7 +79,7 @@
 }
 
 .arrowLeftLink>img {
-  width: 110px;
+  width: 80%;
   height: 95%;
   border-radius: inherit;
   opacity: 0.8;
@@ -72,6 +92,8 @@
 }
 
 .tips {
+  height: fit-content;
+  width: fit-content;
   grid-area: tips;
   background-color: #24a4e3;
   border-radius: 5px;
@@ -79,15 +101,23 @@
   margin: auto;
   padding: 6px;
 
-  font-size: 35px;
+  font-size: 2.2em;
   text-align: center;
 }
 
 .blockWindow {
   position: absolute;
+  top: 0;
+  left: 0;
+
   width: 100%;
   height: 100%;
+}
 
-  top: 0%;
-  z-index: 10;
+.hide {
+  display: none;
+}
+
+.show {
+  display: inherit;
 }

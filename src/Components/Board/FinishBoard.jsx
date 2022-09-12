@@ -22,10 +22,23 @@ const FinishBoard = (props) => {
         return '#'
     }
 
+    const hideBoard = () => {
+        console.log('test')
+        const boardBox = document.getElementById('boardBox');
+        boardBox.classList.toggle(`${style.hide}`);
+
+        const eyeOffIcon = document.getElementById('eyeOffIcon');
+        eyeOffIcon.classList.toggle(`${style.show}`);
+    }
+
     return (
         <div className={style.blockWindow}>
-            <div className={style.boardBox}>
-                {props.isPassed ? <h2>Congratulation!</h2> : <h2>Try again?</h2>}
+            <div onClick={hideBoard} className={style.hideWindow}>Hide this window</div>
+            <div className={style.boardBox} id='boardBox'>
+                <div className={style.result}>
+                    {props.isPassed ? <h2>Congratulation!</h2> : <h2>Try again?</h2>}
+                    <div onClick={hideBoard} className={style.hideWindow}>Hide this window</div>
+                </div>
                 <img src={reload} onClick={reloadLesson} className={style.reloadIcon} alt='reload icon' />
 
                 {props.lessonInfo.type === 'lesson' &&
