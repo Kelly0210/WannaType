@@ -27,27 +27,39 @@
   text-transform: uppercase;
   text-align: center;
   font-size: 3em;
-  margin: 0;
+  margin: 0 0 5px 0;
 }
 
-.hideWindow {
+.hideWindow,
+.showWindow {
+  font-size: 1.3em;
   cursor: pointer;
   width: fit-content;
   margin: 0 auto;
   border-bottom: 1px solid black;
-  opacity: 0.8;
+  z-index: 1;
 }
 
-.result>div:hover {
-  opacity: 1;
+.showWindowBox {
+  display: none;
+  background-color: #ffef7e;
+  width: fit-content;
+  padding: 10px;
+  border: 2px solid #2c3e50;
+  border-radius: 4px;
+  position: absolute;
+  right: 26%;
+  top: 17%;
 }
 
-.hideWindow {
-  grid-area: result;
-  margin: 0 auto;
+.hideWindow:hover,
+.showWindow:hover {
+  color: #24a4e3;
+  border-bottom: 1px solid #24a4e3;
 }
 
 .reloadIcon {
+  cursor: pointer;
   grid-area: reload;
   margin: 0 auto;
   width: 30%;
@@ -62,7 +74,12 @@
   grid-area: arrowRight;
 }
 
-.arrowRightLink>img {
+.arrowLeftLink {
+  grid-area: arrowLeft;
+}
+
+.arrowRightLink>img,
+.arrowLeftLink>img {
   width: 80%;
   height: 95%;
   border-radius: inherit;
@@ -70,21 +87,12 @@
   margin: 10px;
 }
 
+.arrowLeftLink>img {
+  transform: scaleX(-1);
+}
+
 .arrowRightLink img:hover {
   opacity: 1;
-}
-
-.arrowLeftLink {
-  grid-area: arrowLeft;
-}
-
-.arrowLeftLink>img {
-  width: 80%;
-  height: 95%;
-  border-radius: inherit;
-  opacity: 0.8;
-  padding: 10px;
-  transform: scaleX(-1);
 }
 
 .arrowLeftLink img:hover {
@@ -112,6 +120,7 @@
 
   width: 100%;
   height: 100%;
+  z-index: 10;
 }
 
 .hide {
