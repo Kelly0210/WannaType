@@ -18,7 +18,9 @@ const App = () => {
     lessonInfo: {
       type: '',
       units: [],
-      numberOfUnits: 0
+      numberOfUnits: 0,
+      lesson: '',
+      chapter: ''
     },
     title: 'title',
     generatedText: 'Hello!'
@@ -26,13 +28,20 @@ const App = () => {
 
   const reloadLesson = () => {
     passGeneratedLesson({
-      lessonInfo: {
-        type: generatedLesson.lessonInfo.type,
-        units: [...generatedLesson.lessonInfo.units],
-        numberOfUnits: generatedLesson.numberOfUnits
+      ...generatedLesson, lessonInfo: {
+        ...generatedLesson.lessonInfo,
       },
-      title: generatedLesson.title,
       generatedText: generateLesson(generatedLesson.lessonInfo.units, generatedLesson.lessonInfo.numberOfUnits)
+    });
+  }
+
+  const setLesson = (lessonString, chapterString) => {
+    passGeneratedLesson({
+      ...generatedLesson, lessonInfo: {
+        ...generatedLesson.lessonInfo,
+        lesson: lessonString,
+        chapter: chapterString
+      }
     });
   }
 
@@ -47,9 +56,9 @@ const App = () => {
             <Route path='/about' element={<About />} />
             <Route path='/FAQ' element={<FAQ />} />
 
-            <Route path='/:lesson/:chapter' element={<Main generatedLesson={generatedLesson} reloadLesson={reloadLesson} />} />
-            <Route path='/random-text' element={<Main generatedLesson={generatedLesson} reloadLesson={reloadLesson} />} />
-            <Route path='/random-exercise' element={<Main generatedLesson={generatedLesson} reloadLesson={reloadLesson} />} />
+            <Route path='/:lesson/:chapter' element={<Main generatedLesson={generatedLesson} reloadLesson={reloadLesson} setLesson={setLesson} />} />
+            <Route path='/random-text' element={<Main generatedLesson={generatedLesson} reloadLesson={reloadLesson} setLesson={setLesson} />} />
+            <Route path='/random-exercise' element={<Main generatedLesson={generatedLesson} reloadLesson={reloadLesson} setLesson={setLesson} />} />
           </Routes>
           <Chapters passGeneratedLesson={passGeneratedLesson} generatedLesson={generatedLesson} />
           <Footer />

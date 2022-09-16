@@ -12,7 +12,9 @@ const Chapters = (props) => {
         lessonInfo: {
             type: '',
             units: [],
-            numberOfUnits: 0
+            numberOfUnits: 0,
+            lesson: '',
+            chapter: ''
         },
         title: '',
         generatedText: ''
@@ -24,38 +26,39 @@ const Chapters = (props) => {
 
     const createLessonsCollection = (allLessons) => {
         let collection = [];
-        let i = 0;
 
-        Object.values(allLessons).map(lesson => collection.push(
+        Object.values(allLessons).map((lesson, i) => collection.push(
             <React.Fragment key={`Lesson ${i}`}>
                 <li onClick={toggleList} className={style.toggleList}>{`Lesson ${++i}`}</li>
                 <ul id={`Lesson ${i}`} className={style.innerUl}>
-                    {createChaptersCollection(lesson)}
+                    {createChaptersCollection(lesson, `lesson${i}`)}
                 </ul>
             </React.Fragment>
         ))
         return collection;
     }
 
-    const createChaptersCollection = (lesson) => {
+    const createChaptersCollection = (lesson, lessonNumber) => {
         let collection = [];
 
-        Object.values(lesson).map(chapter => collection.push(
+        Object.values(lesson).map((chapter, i) => collection.push(
             <li key={chapter.url}>
                 <Link to={chapter.url}
-                    onClick={() => lessonClick(chapter)}
+                    onClick={() => lessonClick(chapter, lessonNumber, `chapter${++i}`)}
                     dangerouslySetInnerHTML={{ __html: chapter.title }} />
             </li>
         ))
         return collection;
     }
 
-    const lessonClick = (chapter) => {
+    const lessonClick = (chapter, lessonNumber, chapterNumber) => {
         setLessonInfo({
             ...lesson, lessonInfo: {
                 type: 'lesson',
                 units: chapter.units,
                 numberOfUnits: chapter.numberOfUnits,
+                lesson: lessonNumber,
+                chapter: chapterNumber,
             },
             title: chapter.title,
             generatedText: generateLesson(chapter.units, chapter.numberOfUnits)

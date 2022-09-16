@@ -78,6 +78,7 @@ const CustomInput = (props) => {
             {isDisabled && <FinishBoard isPassed={isPassed}
                 lessonInfo={props.generatedLesson.lessonInfo}
                 reloadLesson={reloadLesson}
+                setLesson={props.setLesson}
             />}
         </div>
     )

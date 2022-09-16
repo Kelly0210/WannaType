@@ -45,7 +45,9 @@ const Main = (props) => {
         completionPercentage={completionPercentage}
         passLastLetter={passLastLetter}
         charactersPerMinute={charactersPerMinute}
+
         generatedLesson={props.generatedLesson}
+        setLesson={props.setLesson}
       />
       <Keyboard lastLetter={lastLetter}
         mistakeHappened={mistakeHappened} numberOfMistakes={numberOfMistakes} />
