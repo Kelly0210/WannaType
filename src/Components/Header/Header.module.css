@@ -28,21 +28,3 @@
   text-decoration: underline;
 }
 
-.loginContainer {
-  display: table;
-  width: fit-content;
-  float: right;
-  margin: 5px 10px;
-}
-
-.loginText {
-  display: table-cell;
-  vertical-align: middle;
-  padding: 5px;
-}
-
-.loginText > a {
-  color: #eee;
-  text-decoration: none;
-  border-bottom: 1px solid #eee;
-}
