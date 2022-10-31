@@ -8,8 +8,11 @@ const Footer = () => {
         <footer className={style.footer}>
 
             <div className={style.infoContainer}>
-
-                <img src={logo} alt='logo' />
+                <div className={style.logoContainer}>
+                    <Link to='/'>
+                        <img src={logo} alt='logo' />
+                    </Link>
+                </div>
 
                 <div className={style.copyrightContainer}>
                     &copy; 2022 : Alan Keller

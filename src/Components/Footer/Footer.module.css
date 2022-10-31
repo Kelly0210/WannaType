@@ -25,6 +25,19 @@
     margin: 15px 0px 0px 15px;
 }
 
+.logoContainer {
+    border: 3px solid transparent;
+    font-size: 0;
+}
+
+.logoContainer > img {
+    display: inline-block;
+}
+
+.logoContainer:hover {
+    border: 3px solid #eee;
+}
+
 .copyrightContainer {
     padding-top: 5px;
     font-size: 0.75em;

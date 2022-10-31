@@ -45,7 +45,7 @@ const CustomInput = (props) => {
     }, [value.length]);
 
     React.useEffect(() => {
-        if (value.length === props.generatedLesson.generatedText.length) {
+        if (value.length === props.generatedLesson.generatedText.length && value.length > 0) {
             passedResult(true);
             disableInput(true);
         }
@@ -56,13 +56,13 @@ const CustomInput = (props) => {
         props.completionPercentage(percentage);
     });
 
-    const reloadLesson = () => {
+    const reloadLesson = (lessonString, chapterString) => {
         setStopwatch(0);
         disableInput(false);
         passedResult(false);
         changeValue('');
 
-        props.reloadLesson();
+        props.reloadLesson(lessonString, chapterString);
     };
 
     return (
@@ -78,7 +78,6 @@ const CustomInput = (props) => {
             {isDisabled && <FinishBoard isPassed={isPassed}
                 lessonInfo={props.generatedLesson.lessonInfo}
                 reloadLesson={reloadLesson}
-                setLesson={props.setLesson}
             />}
         </div>
     )
