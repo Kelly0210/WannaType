@@ -8,21 +8,8 @@ import { lessonsCollection } from '../../common/LessonsCollection';
 import { generateLesson } from "../../common/generateLesson";
 
 const Chapters = (props) => {
-    const [lesson, setLessonInfo] = React.useState({
-        lessonInfo: {
-            type: '',
-            units: [],
-            numberOfUnits: 0,
-            lesson: '',
-            chapter: ''
-        },
-        title: '',
-        generatedText: ''
-    });
-
-    React.useEffect(() => {
-        props.passGeneratedLesson(lesson);
-    }, [lesson])
+    const entireComponent = React.createRef();
+    const collapseIcon = React.createRef();
 
     const createLessonsCollection = (allLessons) => {
         let collection = [];
@@ -52,8 +39,8 @@ const Chapters = (props) => {
     }
 
     const lessonClick = (chapter, lessonNumber, chapterNumber) => {
-        setLessonInfo({
-            ...lesson, lessonInfo: {
+        props.passGeneratedLesson({
+            lessonInfo: {
                 type: 'lesson',
                 units: chapter.units,
                 numberOfUnits: chapter.numberOfUnits,
@@ -68,8 +55,8 @@ const Chapters = (props) => {
     const randomTextClick = () => {
         let randomText = textCollection[Math.floor(Math.random() * textCollection.length)];
 
-        setLessonInfo({
-            ...lesson, lessonInfo: {
+        props.passGeneratedLesson({
+            lessonInfo: {
                 type: 'random-text'
             },
             title: 'Random Text',
@@ -78,22 +65,22 @@ const Chapters = (props) => {
     }
 
     const randomExerciseClick = () => {
-        const lessonsKeys = Object.keys(lessonsCollection);
-        const randomLesson = lessonsKeys[Math.floor(Math.random() * lessonsKeys.length)];
-        const findLesson = Object.getOwnPropertyDescriptor(lessonsCollection, randomLesson);
+        const allLessons = Object.keys(lessonsCollection);
+        const randomLesson = allLessons[Math.floor(Math.random() * allLessons.length)];
+        const foundLesson = lessonsCollection[randomLesson];
 
-        const chaptersKeys = Object.keys(findLesson.value);
-        const randomChapter = chaptersKeys[Math.floor(Math.random() * chaptersKeys.length)];
-        const findChapter = Object.getOwnPropertyDescriptor(findLesson.value, randomChapter);
+        const allChapters = Object.keys(foundLesson);
+        const randomChapter = allChapters[Math.floor(Math.random() * allChapters.length)];
+        const foundChapter = foundLesson[randomChapter];
 
-        setLessonInfo({
-            ...lesson, lessonInfo: {
+        props.passGeneratedLesson({
+            lessonInfo: {
                 type: 'random-exercise',
-                units: findChapter.value.units,
-                numberOfUnits: findChapter.value.numberOfUnits
+                units: foundChapter.units,
+                numberOfUnits: foundChapter.numberOfUnits
             },
-            title: findChapter.value.title,
-            generatedText: generateLesson(findChapter.value.units, findChapter.value.numberOfUnits)
+            title: foundChapter.title,
+            generatedText: generateLesson(foundChapter.units, foundChapter.numberOfUnits)
         });
     }
 
@@ -105,19 +92,16 @@ const Chapters = (props) => {
     }
 
     const collapseComponent = () => {
-        let entireComponent = document.getElementById('entireComponent');
-        entireComponent.classList.toggle(`${style.hide}`);
-
-        let arrowRight = document.getElementById('collapseRight');
-        arrowRight.classList.toggle(`${style.show}`);
+        entireComponent.current.classList.toggle(`${style.hide}`);
+        collapseIcon.current.classList.toggle(`${style.show}`);
     }
 
     return (
         <>
-            <img src={collapseArrow} className={style.collapseRight} onClick={collapseComponent} alt="collapse icon" id='collapseRight' />
+            <img src={collapseArrow} className={style.collapseRight} onClick={collapseComponent} alt="collapse icon" ref={collapseIcon} />
 
-            <nav id='entireComponent' className={style.chaptersContainer}>
-                <img src={collapseArrow} className={style.collapseLeft} onClick={collapseComponent} alt="collapse icon" id='collapseLeft' />
+            <nav ref={entireComponent} className={style.chaptersContainer}>
+                <img src={collapseArrow} className={style.collapseLeft} onClick={collapseComponent} alt="collapse icon" />
                 <ul>
                     {createLessonsCollection(lessonsCollection)}
                     <li><Link to='/random-exercise' onClick={randomExerciseClick}>Random Exercise</Link></li>
