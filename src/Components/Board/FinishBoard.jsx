@@ -31,9 +31,9 @@ const FinishBoard = ({ lessonInfo, isPassed, ...props }) => {
 
         const lesson = lessonsCollection[lessonInfo.lesson];
         const decChapter = `chapter${(Number(lessonInfo.chapter.slice(7)) - 1)}`;
-        const findedChapter = lesson[decChapter];
+        const foundChapter = lesson[decChapter];
 
-        if (!findedChapter) {
+        if (!foundChapter) {
             const decLesson = `lesson${(Number(lessonInfo.lesson.slice(6)) - 1)}`;
             const lesson = lessonsCollection[decLesson];
             //Find last chapter in decremented Lesson
@@ -46,7 +46,7 @@ const FinishBoard = ({ lessonInfo, isPassed, ...props }) => {
 
         lessonString = lessonInfo.lesson;
         chapterString = decChapter
-        return findedChapter.url;
+        return foundChapter.url;
     }
 
     const incrementChapter = () => {
@@ -55,9 +55,9 @@ const FinishBoard = ({ lessonInfo, isPassed, ...props }) => {
 
         const lesson = lessonsCollection[lessonInfo.lesson];
         const incChapter = `chapter${(Number(lessonInfo.chapter.slice(7)) + 1)}`;
-        const findedChapter = lesson[incChapter];
+        const foundChapter = lesson[incChapter];
 
-        if (!findedChapter) {
+        if (!foundChapter) {
             const icnLesson = `lesson${(Number(lessonInfo.lesson.slice(6)) + 1)}`;
             const lesson = lessonsCollection[icnLesson];
 
@@ -68,7 +68,7 @@ const FinishBoard = ({ lessonInfo, isPassed, ...props }) => {
 
         lessonString = lessonInfo.lesson;
         chapterString = incChapter;
-        return findedChapter.url;
+        return foundChapter.url;
     }
 
     const hideToggle = () => {

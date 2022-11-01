@@ -13,8 +13,10 @@
 
 .loginLink {
     cursor: pointer;
+    border-bottom: 2px solid #eee;
 }
 
 .loginLink:hover {
-    border-bottom: 2px solid #eee;
+    color: #9ad3fa;
+    border-bottom: 2px solid #9ad3fa;
 }
