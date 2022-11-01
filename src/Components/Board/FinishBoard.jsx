@@ -10,12 +10,15 @@ const FinishBoard = ({ lessonInfo, isPassed, ...props }) => {
     const blockWindow = React.createRef();
     const showWindow = React.createRef();
 
-    const reloadLesson = () => {
-        props.reloadLesson();
-    }
+    let lessonString = '';
+    let chapterString = '';
 
-    const setLesson = (lessonString, chapterString) => {
-        props.setLesson(lessonString, chapterString);
+    const reloadLesson = (lessonString, chapterString) => {
+        if (!lessonString || !chapterString) {
+            lessonString = lessonInfo.lesson;
+            chapterString = lessonInfo.chapter;
+        }
+        props.reloadLesson(lessonString, chapterString);
     }
 
     const randomTip = () => {
@@ -23,43 +26,49 @@ const FinishBoard = ({ lessonInfo, isPassed, ...props }) => {
     }
 
     const decrementChapter = () => {
+        // First chapter can't be decremented
         if (lessonInfo.lesson === 'lesson1' && lessonInfo.chapter === 'chapter1') return '#';
 
         const lesson = lessonsCollection[lessonInfo.lesson];
         const decChapter = `chapter${(Number(lessonInfo.chapter.slice(7)) - 1)}`;
-        const findChapter = lesson[`${decChapter}`];
+        const findedChapter = lesson[decChapter];
 
-        if (!findChapter) {
+        if (!findedChapter) {
             const decLesson = `lesson${(Number(lessonInfo.lesson.slice(6)) - 1)}`;
             const lesson = lessonsCollection[decLesson];
             //Find last chapter in decremented Lesson
             const lastChapter = Object.keys(lesson)[Object.keys(lesson).length - 1];
-            const findChapter = lesson[lastChapter];
 
-            setLesson(decLesson, lastChapter);
-            return findChapter.url;
+            lessonString = decLesson;
+            chapterString = lastChapter;
+            return lesson[lastChapter].url;
         }
-        // setLesson(lessonInfo.lesson, decChapter);
-        return findChapter.url;
+
+        lessonString = lessonInfo.lesson;
+        chapterString = decChapter
+        return findedChapter.url;
     }
 
     const incrementChapter = () => {
+        // Last chapter can't be incremented
         if (lessonInfo.lesson === 'lesson13' && lessonInfo.chapter === 'chapter15') return '#';
 
-        const currentLesson = lessonsCollection[lessonInfo.lesson];
+        const lesson = lessonsCollection[lessonInfo.lesson];
         const incChapter = `chapter${(Number(lessonInfo.chapter.slice(7)) + 1)}`;
-        const findChapter = currentLesson[incChapter];
+        const findedChapter = lesson[incChapter];
 
-        if (!findChapter) {
+        if (!findedChapter) {
             const icnLesson = `lesson${(Number(lessonInfo.lesson.slice(6)) + 1)}`;
             const lesson = lessonsCollection[icnLesson];
-            const findChapter = lesson['chapter1'];
 
-            setLesson(icnLesson, 'chapter1');
-            return findChapter.url;
+            lessonString = icnLesson;
+            chapterString = 'chapter1';
+            return lesson['chapter1'].url;
         }
-        // setLesson(lessonInfo.lesson, incChapter);
-        return findChapter.url;
+
+        lessonString = lessonInfo.lesson;
+        chapterString = incChapter;
+        return findedChapter.url;
     }
 
     const hideToggle = () => {
@@ -81,12 +90,12 @@ const FinishBoard = ({ lessonInfo, isPassed, ...props }) => {
                         <div onClick={hideToggle} className={style.hideWindow}>Hide this window</div>
                     </div>
 
-                    <img src={reload} onClick={reloadLesson} className={style.reloadIcon} alt='reload icon' />
+                    <img src={reload} onClick={() => reloadLesson()} className={style.reloadIcon} alt='reload icon' />
 
                     {lessonInfo.type === 'lesson' &&
                         <>
-                            <Link to={decrementChapter()} onClick={reloadLesson} className={style.arrowLeftLink}><img src={boardArrow} alt='arrow left' /></Link>
-                            <Link to={incrementChapter()} onClick={reloadLesson} className={style.arrowRightLink}><img src={boardArrow} alt='arrow right' /></Link>
+                            <Link to={decrementChapter()} onClick={() => reloadLesson(lessonString, chapterString)} className={style.arrowLeftLink}><img src={boardArrow} alt='arrow left' /></Link>
+                            <Link to={incrementChapter()} onClick={() => reloadLesson(lessonString, chapterString)} className={style.arrowRightLink}><img src={boardArrow} alt='arrow right' /></Link>
                         </>
                     }
                     <div className={style.tips}>{randomTip()}</div>

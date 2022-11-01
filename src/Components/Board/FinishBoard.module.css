@@ -6,8 +6,8 @@
     "arrowLeft result arrowRight"
     "arrowLeft reload arrowRight"
     "arrowLeft tips arrowRight";
-  width: 50%;
   height: 50%;
+  width: 50%;
   background-color: #eee;
 
   position: absolute;

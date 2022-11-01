@@ -16,14 +16,14 @@ const Main = (props) => {
     mistakeCounter(numberOfMistakes + 1);
   }
 
-  const reloadLesson = () => {
+  const reloadLesson = (lessonString, chapterString) => {
     mistakeCounter(0);
     completionPercentage(0);
     charactersPerMinute(0);
     passLastLetter('');
     mistakeHappenedToggle(false);
 
-    props.reloadLesson();
+    props.reloadLesson(lessonString, chapterString);
   }
 
   return (
@@ -47,7 +47,6 @@ const Main = (props) => {
         charactersPerMinute={charactersPerMinute}
 
         generatedLesson={props.generatedLesson}
-        setLesson={props.setLesson}
       />
       <Keyboard lastLetter={lastLetter}
         mistakeHappened={mistakeHappened} numberOfMistakes={numberOfMistakes} />

@@ -11,6 +11,8 @@ import Fallback from './common/Fallback';
 import FAQ from './Components/FAQ/FAQ';
 import About from './Components/About/About';
 import { generateLesson } from './common/generateLesson';
+import { lessonsCollection } from './common/LessonsCollection';
+import { textCollection } from './common/textCollection';
 
 
 const App = () => {
@@ -26,23 +28,60 @@ const App = () => {
     generatedText: 'Hello!'
   });
 
-  const reloadLesson = () => {
-    passGeneratedLesson({
-      ...generatedLesson, lessonInfo: {
-        ...generatedLesson.lessonInfo,
-      },
-      generatedText: generateLesson(generatedLesson.lessonInfo.units, generatedLesson.lessonInfo.numberOfUnits)
-    });
-  }
+  const reloadLesson = (lessonString = generatedLesson.lessonInfo.lesson, chapterString = generatedLesson.lessonInfo.lesson) => {
+    let type = generatedLesson.lessonInfo.type;
 
-  const setLesson = (lessonString, chapterString) => {
-    passGeneratedLesson({
-      ...generatedLesson, lessonInfo: {
-        ...generatedLesson.lessonInfo,
-        lesson: lessonString,
-        chapter: chapterString
-      }
-    });
+    if (type === 'lesson') {
+      const lesson = lessonsCollection[lessonString];
+      const chapter = lesson[chapterString];
+
+      passGeneratedLesson({
+        ...generatedLesson, lessonInfo: {
+          ...generatedLesson.lessonInfo,
+          type: 'lesson',
+          units: [...chapter.units],
+          numberOfUnits: chapter.numberOfUnits,
+          lesson: lessonString,
+          chapter: chapterString,
+        },
+        title: chapter.title,
+        generatedText: generateLesson(generatedLesson.lessonInfo.units, generatedLesson.lessonInfo.numberOfUnits)
+      });
+
+    } else if (type === 'random-text') {
+      const randomText = textCollection[Math.floor(Math.random() * textCollection.length)];
+      passGeneratedLesson({
+        ...generatedLesson, lessonInfo: {
+          ...generatedLesson.lessonInfo,
+          type: 'random-text',
+        },
+        title: 'Random Text',
+        generatedText: randomText
+      });
+
+    } else if (type === 'random-exercise') {
+      const lessonsKeys = Object.keys(lessonsCollection);
+      const randomLesson = lessonsKeys[Math.floor(Math.random() * lessonsKeys.length)];
+      const findLesson = Object.getOwnPropertyDescriptor(lessonsCollection, randomLesson);
+
+      const chaptersKeys = Object.keys(findLesson.value);
+      const randomChapter = chaptersKeys[Math.floor(Math.random() * chaptersKeys.length)];
+      const findChapter = Object.getOwnPropertyDescriptor(findLesson.value, randomChapter);
+
+      passGeneratedLesson({
+        ...generatedLesson, lessonInfo: {
+          ...generatedLesson.lessonInfo,
+          type: 'random-exercise',
+          units: [...findChapter.value.units],
+          numberOfUnits: findChapter.value.numberOfUnits,
+          lesson: lessonString,
+          chapter: chapterString,
+        },
+        title: findChapter.value.title,
+        generatedText: generateLesson(generatedLesson.lessonInfo.units, generatedLesson.lessonInfo.numberOfUnits)
+      });
+
+    }
   }
 
   return (
@@ -56,11 +95,11 @@ const App = () => {
             <Route path='/about' element={<About />} />
             <Route path='/FAQ' element={<FAQ />} />
 
-            <Route path='/:lesson/:chapter' element={<Main generatedLesson={generatedLesson} reloadLesson={reloadLesson} setLesson={setLesson} />} />
-            <Route path='/random-text' element={<Main generatedLesson={generatedLesson} reloadLesson={reloadLesson} setLesson={setLesson} />} />
-            <Route path='/random-exercise' element={<Main generatedLesson={generatedLesson} reloadLesson={reloadLesson} setLesson={setLesson} />} />
+            <Route path='/:lesson/:chapter' element={<Main generatedLesson={generatedLesson} reloadLesson={reloadLesson} />} />
+            <Route path='/random-text' element={<Main generatedLesson={generatedLesson} reloadLesson={reloadLesson} />} />
+            <Route path='/random-exercise' element={<Main generatedLesson={generatedLesson} reloadLesson={reloadLesson} />} />
           </Routes>
-          <Chapters passGeneratedLesson={passGeneratedLesson} generatedLesson={generatedLesson} />
+          <Chapters generatedLesson={generatedLesson} passGeneratedLesson={passGeneratedLesson} />
           <Footer />
         </BrowserRouter>
       </React.Suspense>
