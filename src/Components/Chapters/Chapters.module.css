@@ -1,0 +1,102 @@
+.chaptersContainer {
+    grid-area: chapters;
+    width: 200px;
+    float: left;
+    height: 100%;
+    background-color: crimson;
+}
+
+kbd {
+    background-color: #eee;
+    border-radius: 3px;
+    border: 1px solid #b4b4b4;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .2), 0 2px 0 0 rgba(255, 255, 255, .7) inset;
+    color: #333;
+    display: inline-block;
+    font-size: 1.1em;
+    font-weight: 600;
+    line-height: 1;
+    padding: 2px 4px;
+}
+
+ul {
+    padding: 15px 0 10px 10px;
+    letter-spacing: 0.3px;
+    font-weight: 500;
+}
+
+ul>ul {
+    display: none;
+    padding: 0 0 0 10px;
+}
+
+li {
+    list-style-type: none;
+    width: fit-content;
+    margin: 3px 0;
+}
+
+ul>ul>li:nth-child(3n) {
+    padding-bottom: 5px;
+}
+
+ul>ul>li:first-child {
+    padding-top: 2px;
+}
+
+li>a {
+    color: black;
+    text-decoration: none;
+}
+
+li>a:hover {
+    color: #eee;
+}
+
+.toggleList {
+    cursor: pointer;
+}
+
+.toggleList:hover {
+    color: #eee;
+}
+
+.collapseLeft {
+    float: right;
+    width: 30px;
+    cursor: pointer;
+    padding: 4px;
+    margin: 4px 4px 0 0;
+}
+
+.collapseRight {
+    display: none;
+    float: left;
+    width: 30px;
+    cursor: pointer;
+    padding: 4px;
+    margin: 5px 0 0 5px;
+    transform: scaleX(-1);
+}
+
+.collapseLeft:hover,
+.collapseRight:hover {
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: inherit;
+}
+
+.active {
+    color: #eee;
+}
+
+.sss {
+    color: green
+}
