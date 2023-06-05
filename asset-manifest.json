@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/WannaType/static/css/main.9dd6da9d.css",
+    "main.js": "/WannaType/static/js/main.f4bea6e6.js",
+    "static/js/787.b6236edf.chunk.js": "/WannaType/static/js/787.b6236edf.chunk.js",
+    "static/media/boardArrow.png": "/WannaType/static/media/boardArrow.730254723418a37947d5.png",
+    "static/media/reload.png": "/WannaType/static/media/reload.2fe5bb3c0e6f39775653.png",
+    "static/media/heart.png": "/WannaType/static/media/heart.0a753b68a8ed696f616f.png",
+    "static/media/emptyHeart.png": "/WannaType/static/media/emptyHeart.91a3486c34c8db48d749.png",
+    "static/media/loginImg.png": "/WannaType/static/media/loginImg.f20f5b298e6dcf65d0ff.png",
+    "index.html": "/WannaType/index.html",
+    "main.9dd6da9d.css.map": "/WannaType/static/css/main.9dd6da9d.css.map",
+    "main.f4bea6e6.js.map": "/WannaType/static/js/main.f4bea6e6.js.map",
+    "787.b6236edf.chunk.js.map": "/WannaType/static/js/787.b6236edf.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9dd6da9d.css",
+    "static/js/main.f4bea6e6.js"
+  ]
+}
